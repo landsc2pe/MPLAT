@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <!-- http://kitesoft.tistory.com/75 -->
+    <!-- http://kd3302.tistory.com/98 -->
+    <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:background="@color/primaryBackground"
+        android:orientation="horizontal">
+        <!-- 등급아이콘, 아이디 그룹-->
+        <LinearLayout
+            android:id="@+id/cash_leftinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+            <!-- 등급 아이콘-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/grade_b"/>
+            <!-- 이메일-->
+            <TextView
+                android:id="@+id/culturelandRequest_tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:textSize="18sp"
+                android:text=""/>
+        </LinearLayout>
+
+        <!-- 포인트 아이콘, 포인트 그룹 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+            <!-- 포인트 아이콘-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/point_p"/>
+            <!-- 포인트 -->
+            <TextView
+                android:id="@+id/culturelandRequest_tvPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:text="0"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 하단 메뉴 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <!-- 문화상품권 금액 선택 -->
+            <!--구분선(굵게)-->
+            <View android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/primary"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:background="@drawable/border_header">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="문화상품권 금액 선택"
+                    android:textSize="18dp"/>
+            </LinearLayout>
+            <!-- 경계선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+
+            <!-- 상품권 금액 이미지들 -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:columnCount="3"
+                    android:rowCount="3">
+                        <RadioButton
+                            android:id="@+id/cultureland_rb1000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/cultureland1000"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"/>
+                        <RadioButton
+                            android:id="@+id/cultureland_rb2000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/cultureland2000"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"/>
+                        <RadioButton
+                            android:id="@+id/cultureland_rb3000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/cultureland3000"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"/>
+
+                        <RadioButton
+                            android:id="@+id/cultureland_rb4000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:button="@drawable/cultureland4000"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"/>
+                        <RadioButton
+                            android:id="@+id/cultureland_rb5000"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:button="@drawable/cultureland5000"
+                            android:scaleX="0.9"
+                            android:scaleY="0.9"/>
+                </GridLayout>
+                <TextView
+                    android:id="@+id/cultureland_tvInfo0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/red"
+                    android:visibility="gone"/>
+
+                <!-- 교환하기 -->
+                <Button style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/culturelandRequest_btnNext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="교환하기"
+                    android:textSize="@dimen/activity_fontSize"
+                    android:background="@color/primaryDisabled"
+                    android:textColor="@color/white"
+                    android:layout_gravity="bottom"/>
+
+
+            <!--구분선(굵게)-->
+            <View android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/primary"/>
+            <!-- ******************* 이체 계좌 정보 ******************* -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_padding0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_header"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="교환 안내"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="- "
+                            android:textSize="18dp"/>
+                        <TextView
+                            android:id="@+id/culturelandRequest_tvInfo1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="온라인문화상품권 교환은 실시간으로 처리가 됩니다. 교환 후 취소가 불가능 합니다."
+                            android:textSize="18dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="- "
+                            android:textSize="18dp"/>
+                        <TextView
+                            android:id="@+id/culturelandRequest_tvInfo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="온라인문화상품권의 유효기간은 발급일로부터 60일입니다. 유효기간 경과 후 취소 되지 않습니다."
+                            android:textSize="18dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="- "
+                            android:textSize="18dp"/>
+                        <TextView
+                            android:id="@+id/culturelandRequest_tvInfo3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="온라인문화상품권 교환 시, 액면가의 10%의 교환수수료가 추가로 차감됩니다."
+                            android:textSize="18dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 아래의 휴대전화 번호로 문화상품권이 전송됩니다.-->
+            <!--구분선(굵게)-->
+            <View android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/primary"/>
+            <!-- 이체 예정일-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_padding0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_header"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/culturelandRequest_tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="아래의 휴대전화 번호로 문화상품권이 전송됩니다."
+                        android:textSize="18dp"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="4dp"
+                            android:text="휴대폰 번호"
+                            android:textSize="18dp"
+                            android:layout_weight="1"/>
+                        <EditText
+                            android:id="@+id/culturelandRequest_etMobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border"
+                            android:enabled="false"
+                            android:layout_weight="9"/>
+                    </LinearLayout>
+                    <!-- 휴대폰번호 변경 -->
+                    <Button style="@style/Widget.AppCompat.Button.Borderless"
+                        android:id="@+id/cash_btnBack"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="휴대폰번호 변경"
+                        android:textSize="@dimen/activity_fontSize"
+                        android:background="@color/red"
+                        android:textColor="@color/white"
+                        android:layout_gravity="bottom"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

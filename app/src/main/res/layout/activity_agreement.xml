@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="40dp">
+    <ScrollView
+        android:id="@+id/agreement_svParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+            <!-- 이용약관 및 개인정보 취급 이용안내에 대해 모두 동의-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:id="@+id/agreement_cbAgreeall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:textSize="@dimen/agreement_title"
+                    android:checked="false"
+                    android:button="@null"
+                    android:background="@android:color/transparent"
+                    android:text="@string/agreement_title1"
+                    android:textColor="@color/primaryFont"
+                    android:drawableLeft="@drawable/ncheckbox" android:onClick="onClick"/>
+            </LinearLayout>
+
+            <!-- 본인은 만 14세 이상임을 확인 합니다.(필수)-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical" android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_title2"
+                    android:textSize="@dimen/agreement_title"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="6dp">
+                    <RadioGroup
+                        android:id="@+id/agreement_rgAgeover14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id="@+id/agreement_rbAgeover14_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:checked="false"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:text="@string/agreement_txt_1"
+                            android:drawableLeft="@drawable/ncheckbox"
+                            android:textSize="@dimen/agreement_txt"
+                            android:textColor="@color/primaryFont"
+                            android:drawablePadding="3dp"
+                            android:layout_weight="1" android:onClick="onClick"/>
+                        <RadioButton
+                            android:id="@+id/agreement_rbAgeover14_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:checked="false"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:text="@string/agreement_txt_2"
+                            android:drawableLeft="@drawable/ncheckbox"
+                            android:textSize="@dimen/agreement_txt"
+                            android:textColor="@color/primaryFont"
+                            android:drawablePadding="3dp"
+                            android:layout_weight="1" android:onClick="onClick"/>
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 엠플랫 이용약관 동의(필수)-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical" android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_title3"
+                    android:textSize="@dimen/agreement_title"/>
+                <ScrollView
+                    android:id="@+id/agreement_svAgree_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:fadeScrollbars="false"
+                    android:fillViewport="true"
+                    android:background="@drawable/border">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/agreement_tvAgree_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </ScrollView>
+                <CheckBox
+                    android:id="@+id/agreement_cbAgree_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/agreement_txt"
+                    android:checked="false"
+                    android:button="@null"
+                    android:background="@android:color/transparent"
+                    android:text="@string/agreement_txt_3"
+                    android:textColor="@color/darkgray"
+                    android:drawableLeft="@drawable/ncheckbox"
+                    android:drawablePadding="3dp"
+                    android:layout_weight="1" android:onClick="onClick"/>
+            </LinearLayout>
+            <!-- 개인정보 수집 및 이용에 대한 아내(필수)-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical" android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/agreement_title4"
+                    android:textSize="@dimen/agreement_title"/>
+                <ScrollView
+                    android:id="@+id/agreement_svAgree_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="10dp"
+                    android:fadeScrollbars="false"
+                    android:fillViewport="true"
+                    android:background="@drawable/border">
+                    <TextView
+                        android:id="@+id/agreement_tvAgree_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </ScrollView>
+                <CheckBox
+                    android:id="@+id/agreement_cbAgree_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/agreement_txt"
+                    android:checked="false"
+                    android:button="@null"
+                    android:background="@android:color/transparent"
+                    android:text="@string/agreement_txt_4"
+                    android:textColor="@color/darkgray"
+                    android:drawableLeft="@drawable/ncheckbox"
+                    android:drawablePadding="3dp"
+                    android:layout_weight="1" android:onClick="onClick"/>
+            </LinearLayout>
+            <!-- 다음 -->
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/agreement_btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/com_next"
+                android:textSize="@dimen/com_btnText"
+                android:background="@color/primary"
+                android:textColor="@color/white"
+                android:onClick="onClick"/>
+        </LinearLayout>
+    </ScrollView><!-- 2-->
+</LinearLayout><!-- 1 -->

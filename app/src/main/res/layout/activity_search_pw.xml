@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/activity_vertical_margin">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/txt_id"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/searchpw_etId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/msg_inputId"
+                android:background="@drawable/border"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/primary"
+                android:inputType="textVisiblePassword"/>
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/searchpw_btnSearchPw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_ok"
+            android:textSize="@dimen/activity_fontSize"
+            android:layout_margin="@dimen/activity_btn_margin"
+            android:background="@color/darkgray"
+            android:textColor="@color/white"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+</LinearLayout>

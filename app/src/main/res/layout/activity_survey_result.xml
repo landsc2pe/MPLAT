@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/surveyResult_tvCompleteMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="죄송합니다. 설문이 중단되었습니다."
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/primaryFont"
+            android:textStyle="bold"/>
+        <!-- 경계선 -->
+        <View android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/primary"/>
+        <TextView
+            android:id="@+id/surveyResult_tvCompleteDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="귀하께서는 조사 대상이 아니셔서 더 이상 조사에 참여하실 수 없습니다.\n엠플랫은 조사 대상이 아니셔서 조사에 참여하지 못한 경우, 일정 포인트를 적립해 드립니다.\n...."
+            android:textSize="16sp"
+            android:gravity="center_vertical|center"
+            android:textColor="@color/primaryFont"
+            android:textStyle="bold"/>
+        <!-- 경계선 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 적립 포인트 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="20dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="적립포인트"
+                    android:textSize="20sp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/surveyResult_tvPoint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="50 P"
+                    android:textSize="20sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <!-- 총 보유 포인트 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="총 보유 포인트"
+                    android:textSize="20sp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/surveyResult_tvTotalPoint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="11,400 P"
+                    android:textSize="20sp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            !-- 경계선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

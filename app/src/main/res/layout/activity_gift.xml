@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:background="@color/primaryBackground"
+        android:orientation="horizontal">
+        <!-- 등급아이콘, 아이디 그룹-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!-- 등급 아이콘-->
+            <!--ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/grade_b"/-->
+            <!-- 이메일-->
+            <!--TextView
+                android:id="@+id/main_tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:textSize="18sp"
+                android:text="mplatid"/-->
+        </LinearLayout>
+
+        <!-- 포인트 아이콘, 포인트 그룹 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <!-- 포인트 아이콘-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/point_p"/>
+            <!-- 포인트 -->
+            <TextView
+                android:id="@+id/gift_tvPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:text="0"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 상품권 브랜드 리스트-->
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <GridLayout
+            android:id="@+id/gift_glList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:stretchMode="columnWidth"
+            android:useDefaultMargins="true"
+            android:orientation="horizontal">
+        </GridLayout>
+
+    </ScrollView>
+    <!--ListView
+        android:id="@+id/gift_lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/-->
+</LinearLayout>

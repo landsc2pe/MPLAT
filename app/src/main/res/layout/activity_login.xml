@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- Message Box -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/activity_btn_margin">
+            <ImageView
+                android:id="@+id/login_ivLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/login"/>
+            <EditText
+                android:id="@+id/login_etId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/border"
+                android:textColor="@color/primary"
+                android:inputType="textVisiblePassword"
+                android:textCursorDrawable="@null"/>
+            <EditText
+                android:id="@+id/login_etPw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:textColor="@color/primary"
+                android:textCursorDrawable="@null"
+                android:maxLength="16"
+                android:inputType="textPassword"/>
+            <TextView
+                android:id="@+id/login_tvMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!--Button style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/login_btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/btn_login"
+                    android:textSize="@dimen/activity_fontSize"
+                    android:background="@drawable/radius"
+                    android:textColor="@color/white" android:onClick="onClick"/-->
+                <ImageButton
+                    android:id="@+id/login_btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/login_base"
+                    android:background="#00000000"
+                    android:onClick="onClick"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/darkgray"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/login_tvSearchId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디 찾기"
+                    android:textSize="14sp"
+                    android:textColor="@color/darkgray" android:onClick="onClick"/>
+
+                <!--TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디 찾기"
+                    android:textSize="16sp"/-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/login_tvSearchPw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="비밀번호 찾기"
+                    android:textSize="14sp"
+                    android:textColor="@color/darkgray" android:onClick="onClick"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" | "/>
+                <TextView
+                    android:id="@+id/login_tvRegist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_regist"
+                    android:textSize="14sp"
+                    android:textColor="@color/primary" android:onClick="onClick"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+                <!-- 네이버 테스트 임시-->
+                <!-- 페이스북 테스트용-->
+                <com.facebook.login.widget.LoginButton
+                    android:visibility="gone"
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp" />
+                <!-- 페이스북 테스트용 끝-->
+                <!-- 구글 테스트용 -->
+                <!-- 구글 테스트용 끝-->
+                <!-- 카카오 -->
+                <com.kakao.usermgmt.LoginButton
+                    android:id="@+id/com_kakao_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:visibility="gone"/>
+                <ImageButton
+                    android:id="@+id/login_ibKakao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/login_kakao"
+                    android:background="#00000000" />
+                <!-- 카카오 끝-->
+                <ImageButton
+                    android:id="@+id/login_ibFacebook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/login_facebook"
+                    android:background="#00000000"/>
+                <ImageButton
+                    android:id="@+id/login_ibNaver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/login_naver"
+                    android:background="#00000000"/>
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"/>
+                <ImageButton
+                    android:id="@+id/login_ibGoogle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/login_google"
+                    android:background="#00000000"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

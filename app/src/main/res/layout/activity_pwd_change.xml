@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/activity_vertical_margin">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="새로 사용할 비밀번호를 입력하세요."
+                android:textSize="18sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="(6~16자 영문 대소문자, 숫자, 특수문자 사용 가능)"
+                android:textSize="18sp"/>
+            <EditText
+                android:id="@+id/pwdChange_etPw1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="새 비밀번호 입력"
+                android:textSize="16dp"
+                android:background="@drawable/border"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/primary"
+                android:inputType="textPassword"/>
+            <EditText
+                android:id="@+id/pwdChange_etPw2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="새 비밀번호 재입력"
+                android:textSize="16dp"
+                android:background="@drawable/border"
+                android:textCursorDrawable="@null"
+                android:textColor="@color/primary"
+                android:inputType="textPassword"/>
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/pwdChange_btnUpdatePw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="변경 완료"
+            android:textSize="@dimen/activity_fontSize"
+            android:layout_margin="@dimen/activity_btn_margin"
+            android:background="@color/darkgray"
+            android:textColor="@color/white"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+</LinearLayout>

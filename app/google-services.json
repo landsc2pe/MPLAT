@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "720286461478",
+    "firebase_url": "https://mplat-1368.firebaseio.com",
+    "project_id": "mplat-1368",
+    "storage_bucket": "mplat-1368.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720286461478:android:db5198338baf110f",
+        "android_client_info": {
+          "package_name": "kr.co.mplat.www"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720286461478-bq6bngqke2j0b649gqd68nfoaufrj5an.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "720286461478-4mdh4juikt18i52i78ooqrb5smtclcdg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNdT8OLmD0MBFDMugbZiUfV_7R6dfTWYY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

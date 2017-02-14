@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="10dp"
+    android:id="@+id/recommendHistory_llParent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:layout_marginLeft="4dp"
+            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/recommendHistory_tvJoinDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="2016-11-30"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|center"/>
+                <TextView
+                    android:id="@+id/recommendHistory_tvRecommendName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="4dp"
+                    android:text="[이메일]"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|center"/>
+                <TextView
+                    android:id="@+id/recommendHistory_tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="ddd**@naver.com"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|center"/>
+        </LinearLayout>
+</LinearLayout>

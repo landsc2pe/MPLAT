@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <!-- 메인페이지-->
+
+    <!-- 하단 메뉴 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 메뉴 리스트뷰-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- 수신동의 상태 변경-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/lightgray">
+                    <TextView
+                        android:id="@+id/agreeChange_tvTitle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:text="수신동의 상태 변경" />
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 이메일 수신동의 *********************************-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:id="@+id/agreeChage_tvAgreeEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:text="이메일 수신 동의 (최종변경: 2016-09-30)"/>
+                    <Switch
+                        android:id="@+id/agreechange_swcAgreeEmail"
+                        android:layout_height="wrap_content"
+                        android:layout_width="120dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+
+                <!-- SMS 수신 동의 *********************************-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:id="@+id/agreeChage_tvAgreeSms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:text="SMS 수신동의 (최종변경: 2016-09-30)"/>
+                    <Switch
+                        android:id="@+id/agreechange_swcAgreeSms"
+                        android:layout_height="wrap_content"
+                        android:layout_width="120dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 수신동의 상태 변경-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/lightgray">
+                    <TextView
+                        android:id="@+id/agreeChange_tvTitle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:text="알림 상태 변경" />
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 공지사항 *********************************-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:id="@+id/config_tvNotice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:text="공지사항"/>
+                    <Switch
+                        android:id="@+id/agreechange_swcAgreeNotice"
+                        android:layout_height="wrap_content"
+                        android:layout_width="120dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+
+                <!-- SMS 수신 동의 *********************************-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="25dp"
+                        android:text="이벤트 및 광고"/>
+                    <Switch
+                        android:id="@+id/agreechange_swcAgreeEvent"
+                        android:layout_height="wrap_content"
+                        android:layout_width="120dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

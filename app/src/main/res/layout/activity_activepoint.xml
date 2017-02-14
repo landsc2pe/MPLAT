@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <!-- 메인페이지-->
+    <!-- 하단 메뉴 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 메뉴 리스트뷰-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/activepoint_tvAvg"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textSize="18sp"
+                    android:gravity="center"/>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="40dp"
+                    android:textSize="16sp"
+                    android:text="월별 활동지수(최근 3개월)"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"/>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 활동지수 내역 (최근1/3개월)*********************************-->
+                <LinearLayout
+                    android:id="@+id/activepoint_llMonth1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/activepoint_tvMonthname_1"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="45dp"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/activepoint_tvMonth_1"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_r_mypage"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 활동지수 내역 (최근2/3개월)*********************************-->
+                <LinearLayout
+                    android:id="@+id/activepoint_llMonth2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/activepoint_tvMonthname_2"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="45dp"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/activepoint_tvMonth_2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_r_mypage"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 활동지수 내역 (최근3/3개월)*********************************-->
+                <LinearLayout
+                    android:id="@+id/activepoint_llMonth3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/activepoint_tvMonthname_3"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="45dp"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/activepoint_tvMonth_3"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="20sp"
+                        android:gravity="right"
+                        android:layout_marginRight="20dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_r_mypage"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"
+                    android:layout_marginBottom="10dp"/>
+                <!-- 합계*********************************-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/activepoint_tvSumname"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="45dp"
+                        android:textSize="16sp"
+                        android:text="합계"/>
+                    <TextView
+                        android:id="@+id/activepoint_tvSum"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="20sp"
+                        android:gravity="right"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_r_mypage"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 평균*********************************-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="45dp"
+                        android:textSize="16sp"
+                        android:text="3개월 평균 (합계/3)"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/activepoint_tvAvg2"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:textSize="20sp"
+                        android:gravity="right"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arrow_r_mypage"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 활동지수가 부여되는 회원활동-->
+                <Button style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/activepoint_btnInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="활동지수가 부여되는 회원활동"
+                    android:textSize="@dimen/activity_fontSize"
+                    android:background="@color/browngray"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

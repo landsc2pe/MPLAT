@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/activity_vertical_margin">
+            <EditText
+                android:id="@+id/searchidauth_etAuthCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/msg_checkAuthCode"
+                android:background="@drawable/border"
+                android:digits="0123456789"
+                android:textCursorDrawable="@null"
+                android:inputType="number"
+                android:maxLength="5"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:text="@string/msg_checkAuth"/>
+            <TextView
+                android:id="@+id/searchidauth_tvCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:textSize="40sp"
+                android:textColor="@color/red"
+                android:text="00:00"/>
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/searchidauth_btnReSendAuthCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_resendAuthCode"
+            android:textSize="@dimen/activity_fontSize"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/darkgray"
+            android:textColor="@color/white"
+            android:onClick="onClick"/>
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/searchidauth_btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/btn_authCodeOK"
+            android:textSize="@dimen/activity_fontSize"
+            android:background="@color/primary"
+            android:textColor="@color/white"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+</LinearLayout>

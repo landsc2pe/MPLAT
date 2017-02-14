@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:padding="1dp"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+                <!-- 부가정보를 입력하시면 100P 더 지급해 드립니다....-->
+
+                <LinearLayout
+                    android:id="@+id/joinaddinfo_ll_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:background="@color/gray"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/addinfo"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14dp"
+                        android:text="@string/joinaddinfo_title7">
+                    </TextView>
+                </LinearLayout>
+                <!-- 구분선 -->
+                <View
+                    android:id="@+id/joinaddinfo_v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 이동통신사 box-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joinaddinfo_title1"/>
+                    <Spinner
+                        android:id="@+id/joinaddinfo_spTelecom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!-- 구분선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/primaryBorder"
+                    android:visibility="gone"/>
+                <!-- 휴대폰 종류-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joinaddinfo_title2"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp">
+                        <RadioGroup
+                            android:id="@+id/joinaddinfo_rgMobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/joinaddinfo_rbPhoneType_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:checked="false"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:text="@string/joinaddinfo_txt1"
+                            android:textColor="@color/primaryFont"
+                            android:drawableLeft="@drawable/ncheckbox" />
+                        <RadioButton
+                            android:id="@+id/joinaddinfo_rbPhoneType_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:checked="false"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:text="@string/joinaddinfo_txt2"
+                            android:textColor="@color/primaryFont"
+                            android:drawableLeft="@drawable/ncheckbox" />
+                        <RadioButton
+                            android:id="@+id/joinaddinfo_rbPhoneType_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:checked="false"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:text="@string/joinaddinfo_txt3"
+                            android:textColor="@color/primaryFont"
+                            android:drawableLeft="@drawable/ncheckbox" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout><!-- 휴대폰 종류 끝-->
+                <!-- 구분선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/primaryBorder"
+                    android:visibility="gone"/>
+                <!-- 스마트폰 OS -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joinaddinfo_title3"/>
+                    <Spinner
+                        android:id="@+id/joinaddinfo_spOS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!-- 구분선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 결혼여부 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="@string/joinaddinfo_title4"/>
+
+                        <RadioGroup
+                            android:id="@+id/joinaddinfo_rgWedding"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/joinaddinfo_rbWedding_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:textSize="14sp"
+                            android:checked="false"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:text="@string/joinaddinfo_txt4"
+                            android:textColor="@color/primaryFont"
+                            android:drawablePadding="3dp"
+                            android:drawableLeft="@drawable/ncheckbox" />
+                        <RadioButton
+                            android:id="@+id/joinaddinfo_rbWedding_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:checked="false"
+                            android:button="@null"
+                            android:background="@android:color/transparent"
+                            android:text="@string/joinaddinfo_txt5"
+                            android:textColor="@color/primaryFont"
+                            android:drawablePadding="3dp"
+                            android:drawableLeft="@drawable/ncheckbox" />
+                        </RadioGroup>
+
+                </LinearLayout><!-- 결혼여부 끝-->
+                <!-- 구분선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 거주지역-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joinaddinfo_title5"/>
+                    <Spinner
+                        android:id="@+id/joinaddinfo_spAREA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!-- 구분선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 직업 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/joinaddinfo_title6"/>
+                    <Spinner
+                        android:id="@+id/joinaddinfo_spJOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 다음 -->
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/jojnaddinfo_btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:text="@string/com_complete"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/primaryDisabled"
+                android:textColor="@color/white"
+                android:onClick="onClick"/>
+        </LinearLayout>
+    </ScrollView><!-- 2-->
+</LinearLayout><!-- 1 -->

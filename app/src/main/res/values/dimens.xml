@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- 하단 버튼 -->
+    <dimen name="activity_btn_margin">20dp</dimen>
+    <!-- Message Box -->
+    <dimen name="messageBox_padding">20dp</dimen>
+    <!-- font -->
+    <dimen name="activity_fontSize">20sp</dimen>
+    <dimen name="actionbar_fontSize">20sp</dimen>
+
+    <!-- 공통 -->
+
+    <!-- 다음버튼 basic button fontsize -->
+    <dimen name="com_btnText">20sp</dimen>
+
+    <!-- 페이지별 -->
+    <!-- 약관동의 : activity_agreement.xml -->
+    <dimen name="agreement_title">15sp</dimen>
+    <dimen name="agreement_txt">14sp</dimen>
+
+    <!-- 회원정보 입력 -->
+
+    <!-- 구글 테스트용. -->
+    <dimen name="g_top_margin">100dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:layout_marginBottom="40dp">
+    <ScrollView
+        android:id="@+id/agreement_svParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:background="@color/primaryBackground"
+                android:orientation="horizontal">
+                <!-- 등급아이콘, 아이디 그룹-->
+                <LinearLayout
+                    android:id="@+id/point_leftinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <!-- 등급 아이콘-->
+                    <!--ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/grade_b"/-->
+                    <!-- 이메일-->
+                    <!--TextView
+                        android:id="@+id/main_tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="4dp"
+                        android:textSize="18sp"
+                        android:text="mplatid"/-->
+                </LinearLayout>
+
+                <!-- 포인트 아이콘, 포인트 그룹 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+                    <!-- 포인트 아이콘-->
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/point_p"/>
+                    <!-- 포인트 -->
+                    <TextView
+                        android:id="@+id/main_tvPoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="18sp"
+                        android:text="0"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/auth_txt_1"
+                    android:textSize="16dp"/>
+                <View android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/primary"/>
+                <!-- 이체안내-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/auth_title1"
+                        android:textSize="18dp"
+                        android:background="@drawable/border_bggray"/>
+                    <!-- 이체안내-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/border">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:text="- "/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:text="이체계좌 등록을 위해서는 휴대폰 본인인증 절차를 먼저 진행하셔야 합니다."/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:text="- "/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16dp"
+                                android:text="이체계좌 등록 회원은 본인의 소유한 계좌만 등록이 가능합니다.(타인계좌 등록불가)"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- 개인정보 수집 및 이용에 대한 아내(필수)-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:orientation="vertical" android:layout_marginTop="10dp">
+                    <CheckBox
+                        android:id="@+id/auth_cbAgree_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/primaryFont"
+                        android:checked="false"
+                        android:button="@null"
+                        android:background="@android:color/transparent"
+                        android:text="@string/auth_txt_2"
+                        android:drawableLeft="@drawable/ncheckbox"
+                        android:drawablePadding="8dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+
+    </ScrollView>
+    <!-- 다음 -->
+    <Button style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/auth_btnNext"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/com_auth"
+        android:textSize="@dimen/com_btnText"
+        android:background="@color/primaryDisabled"
+        android:textColor="@color/white" />
+</FrameLayout>

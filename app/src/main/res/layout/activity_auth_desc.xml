@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="4dp"
+    android:layout_marginBottom="40dp">
+    <ScrollView
+        android:id="@+id/agreement_svParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/authDesc_tvInfo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="고객님의 휴대폰을 사용하여 본인인증 절차를 진행합니다. 인증 후에는 인증된 정보로 회원정보가 변경 됩니다."
+                    android:textSize="16dp"
+                    android:gravity="center"/>
+
+                <!-- 개인정보 수집 및 이용에 대한 아내(필수)-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:orientation="vertical" android:layout_marginTop="10dp">
+                    <CheckBox
+                        android:id="@+id/authDesc_cbAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/primaryFont"
+                        android:checked="false"
+                        android:button="@null"
+                        android:background="@android:color/transparent"
+                        android:text="휴대폰 본인인증 완료 시, 인증된 정보로 회원정보가 변경됨을 확인 합니다."
+                        android:drawableLeft="@drawable/ncheckbox"
+                        android:drawablePadding="8dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+
+    </ScrollView>
+    <!-- 다음 -->
+    <Button style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/authDesc_btnNext"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/com_auth"
+        android:textSize="@dimen/com_btnText"
+        android:background="@color/primaryDisabled"
+        android:textColor="@color/white" />
+</FrameLayout>

@@ -1,0 +1,181 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 메인 베너 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/main_banner_joincomplete"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="20dp">
+                        <TextView
+                            android:id="@+id/joincomplete_tvWelcome"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="16dp"
+                            android:text="Mplatid 님의 회원가입을 진심으로 환영합니다."
+                            android:paddingTop="150dp"
+                            />
+                    </RelativeLayout>
+
+            </FrameLayout>
+
+            <!-- 이메일 및 SMS 수신동의 여부 안내 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+                android:orientation="vertical"
+                android:layout_margin="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/joincomplete_descTitle"
+                    android:textSize="16sp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!-- 전송자-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="20dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/square_base"
+                            android:scaleType="fitXY"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/joincomplete_sender"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="엠플랫"/>
+                    </LinearLayout>
+                    <!-- 처리일자-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="20dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/square_base"
+                            android:scaleType="fitXY"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/joincomplete_date"/>
+                        <TextView
+                            android:id="@+id/joincomplete_tvDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2016년 10월 21일"/>
+                    </LinearLayout>
+                    <!-- 처리내용-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="20dp">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/square_base"
+                            android:scaleType="fitXY"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/joincomplete_content"/>
+                        <TextView
+                            android:id="@+id/joincomplete_tvResult"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=" 이메일(수신거부) SMS(수신거부)"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--하단 버튼-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+        <!-- !추가로 부가정보를 입력하시면 100P가 적립됩니다.-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/square_notice"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/joincomplete_tvAddInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <!-- !추가로 부가정보를 입력하시면 100P가 적립됩니다 끝.-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/joincomplete_btnAddInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/com_addInfo"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/primary"
+                android:textColor="@color/white"
+                android:onClick="onClick"/>
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/joincomplete_btnGoMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/com_goMain"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/darkgray"
+                android:textColor="@color/white"
+                android:onClick="onClick"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

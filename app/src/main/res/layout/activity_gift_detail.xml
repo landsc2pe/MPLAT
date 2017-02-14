@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/giftDetail_ivGoodsImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/giftDetail_tvGoodsProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="페퍼로니(오리지널)M+콜라1.25L"
+            android:textSize="18sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/giftDetail_tvGoodsPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:text="15,100P"/>
+        <TextView
+            android:id="@+id/giftDetail_tvNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:text="포인트가 부족하여 구매하실 수 없습니다."
+            android:textColor="@color/red"
+            android:visibility="gone"/>
+        <!-- 구매하기 -->
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/giftDetail_btnNext"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="구매하기"
+            android:textSize="@dimen/com_btnText"
+            android:background="@color/primary"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+    <!-- 경계선 -->
+    <View android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="1dp"
+        android:background="@color/primaryBorder"/>
+    <!-- 포인트 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/giftDetail_info11"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="보유 포인트"
+                android:textSize="20sp"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/giftDetail_info12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="20,700P"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="60dp"/>
+        </LinearLayout>
+        <!-- 차감 포인트-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/giftDetail_info21"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="차감 포인트"
+                android:textSize="20sp"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/giftDetail_info22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="-15,100P"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="60dp"/>
+        </LinearLayout>
+        <!-- 구매 후 포인트 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/giftDetail_info31"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:text="구매 후 포인트"
+                android:textSize="20sp"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/giftDetail_info32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="5,600P"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:layout_marginRight="60dp"/>
+        </LinearLayout>
+        <!-- 경계선 -->
+        <View android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="1dp"
+            android:background="@color/primaryBorder"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/giftDetail_info41"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="상품권 유효기간은 발급일을 포함하여 30일 이내 입니다."
+                android:textSize="16sp"/>
+            <!-- 구매하기 -->
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/giftDetail_btnInfo"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상품권 안내"
+                android:textSize="@dimen/com_btnText"
+                android:background="@color/browngray"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

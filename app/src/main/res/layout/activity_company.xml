@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- 회사명-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:text="회사명"/>
+            <TextView
+                android:id="@+id/company_TvCompanyName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textSize="18sp"
+                android:text="엠플랫 주식회사"/>
+        </LinearLayout><!-- 회사명 끝 -->
+        <!-- 대표자명-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:text="대표자명"/>
+            <TextView
+                android:id="@+id/company_Tvname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textSize="18sp"
+                android:text=""/>
+        </LinearLayout><!-- 대표자명 끝 -->
+        <!-- 사업자등록번호-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:text="사업자등록번호"/>
+            <TextView
+                android:id="@+id/company_tvNum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textSize="18sp"
+                android:text=""/>
+        </LinearLayout><!-- 사업자등록번호 끝 -->
+        <!-- 대표전화-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:text="대표전화"/>
+            <TextView
+                android:id="@+id/company_tvPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textSize="18sp"
+                android:text=""/>
+        </LinearLayout><!-- 대표전화 끝 -->
+        <!-- 대표메일-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="10">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="18sp"
+                android:text="대표메일"/>
+            <TextView
+                android:id="@+id/company_tvMail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:textSize="18sp"
+                android:text=""/>
+        </LinearLayout><!-- 대표메일 끝 -->
+    </LinearLayout>
+
+    <!-- 경계선 -->
+    <View android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_height="1dp"
+        android:background="@color/primaryBorder"/>
+</LinearLayout><!-- 1 -->

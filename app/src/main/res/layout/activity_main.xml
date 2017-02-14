@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main">
+    <!-- http://kitesoft.tistory.com/75 -->
+    <!-- http://kd3302.tistory.com/98 -->
+    <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:background="@color/primaryBackground"
+        android:orientation="horizontal">
+        <!-- 등급아이콘, 아이디 그룹-->
+        <LinearLayout
+            android:id="@+id/main_llGrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!-- 등급 아이콘-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/grade_b"/>
+            <!-- 이메일-->
+            <TextView
+                android:id="@+id/main_tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- 포인트 아이콘, 포인트 그룹 -->
+        <LinearLayout
+            android:id="@+id/main_llPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <!-- 포인트 아이콘-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/point_p"/>
+            <!-- 포인트 -->
+            <TextView
+                android:id="@+id/main_tvPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:text="0"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 메인 배너 -->
+    <LinearLayout
+        android:id="@+id/main_llBanner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+        <ViewFlipper
+            android:id="@+id/main_vf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--ImageView
+            android:id="@+id/main_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mainbanner"
+            android:background="@color/bluegreen"
+            android:scaleType="fitXY"/-->
+        </ViewFlipper>
+        <!-- viewFilpper 테스트용 -->
+        <!--LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/main_prev"
+                android:text="이전"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:onClick="onClick"/>
+            <ToggleButton
+                android:id="@+id/main_tbAuto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="auto"
+                android:textOn="stop"/>
+            <Button
+                android:id="@+id/main_next"
+                android:text="다음"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:onClick="onClick"/>
+        </LinearLayout-->
+
+    </LinearLayout>
+
+    <!-- 하단 메뉴 -->
+    <ScrollView
+        android:id="@+id/agreement_svParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="vertical">
+
+            <!-- 쿠폰 이미지버튼, 미션 이미지버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:orientation="horizontal">
+                <!-- 쿠폰-->
+                <LinearLayout
+                    android:id="@+id/main_llCoupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <kr.co.mplat.www.DynamicImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/coupon"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+                <View android:layout_width="6dp"
+                        android:layout_height="match_parent" />
+                <!-- 미션-->
+                <LinearLayout
+                    android:id="@+id/main_llMission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <kr.co.mplat.www.DynamicImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mission"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 쿠폰 이미지버튼, 미션 이미지버튼-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:orientation="horizontal">
+                <!-- 리뷰-->
+                <LinearLayout
+                    android:id="@+id/main_llReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <kr.co.mplat.www.DynamicImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/review"
+                        android:background="@drawable/borderless"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+                <View android:layout_width="6dp"
+                    android:layout_height="match_parent" />
+
+                <!-- 설문조사-->
+                <LinearLayout
+                    android:id="@+id/main_llSurvey"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <kr.co.mplat.www.DynamicImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/survey"
+                        android:background="@drawable/borderless"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 라운지 이미지버튼, 회원추천 이미지버튼-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/main_llLounge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <!-- 라운지-->
+                    <kr.co.mplat.www.DynamicImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/lounge"
+                        android:background="#00000000"
+                        android:scaleType="centerCrop"/>
+                </LinearLayout>
+                <View android:layout_width="6dp"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:id="@+id/main_llRecommend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                <!-- 회원추천-->
+                <kr.co.mplat.www.DynamicImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/recommend"
+                    android:background="#00000000"
+                    android:scaleType="centerCrop"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

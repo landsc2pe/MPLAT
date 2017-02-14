@@ -1,0 +1,283 @@
+<resources>
+    <!-- sns 로그인연동-->
+    <string name="facebook_app_id">816229201855282</string>
+    <!--******************************* 공통 ************************************-->
+    <string name="app_name">MPLAT</string>
+    <string name="com_ok">확인</string>
+    <string name="com_cancel">취소</string>
+    <string name="com_next">다음</string>
+    <string name="com_prev">이전</string>
+    <string name="com_complete">입력완료 (+100P)</string>
+    <string name="com_addInfo">부가정보 입력(+100P)</string>
+    <string name="com_goMain">메인화면으로</string>
+    <string name="com_auth">휴대폰 본인인증</string>
+    <string name="com_bank">계좌번호 등록</string>
+    <!-- et hint -->
+    <string name="hint_id">6-20자 영소문자 또는 숫자 조합</string>
+    <string name="hint_pw1">6-16자 영문,숫자,특수문자 조합</string>
+    <string name="hint_pw2">비밀번호 재확인</string>
+    <string name="hint_email1">이메일 주소 입력</string>
+
+
+    <!-- url -->
+    <string name="url_login">http://app.mplat.co.kr:8080/login</string>
+    <string name="url_searchId">http://app.mplat.co.kr:8080/searchId</string>
+    <string name="url_searchIdAuth">http://app.mplat.co.kr:8080/searchIdAuth</string>
+    <string name="url_searchPw">http://app.mplat.co.kr:8080/searchPw</string>
+    <string name="url_searchPwMobile">http://app.mplat.co.kr:8080/searchPwMobile</string>
+    <string name="url_searchPwAuth">http://app.mplat.co.kr:8080/searchPwAuth</string>
+    <string name="url_searchPwChange">http://app.mplat.co.kr:8080/searchPwChange</string>
+    <string name="url_idDupCheck">http://app.mplat.co.kr:8080/idDupCheck</string>
+    <string name="url_emailDupCheck">http://app.mplat.co.kr:8080/emailDupCheck</string>
+    <string name="url_joinMobile">http://app.mplat.co.kr:8080/joinMobile</string>
+    <string name="url_joinAuth">http://app.mplat.co.kr:8080/joinAuth</string>
+    <string name="url_join">http://app.mplat.co.kr:8080/join</string>
+    <string name="url_agree">http://app.mplat.co.kr:8080/agree</string>
+    <string name="url_agreement">http://app.mplat.co.kr:8080/agreement</string>
+    <string name="url_joinmobile">http://app.mplat.co.kr:8080/joinMobile</string>
+    <string name="url_addinfoList">http://app.mplat.co.kr:8080/addinfoList</string>
+    <string name="url_joinAddinfo">http://app.mplat.co.kr:8080/joinAddinfo</string>
+    <string name="url_main">http://app.mplat.co.kr:8080/main</string>
+    <string name="url_snsLogin">http://app.mplat.co.kr:8080/snsLogin</string>
+    <string name="url_snsJoin">http://app.mplat.co.kr:8080/snsJoin</string>
+    <string name="url_point">http://app.mplat.co.kr:8080/point</string>
+    <string name="url_authwv">http://mplat.co.kr/auth/android_start.php</string>
+    <string name="url_auth">http://app.mplat.co.kr:8080/auth</string>
+    <string name="url_authComplete">http://app.mplat.co.kr:8080/authComplete</string>
+    <string name="url_bank">http://app.mplat.co.kr:8080/bank</string>
+    <string name="url_bankAccount">http://app.mplat.co.kr:8080/bankAccount</string>
+    <string name="url_cashRequest">http://app.mplat.co.kr:8080/cashRequest</string>
+    <string name="url_cash">http://app.mplat.co.kr:8080/cash</string>
+    <string name="url_basicinfo">http://app.mplat.co.kr:8080/basicinfo</string>
+    <string name="url_culturelandRequest">http://app.mplat.co.kr:8080/culturelandRequest</string>
+    <string name="url_culturelandHistory">http://app.mplat.co.kr:8080/culturelandHistory</string>
+    <string name="url_gift">http://app.mplat.co.kr:8080/gift</string>
+    <string name="url_giftProduct">http://app.mplat.co.kr:8080/giftProduct</string>
+    <string name="url_giftDetail">http://app.mplat.co.kr:8080/giftDetail</string>
+    <string name="url_giftRequest">http://app.mplat.co.kr:8080/giftRequest</string>
+    <string name="url_pwd">http://app.mplat.co.kr:8080/pwd</string>
+    <string name="url_pwdChange">http://app.mplat.co.kr:8080/pwdChange</string>
+    <string name="url_withdraw">http://app.mplat.co.kr:8080/withdraw</string>
+    <string name="url_withdrawCancel">http://app.mplat.co.kr:8080/withdrawCancel</string>
+    <string name="url_emailChange">http://app.mplat.co.kr:8080/emailChange</string>
+    <string name="url_addinfo">http://app.mplat.co.kr:8080/addinfo</string>
+    <string name="url_mobileChange">http://app.mplat.co.kr:8080/mobileChange</string>
+    <string name="url_mobileChangeRequest">http://app.mplat.co.kr:8080/mobileChangeRequest</string>
+    <string name="url_pointCoupon">http://app.mplat.co.kr:8080/pointCoupon</string>
+    <string name="url_blog">http://app.mplat.co.kr:8080/blog</string>
+    <string name="url_blogChange">http://app.mplat.co.kr:8080/blogChange</string>
+    <string name="url_notice">http://app.mplat.co.kr:8080/notice</string>
+    <string name="url_faq">http://app.mplat.co.kr:8080/faq</string>
+    <string name="url_agreeInfo">http://app.mplat.co.kr:8080/agreeInfo</string>
+    <string name="url_agreeChange">http://app.mplat.co.kr:8080/agreeChange</string>
+    <string name="url_company">http://app.mplat.co.kr:8080/company</string>
+    <string name="url_config">http://app.mplat.co.kr:8080/config</string>
+    <string name="url_qnaType">http://app.mplat.co.kr:8080/qnaType</string>
+    <string name="url_qnaWrite">http://app.mplat.co.kr:8080/qnaWrite</string>
+    <string name="url_qnaHistory">http://app.mplat.co.kr:8080/qnaHistory</string>
+    <string name="url_qnaDelete">http://app.mplat.co.kr:8080/qnaDelete</string>
+    <string name="url_grade">http://app.mplat.co.kr:8080/grade</string>
+    <string name="url_gradeInfo">http://app.mplat.co.kr:8080/gradeInfo</string>
+    <string name="url_activepoint">http://app.mplat.co.kr:8080/activepoint</string>
+    <string name="url_activepointHistory">http://app.mplat.co.kr:8080/activepointHistory</string>
+    <string name="url_activepointInfo">http://app.mplat.co.kr:8080/activepointInfo</string>
+    <string name="url_pointHistory">http://app.mplat.co.kr:8080/pointHistory</string>
+    <string name="url_coupon">http://app.mplat.co.kr:8080/coupon</string>
+    <string name="url_couponDetail">http://app.mplat.co.kr:8080/couponDetail</string>
+    <string name="url_couponRequest">http://app.mplat.co.kr:8080/couponRequest</string>
+    <string name="url_couponHistory">http://app.mplat.co.kr:8080/couponHistory</string>
+    <string name="url_couponUse">http://app.mplat.co.kr:8080/couponUse</string>
+    <string name="url_autoCoupon">http://app.mplat.co.kr:8080/autoCoupon</string>
+    <string name="url_autoCouponSave">http://app.mplat.co.kr:8080/autoCouponSave</string>
+    <string name="url_mission">http://app.mplat.co.kr:8080/mission</string>
+    <string name="url_missionDetail">http://app.mplat.co.kr:8080/missionDetail</string>
+    <string name="url_missionRequest">http://app.mplat.co.kr:8080/missionRequest</string>
+    <string name="url_missionHistory">http://app.mplat.co.kr:8080/missionHistory</string>
+    <string name="url_survey">http://app.mplat.co.kr:8080/survey</string>
+    <string name="url_surveyResult">http://app.mplat.co.kr:8080/surveyResult</string>
+    <string name="url_surveyHistory">http://app.mplat.co.kr:8080/surveyHistory</string>
+    <string name="url_surveyDetail">http://app.mplat.co.kr:8080/surveyDetail</string>
+    <string name="url_event">http://app.mplat.co.kr:8080/event</string>
+    <string name="url_eventDetail">http://app.mplat.co.kr:8080/eventDetail</string>
+    <string name="url_eventResult">http://app.mplat.co.kr:8080/eventResult</string>
+    <string name="url_eventResultDetail">http://app.mplat.co.kr:8080/eventResultDetail</string>
+    <string name="url_recommendSendmail">http://app.mplat.co.kr:8080/recommendSendmail</string>
+    <string name="url_recommendHistory">http://app.mplat.co.kr:8080/recommendHistory</string>
+    <string name="url_recommendGrade">http://app.mplat.co.kr:8080/recommendGrade</string>
+    <string name="url_review">http://app.mplat.co.kr:8080/review</string>
+    <string name="url_reviewDetail">http://app.mplat.co.kr:8080/reviewDetail</string>
+    <string name="url_address">http://app.mplat.co.kr:8080/address</string>
+    <string name="url_reviewInfo">http://app.mplat.co.kr:8080/reviewInfo</string>
+    <string name="url_reviewRequest">http://app.mplat.co.kr:8080/reviewRequest</string>
+    <string name="url_reviewHistory">http://app.mplat.co.kr:8080/reviewHistory</string>
+    <string name="url_reviewCancel">http://app.mplat.co.kr:8080/reviewCancel</string>
+    <string name="url_reviewList">http://app.mplat.co.kr:8080/reviewList</string>
+    <string name="url_reviewWrite">http://app.mplat.co.kr:8080/reviewWrite</string>
+    <string name="url_reviewComment">http://app.mplat.co.kr:8080/reviewComment</string>
+    <!--******************************* 공통 끝 ************************************-->
+
+    <!-- 다이얼로그 -->
+    <!-- 약관동의 : activity_agreement.xml -->
+    <string name="dial_title1">약관동의</string>
+    <string name="dial_title2">회원정보 입력</string>
+    <string name="dial_title3">수신동의 확인</string>
+    <string name="dial_title4">부가정보 입력</string>
+    <string name="dial_msg1">만 14세 미만은 가입대상이 아닙니다.</string>
+    <string name="dial_msg2">서비스 이용약관에 동의해 주세요.</string>
+    <string name="dial_msg3">개인정보 수집 및 이용에 동의해 주세요.</string>
+    <string name="dial_msg4">필수항목을 선택하여 주세요.</string>
+    <string name="dial_msg5">휴대폰 번호를 입력하여 주세요.</string>
+    <string name="dial_msg6">입력 완료 되었습니다.</string>
+    <string name="dial_msg7">6-20자 영소문자 또는 숫자 조합으로 입력하여 주세요.</string>
+    <string name="dial_msg8">인증에 실패하였습니다.</string>
+    <string name="dial_msg9">입력 완료 되었습니다.</string>
+
+
+    <!--******************************* 페이지별 ************************************-->
+    <!-- 수신동의 선택 : activity_agree.xml -->
+    <string name="agree_agreeEmail">&#160;&#160;이메일 수신 동의 (선택사항)</string>
+    <string name="agree_agreeSMS">&#160;&#160;SMS 문자 수신 동의 (선택사항)</string>
+    <!-- 수신동의 확인 : activity_join_complete.xml -->
+
+    <string name="joincomplete_descTitle"><b>이메일 및 SMS 수신 동의 여부 안내</b></string>
+    <string name="joincomplete_sender">&#160;전송자 :</string>
+    <string name="joincomplete_date">&#160;처리일자 :</string>
+    <string name="joincomplete_content">&#160;처리내용 :</string>
+
+    <!-- activity_join_add_info.xml -->
+
+    <string name="joinaddinfo_title1">&#160;<b>이동통신사</b></string>
+    <string name="joinaddinfo_title2">&#160;<b>휴대폰 종류</b></string>
+    <string name="joinaddinfo_title3">&#160;<b>스마트폰OS</b></string>
+    <string name="joinaddinfo_title4">&#160;<b>결혼여부</b></string>
+    <string name="joinaddinfo_title5">&#160;<b>거주지역</b></string>
+    <string name="joinaddinfo_title6">&#160;<b>직업</b></string>
+    <string name="joinaddinfo_title7"><b>부가정보를 입력하시면 100P 더 지급해 드립니다. 아래 정보를 입력해 주시기 바랍니다.</b></string>
+    <!-- auth -->
+    <string name="auth_title1"><b>이체 안내</b></string>
+    <string name="joinaddinfo_txt1">&#160;스마트폰&#160;&#160;&#160;</string>
+    <string name="joinaddinfo_txt2">&#160;피처폰&#160;&#160;&#160;</string>
+    <string name="joinaddinfo_txt3">&#160;기타&#160;&#160;&#160;</string>
+    <string name="joinaddinfo_txt4">미혼</string>
+    <string name="joinaddinfo_txt5">기혼</string>
+    <!-- cash -->
+    <string name="cash_txt1"><b>이체금액</b></string>
+    <string name="cash_txt2"><b>이체 안내</b></string>
+    <string name="cash_txt3"><b>이체 계좌 정보</b></string>
+    <string name="cash_txt4">최소 5,000포인트 이상 부터 이체 가능합니다.</string>
+    <!-- cash result-->
+    <string name="cashResult_txt1">현금이체 신청이 완료되었습니다.</string>
+    <string name="cashResult_txt2"><b>이체 신청 금액</b></string>
+    <string name="cashResult_txt3"><b>이체 계좌 정보</b></string>
+    <string name="cashResult_txt4"><b>이체 예정일</b></string>
+    <!--******************************* 페이지별 끝 ************************************-->
+    <!-- 페이지별-->
+    <!-- 이용약관 : activity_agreement.xml -->
+    <string name="agreement_title1"><b>이용약관 및 개인정보 취급 이용안내에 대해 모두 동의</b></string>
+    <string name="agreement_title2"><b>본인은 만 14세 이상임을 확인 합니다.(필수)</b></string>
+    <string name="agreement_title3"><b>엠플랫 이용약관 동의(필수)</b></string>
+    <string name="agreement_title4"><b>개인정보 수집 및 이용에 대한 안내 (필수)</b></string>
+    <string name="agreement_txt_1"><b>예, 14세 이상입니다.</b></string>
+    <string name="agreement_txt_2"><b>아니오, 14세 미만입니다.</b></string>
+    <string name="agreement_txt_3"><b>서비스 이용약관에 동의</b></string>
+    <string name="agreement_txt_4"><b>개인정보 수집 및 이용에 동의</b></string>
+    <!-- 본인인증 : activity_auth.xml-->
+    <string name="auth_txt_1">포인트를 현금으로 이체하기 위해서는 이체계좌등록이 필요하며, 이체계좌등록은 휴대폰 본인인증을 진행한 회원만 등록 가능합니다.</string>
+    <string name="auth_txt_2"><b>휴대폰 본인인증 완료 시, 인증된 정보로 회원정보가 변경됨을 확인 합니다.</b></string>
+    <!-- 회원가입 > 휴대폰인증 activity_joinmobile.xml -->
+
+
+    <!-- button -->
+
+
+    <string name="txt_title">MPLAT</string>
+    <string name="txt_checkMobile">휴대폰 번호 확인</string>
+    <string name="txt_authCodeOK">인증번호 확인</string>
+    <string name="txt_id"><b>아이디</b></string>
+    <string name="txt_regist"><b><u>회원가입</u></b></string>
+    <string name="txt_searchId">아이디 찾기</string>
+    <string name="txt_searchPw">비밀번호 찾기</string>
+    <string name="txt_pw">비밀번호 찾기</string>
+    <string name="txt_login"><b><u>로그인 하기</u></b></string>
+    <!--string name="txt_agreeAll">&#160;<b>이용약관 및 개인정보 취급 이용안내에 대해 모두 동의</b></string>
+    <string name="txt_agreeAge14"><b>본인은 만 14세 이상임을 확인 합니다.(필수)</b></string>
+    <string name="txt_agreeInfo1"><b>엠플랫 이용약관 동의(필수)</b></string>
+    <string name="txt_agreeInfo2"><b>개인정보 수집 및 이용에 대한 안내(필수)</b></string>
+    <string name="txt_agreeYesAge14"><b> 예, 14세 이상입니다.</b></string>
+    <string name="txt_agreeNoAge14"><b> 아니오, 14세 미만입니다.</b></string>
+    <string name="txt_agree1"> <b>서비스 이용약관에 동의</b></string>
+    <string name="txt_agree2"> <b>개인정보 수집 및 이용에 동의</b></string-->
+
+    <string name="btn_ok">확인</string>
+    <string name="btn_cancel">취소</string>
+    <string name="btn_yes">예</string>
+    <string name="btn_no">아니오</string>
+    <string name="btn_login">로그인</string>
+    <string name="btn_sendAuthCode">인증번호 발송</string>
+    <string name="btn_sendAuthCode2">인증번호 전송</string>
+    <string name="btn_authCodeOK">인증번호 확인</string>
+    <string name="btn_resendAuthCode">인증번호 재전송</string>
+    <string name="btn_retry">다시 시도</string>
+    <string name="btn_next">다음</string>
+
+    <!-- text -->
+    <string name="msg_checkAuthCode">인증번호 5자리 숫자</string>
+    <string name="msg_yourId">고객님의 아이디는 아래와 같습니다.</string>
+    <string name="msg_checkIdPw">아이디 또는 비밀번호를 다시 한번 확인해 주세요.</string>
+    <string name="msg_checkMobile">- 빼고 숫자만 입력해주세요.</string>
+    <string name="msg_checkAuth">엠플랫 서비스를 정상적으로 이용하기 위해서는 핸드폰 인증이 반드시 필요합니다.</string>
+    <string name="msg_inputMobileCode">회원으로 가입한 휴대전화번호를 입력하세요.</string>
+    <string name="msg_inputId">6~20자 영소문자 또는 숫자 조합</string>
+    <string name="msg_checkNetwork">인터넷 연결상태를 확인해주세요</string>
+    <string name="msg_sendCodeThisMoblie">이 번호로 코드를 보내드릴까요?</string>
+    <string name="msg_inputMobile">핸드폰 번호를 입력하여 주세요.</string>
+
+    <!-- 구글 테스트용  -->
+    <string name="title_text">Google Sign-In\nQuickstart</string>
+
+    <!-- Sign-in status messages -->
+    <string name="signed_in_fmt">Signed in as: %s</string>
+    <string name="signed_in">Signed in</string>
+    <string name="signing_in">Signing in…</string>
+    <string name="signed_out">Signed out</string>
+    <string name="signed_in_err">"Error: please check logs."</string>
+    <string name="error_null_person">
+        Error: Plus.PeopleApi.getCurrentPerson returned null. Ensure that the Google+ API is
+        enabled for your project, you have a properly configured google-services.json file
+        and that your device has an internet connection.
+    </string>
+    <string name="loading">Loading…</string>
+    <string name="auth_code_fmt">Auth Code: %s</string>
+    <string name="id_token_fmt">ID Token: %s</string>
+
+    <!-- Google Play Services error for Toast -->
+    <string name="play_services_error_fmt">Google Play Services Error: %i</string>
+
+    <!-- Button labels -->
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="refresh_token">Get Fresh Token</string>
+
+    <!-- Content Description for images -->
+    <string name="desc_google_icon">Google Logo</string>
+
+    <!-- Rationale for asking for Contacts -->
+    <string name="contacts_permission_rationale">Contacts access is needed in order to retrieve your email address.</string>
+
+    <!-- Activity Names and Descriptions -->
+    <string name="name_sign_in_activity">SignInActivity</string>
+    <string name="desc_sign_in_activity">Signing in, signing out, and revoking access.</string>
+    <string name="desc_sign_in_activity_scopes">Signing in, signing out, and revoking access with Google Drive permissions.</string>
+    <string name="name_id_token_activity">IdTokenActivity</string>
+    <string name="desc_id_token_activity">Retrieving an ID Token for the user.</string>
+    <string name="desc_auth_code_activity">Demonstrate retrieving an auth code for authorizing your server.</string>
+    <string name="name_auth_code_activity">ServerAuthCodeActivity</string>
+
+    <!-- TODO(user): replace with your real server client ID -->
+    <!-- Server Client ID.  This should be a valid Web OAuth 2.0 Client ID obtained
+         from https://console.developers.google.com/ -->
+    <string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_first_install_show_page1">FirstInstallShowPage1Activity</string>
+    <!-- 구글 테스트용 끝-->
+</resources>

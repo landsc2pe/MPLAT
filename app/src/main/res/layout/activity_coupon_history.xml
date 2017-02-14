@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <LinearLayout
+        android:id="@+id/couponHistory_llParent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:background="@color/darkgray">
+        <LinearLayout
+            android:id="@+id/couponHistory_llCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/couponHistory_tvCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="쿠폰 신청"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/primaryFont"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/couponHistory_llCouponHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/primary">
+            <TextView
+                android:id="@+id/couponHistory_tvCouponHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="나의 쿠폰함"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/couponHistory_llAutoCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/couponHistory_tvAutoCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="쿠폰 자동발급"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/primaryFont"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/couponHistory_lvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

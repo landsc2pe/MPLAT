@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+            <TextView
+                android:id="@+id/withdrawCancel_tvInfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="mplat@gmail.com는 회원탈퇴를 신청한 아이디이며, 현재는 탈퇴 유예기간으로 취소가 가능합니다."
+                android:textSize="15sp"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- 삭제예정일-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:background="@drawable/border">
+                <TextView
+                    android:id="@+id/withdrawCancel_tvInfo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="완전 삭제 예정일"
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/withdrawCancel_tvInfo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="2016년 12월 7일 자정 이후"
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/withdrawCancel_tvInfo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="(탈퇴 신청 및 동의일 : 2016년 11월 30일)"
+                    android:gravity="center"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="※ "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/withdrawCancel_tvInfo5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="완전삭제 예정일 이후에는 데이터가 완전히 삭제되어 복구가 불가능하며, 해당 이메일로 재가입하실 수 없습니다."
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/withdrawCancel_btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원탈퇴를 취소하고 다시 사용하겠습니다."
+            android:textSize="18sp"
+            android:background="@color/primary"
+            android:textColor="@color/white" />
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/withdrawCancel_btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="뒤로가기"
+            android:textSize="18sp"
+            android:background="@color/darkblack"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

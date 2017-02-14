@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF">
+    <LinearLayout
+        android:id="@+id/eventResult_llParent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/eventResult_llEvent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/eventResult_tvEvent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="진행중인 이벤트"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/primaryFont"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/eventResult_llEventResult"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/primary">
+            <TextView
+                android:id="@+id/eventResult_tvEventResult"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="이벤트 당첨자"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/eventResult_lvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

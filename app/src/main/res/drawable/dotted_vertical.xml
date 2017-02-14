@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android" android:shape="line">
+    <stroke
+        android:color="#FF0000FF"
+        android:dashWidth="4dp"
+        android:dashGap="8dp"/>
+</shape>
+<!--
+<View
+android:layout_centerInParent="true"
+android:layout_width="match_parent"
+android:layout_height="8dp"
+android:layout_margin="20dp"
+android:layerType="software"
+android:background="@drawable/dotted"/>
+-->

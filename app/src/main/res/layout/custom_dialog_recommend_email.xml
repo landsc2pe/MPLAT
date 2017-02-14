@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--제목-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="추천 받는 분 이메일 입력"
+            android:padding="10dp"
+            android:background="@color/lightgray"
+            android:textColor="@color/primaryFont"
+            android:gravity="center"
+            android:textSize="18sp"/>
+        <!-- 경계선 -->
+        <View android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/primaryBorder"/>
+        <!--버전-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/recommend_popName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="받는 분 이름을 입력해주세요."
+                    android:background="@drawable/border"/>
+                <EditText
+                    android:id="@+id/recommend_popEmail"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="받는 분 이메일을 입력해주세요."
+                    android:background="@drawable/border"/>
+                <TextView
+                    android:id="@+id/recommend_popMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <!-- 취소 -->
+            <TextView
+                android:id="@+id/dialog_recommendEmail_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="취소"
+                android:padding="10dp"
+                android:background="@color/primaryBlack"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+            <!-- 보내기 -->
+            <TextView
+                android:id="@+id/dialog_recommendEmail_send"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="보내기"
+                android:padding="10dp"
+                android:background="@color/primary"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+</LinearLayout>

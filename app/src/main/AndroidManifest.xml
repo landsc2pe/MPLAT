@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="kr.co.mplat.www">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.hardware.wifi" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 위치정보활용시 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 위치정보활용시 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- WIFI 상태활용시 추가 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- WIFI 상태활용시 추가 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- 카카오 -->
+    <application
+        android:name=".GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="adjustPan">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <!-- 인트로 화면 -->
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".LogoutActivity"
+            android:screenOrientation="portrait" />
+        <!-- 메인 -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- 로그인 -->
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <!-- 아이디 찾기 -->
+        <activity
+            android:name=".SearchIdActivity"
+            android:screenOrientation="portrait" />
+        <!-- 아이디 찾기 인증 -->
+        <activity
+            android:name=".SearchIdAuthActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <!-- 아이디 찾기 결과 -->
+        <activity
+            android:name=".SearchIdResultActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+
+        <!-- 비밀번호 찾기 -->
+        <activity
+            android:name=".SearchPwActivity"
+            android:screenOrientation="portrait" />
+        <!-- 비밀번호 찾기 휴대폰번호 입력 -->
+        <activity
+            android:name=".SearchPwMobileActivity"
+            android:screenOrientation="portrait" />
+        <!-- 비밀번호 찾기 인증번호 입력 -->
+        <activity
+            android:name=".SearchPwAuthActivity"
+            android:screenOrientation="portrait" />
+        <!-- 비밀번호 찾기 전화번호 변경 -->
+        <activity
+            android:name=".SearchPwChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgreementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JoinMobileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JoinActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgreeActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JoinCompleteActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JoinAddInfoActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".JoinAuthActivity" />
+
+        <!-- 카카오 연동 -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <!-- 네이버 아이디로 로그인에서 사용하는 액티비티를 등록 -->
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+            android:label="OAuth2.0 In-app"
+            android:screenOrientation="portrait" />
+        <!-- 페이스북 아이디 -->
+
+        <activity
+            android:name=".AuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AuthWvActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".BankActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PointActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CashActivity" />
+        <activity
+            android:name=".CashResultActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".CulturelandActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CulturelandRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CulturelandHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MypageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PwdChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SnsAuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InfoChangeEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InfoChangeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".InfoChangeAuthActivity" />
+        <activity
+            android:name=".InfoChangeAuthEmailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".GoogleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GiftActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GiftProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GiftDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MobileChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MobileChangeRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AuthDescActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CashAuthDescActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PointCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PointCouponUseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WithdrawCancelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BlogActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".ConfigActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FaqActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgreeChangeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RuleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CompanyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QnaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QnaWriteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QnaHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QnaDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GradeInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivepointActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivepointHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivepointInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PointHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PointInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurveyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CouponDetailActivity"
+            android:screenOrientation="portrait">
+            <intent-filter> <!-- 카카오 링크 -->
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaostory_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CouponRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CouponHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CouponUseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AutoCouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AutoCouponSaveActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider816229201855282"
+            android:exported="true" />
+
+        <activity
+            android:name=".MissionHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MissionDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MissionRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurveyHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurveyDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurveyJoinActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SurveyAuthActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurveyResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EventActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EventDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EventResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EventResultDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecommendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecommendHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecommendGradeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewRequest1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewRequest2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewRequest3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecommendInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecommendGradeInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".FirstInstallAdActivity" />
+
+        <activity android:name=".ReviewSearchZipCodeActivity" />
+
+    </application>
+
+</manifest>

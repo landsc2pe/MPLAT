@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="94dp"
+    android:padding="10dp"
+    android:id="@+id/event_llParent">
+        <ImageView
+            android:id="@+id/event_ivTitleImg"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+                <TextView
+                    android:id="@+id/event_tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="랜드슬라이더"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/event_tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="2016.06.03~2016.06.30"/>
+        </LinearLayout>
+</LinearLayout>

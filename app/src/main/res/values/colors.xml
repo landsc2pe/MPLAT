@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7161C4</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- Basic-->
+    <color name="primary">#7161C4</color><!--기본 배경 -->
+    <color name="primaryFont">#7D7D7D</color><!-- 기본 폰트 -->
+    <color name="primaryDisabled">#D3D3D3</color><!-- 기본 버튼 disabled -->
+    <color name="primaryBorder">#DEDEDE</color><!-- 기본 border -->
+    <color name="primaryDivision">#ECECEC</color><!-- 기본 구분선 -->
+    <color name="primaryBlack">#2F2F2F</color><!-- 메인 actionbar  -->
+    <color name="primaryBackground">#F1F1F1</color><!-- 메인 backbround  -->
+
+
+    <!-- etc -->
+    <color name="black">#000</color>
+    <color name="darkblack">#4F4E51</color>
+    <color name="browngray">#727075</color>
+
+
+    <color name="white">#FFF</color>
+
+    <color name="gray">#F3F4F6</color>
+    <color name="darkgray">#B0B0B0</color>
+    <color name="lightgray">#F7F7F7</color>
+    <color name="bordergray">#D4D4D4</color>
+
+    <color name="red">#D57A76</color>
+    <color name="orange">#F07907</color>
+    <color name="bluegreen">#62BDB5</color>
+
+    <!-- 구글 테스트용-->
+
+    <color name="blue_grey_500">#607D8B</color>
+    <color name="blue_grey_600">#546E7A</color>
+    <color name="blue_grey_700">#455A64</color>
+    <color name="blue_grey_800">#37474F</color>
+    <color name="blue_grey_900">#263238</color>
+
+
+    <!-- 구글 테스트용 끝-->
+
+</resources>

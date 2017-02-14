@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/blog_tvInfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:text="리뷰(홍보글)를 게재하실 본인소유의 블로그 또는 SNS를 등록해주시기 바랍니다."
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center"/>
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <!-- dla-->
+            <TextView
+                android:id="@+id/blog_tvInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="블로그 등록(*필수 1개이상)"
+                android:textSize="16sp"/>
+
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <!--##### Blog 1 #####-->
+            <LinearLayout
+                android:id="@+id/blog_llParent1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+                <!-- 블로그 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="블로그 1"
+                        android:id="@+id/blog_tvHeader1"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/blog_btnDelete1"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/primaryDisabled"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/blog_spBlog1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/blog_etTitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="블로그 제목을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="text"/>
+                <EditText
+                    android:id="@+id/blog_etUrl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="블로그 URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Blog 1 END #####-->
+            <!--##### Blog 2 #####-->
+            <LinearLayout
+                android:id="@+id/blog_llParent2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_horizontal"
+                    android:layout_marginBottom="20dp"/>
+                <!-- 블로그 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="블로그 2"
+                        android:id="@+id/blog_tvHeader2"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/blog_btnDelete2"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/darkblack"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/blog_spBlog2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/blog_etTitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="블로그 제목을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="text"/>
+                <EditText
+                    android:id="@+id/blog_etUrl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="블로그 URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Blog 2 END #####-->
+            <!--##### Blog 3 #####-->
+            <LinearLayout
+                android:id="@+id/blog_llParent3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_horizontal"
+                    android:layout_marginBottom="20dp"/>
+                <!-- 블로그 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="블로그 3"
+                        android:id="@+id/blog_tvHeader3"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/blog_btnDelete3"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/darkblack"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/blog_spBlog3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/blog_etTitle3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="블로그 제목을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="text"/>
+                <EditText
+                    android:id="@+id/blog_etUrl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="블로그 URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Blog 3 END #####-->
+            <!--##### Blog 4 #####-->
+            <LinearLayout
+                android:id="@+id/blog_llParent4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_horizontal"
+                    android:layout_marginBottom="20dp"/>
+                <!-- 블로그 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="블로그 4"
+                        android:id="@+id/blog_tvHeader4"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/blog_btnDelete4"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/darkblack"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/blog_spBlog4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/blog_etTitle4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="블로그 제목을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="text"/>
+                <EditText
+                    android:id="@+id/blog_etUrl4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="블로그 URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Blog 4 END #####-->
+            <!--##### Blog 5 #####-->
+            <LinearLayout
+                android:id="@+id/blog_llParent5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_horizontal"
+                    android:layout_marginBottom="20dp"/>
+                <!-- 블로그 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="블로그 5"
+                        android:id="@+id/blog_tvHeader5"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/blog_btnDelete5"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/darkblack"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/blog_spBlog5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/blog_etTitle5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="블로그 제목을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="text"/>
+                <EditText
+                    android:id="@+id/blog_etUrl5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="블로그 URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Blog 5 END #####-->
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/blog_btnBlogAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="블로그 입력창 추가 +"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/browngray"
+                android:textColor="@color/white"/>
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <TextView
+                android:id="@+id/blog_tvInfo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="SNS 등록(선택)"
+                android:textSize="16sp"/>
+
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+
+            <!--##### Sns 1 #####-->
+            <LinearLayout
+                android:id="@+id/sns_llParent1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- SNS 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SNS 1"
+                        android:id="@+id/sns_tvHeader1"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/sns_btnDelete1"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/primaryDisabled"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/sns_spSns1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/sns_etUrl1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="SNS URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Sns 1 END #####-->
+            <!--##### Sns 2 #####-->
+            <LinearLayout
+                android:id="@+id/sns_llParent2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_horizontal"
+                    android:layout_marginBottom="20dp"/>
+                <!-- SNS 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SNS 2"
+                        android:id="@+id/sns_tvHeader2"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/sns_btnDelete2"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/darkblack"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/sns_spSns2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/sns_etUrl2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="SNS URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Sns 2 END #####-->
+            <!--##### Sns 3 #####-->
+            <LinearLayout
+                android:id="@+id/sns_llParent3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_horizontal"
+                    android:layout_marginBottom="20dp"/>
+                <!-- SNS 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SNS 3"
+                        android:id="@+id/sns_tvHeader3"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/sns_btnDelete3"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/darkblack"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/sns_spSns3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/sns_etUrl3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="블로그 URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Sns 3 END #####-->
+            <!--##### Sns 4 #####-->
+            <LinearLayout
+                android:id="@+id/sns_llParent4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_horizontal"
+                    android:layout_marginBottom="20dp"/>
+                <!-- SNS 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SNS 4"
+                        android:id="@+id/sns_tvHeader14"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/sns_btnDelete4"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/darkblack"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/sns_spSns4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/sns_etUrl4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="SNS URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Sns 4 END #####-->
+            <!--##### Sns 5 #####-->
+            <LinearLayout
+                android:id="@+id/sns_llParent5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+                <View
+                    android:layout_centerInParent="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layerType="software"
+                    android:background="@drawable/dotted_horizontal"
+                    android:layout_marginBottom="20dp"/>
+                <!-- SNS 선택-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="SNS 5"
+                        android:id="@+id/sns_tvHeader5"
+                        android:textSize="18sp"
+                        android:textColor="@color/primaryFont"
+                        android:gravity="left"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right">
+                        <Button style="@style/Widget.AppCompat.Button.Borderless"
+                            android:id="@+id/sns_btnDelete5"
+                            android:layout_width="70dp"
+                            android:layout_height="40dp"
+                            android:text="삭제"
+                            android:textSize="16sp"
+                            android:background="@color/darkblack"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 선택-->
+                <Spinner
+                    android:id="@+id/sns_spSns5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/sns_etUrl5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="SNS URL을 입력하세요"
+                    android:background="@drawable/border"
+                    android:textCursorDrawable="@null"
+                    android:textColor="@color/primary"
+                    android:inputType="textVisiblePassword" />
+            </LinearLayout>
+            <!--##### Sns 5 END #####-->
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/blog_btnSnsAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="SNS 입력창 추가 +"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/browngray"
+                android:textColor="@color/white" />
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/blog_btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="입력 완료"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/primary"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

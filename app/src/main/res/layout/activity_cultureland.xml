@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <!-- http://kitesoft.tistory.com/75 -->
+    <!-- http://kd3302.tistory.com/98 -->
+    <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:background="@color/primaryBackground"
+        android:orientation="horizontal">
+        <!-- 등급아이콘, 아이디 그룹-->
+        <LinearLayout
+            android:id="@+id/cultureland_leftinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <!-- 등급 아이콘-->
+            <!--ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/grade_b"/-->
+            <!-- 이메일-->
+            <!--TextView
+                android:id="@+id/main_tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:textSize="18sp"
+                android:text="mplatid"/-->
+        </LinearLayout>
+
+        <!-- 포인트 아이콘, 포인트 그룹 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <!-- 포인트 아이콘-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/point_p"/>
+            <!-- 포인트 -->
+            <TextView
+                android:id="@+id/cultureland_tvPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:text="0"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 하단 메뉴 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 문화상품권 하위메뉴(삼품권 교환,상품권 보관함) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:gravity="center">
+                    <!-- 상품권교환-->
+                    <ImageButton
+                        android:id="@+id/cultureland_ibCultureTransfer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00000000"
+                        android:src="@drawable/culture_transfer"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:gravity="center">
+                    <!-- 상품권보관함-->
+                    <ImageButton
+                        android:id="@+id/cultureland_ibCulturelandCart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00000000"
+                        android:src="@drawable/cultureland_cart" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:gravity="center">
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:background="#00000000"
+                        android:src="@drawable/cultureland_cart"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

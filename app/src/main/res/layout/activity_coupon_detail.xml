@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/couponDetail_ivImageIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+                    <!-- 앱 출시명 -->
+                    <TextView
+                        android:id="@+id/couponDetail_ivTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"/>
+                    <!-- -->
+                    <TextView
+                        android:id="@+id/couponDetail_ivDeveloperName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nexon Coperation"/>
+                    <TextView
+                        android:id="@+id/couponDetail_tvReward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="랜덤 신화 +4 장비재료 개, 임의 특수 영웅 영혼 5개..."/>
+                    <TextView
+                        android:id="@+id/couponDetail_openDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="출시 예정일: 2016년 10월 예정"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/couponDetail_btnBooking"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:text="사전예약 신청"
+                    android:textSize="16sp"
+                    android:background="@color/primary"
+                    android:textColor="@color/white"
+                    android:gravity="left|center_vertical" />
+            </LinearLayout>
+            <!-- 게임 다운로드 공유하기-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/couponDetail_tvDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:text="게임 다운로드"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/border"
+                    android:padding="1dp"
+                    android:layout_marginRight="1dp"/>
+                <TextView
+                    android:id="@+id/couponDetail_tvShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:text="공유하기"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/border"
+                    android:padding="1dp"
+                    android:layout_marginLeft="1dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/couponDetail_tvTab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="쿠폰 안내"
+                    android:textSize="16sp"
+                    android:background="@drawable/border_n_primary"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="1dp"/>
+                <TextView
+                    android:id="@+id/couponDetail_tvTab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="게임 소개"
+                    android:textSize="16sp"
+                    android:background="@drawable/border_n_default"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="1dp"/>
+            </LinearLayout>
+            <!-- 쿠폰안내-->
+            <ScrollView
+                android:id="@+id/couponDetail_svTab1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border">
+                <LinearLayout
+                    android:id="@+id/couponDetail_llTab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/couponDetail_ivTab1Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/couponDetail_tvTab1Desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="설명입니다. 설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다."
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </ScrollView>
+            <!-- 게임소개 -->
+            <ScrollView
+                android:id="@+id/couponDetail_svTab2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="@drawable/border">
+                <LinearLayout
+                    android:id="@+id/couponDetail_llTab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <WebView
+                        android:id="@+id/couponDetail_wvYoutube"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"></WebView>
+                    <ImageView
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/couponDetail_ivTab2Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!--android.support.v4.view.ViewPager
+                        android:id="@+id/couponDetail_ivTab2Image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" /-->
+                    <TextView
+                        android:id="@+id/couponDetail_tvTab2Desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="설명입니다. 설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다."
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

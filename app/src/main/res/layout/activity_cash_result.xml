@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <!-- http://kitesoft.tistory.com/75 -->
+    <!-- http://kd3302.tistory.com/98 -->
+    <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:background="@color/primaryBackground"
+        android:orientation="horizontal">
+        <!-- 등급아이콘, 아이디 그룹-->
+        <LinearLayout
+            android:id="@+id/cash_leftinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+            <!-- 등급 아이콘-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/grade_b"/>
+            <!-- 이메일-->
+            <TextView
+                android:id="@+id/cashResult_tvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="4dp"
+                android:textSize="18sp"
+                android:text=""/>
+        </LinearLayout>
+
+        <!-- 포인트 아이콘, 포인트 그룹 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+            <!-- 포인트 아이콘-->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/point_p"/>
+            <!-- 포인트 -->
+            <TextView
+                android:id="@+id/cashResult_tvPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:text="0"/>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 하단 메뉴 -->
+    <ScrollView
+        android:id="@+id/cashResult_svParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="true"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:orientation="vertical"
+                android:background="@drawable/border_padding0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:background="@color/lightgray"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/addinfo"
+                        android:scaleType="fitXY"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:textSize="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:text="현금이체 신청이 완료되었습니다.">
+                    </TextView>
+                </LinearLayout>
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="이체 신청 금액"
+                        android:textSize="18dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:weightSum="14">
+                        <EditText
+                            android:id="@+id/cashResult_etPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7,000"
+                            android:gravity="right"
+                            android:background="@drawable/border"
+                            android:enabled="false"
+                            android:layout_weight="13"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:textSize="18dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="원"
+                            android:layout_weight="1">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--구분선(굵게)-->
+            <View android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/primary"/>
+            <!-- ******************* 이체 계좌 정보 ******************* -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_padding0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_header"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cash_txt3"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 은행-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="12">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="은행"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9">
+                        <EditText
+                            android:id="@+id/cashResult_etBank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="16dp"
+                            android:background="@drawable/border"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 계좌번호-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="12">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="계좌번호"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9">
+                        <EditText
+                            android:id="@+id/cashResult_etAccountNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="16dp"
+                            android:background="@drawable/border"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 예금주-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="12">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:layout_gravity="center_vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="예금주"
+                            android:textSize="16dp"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="9">
+                        <EditText
+                            android:id="@+id/cashResult_etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="16dp"
+                            android:background="@drawable/border"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <!-- 이체 예정일-->
+            <!--구분선(굵게)-->
+            <View android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/primary"/>
+            <!-- 이체 예정일-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_padding0">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_header"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cashResult_txt4"
+                        android:textSize="18dp"/>
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/cashResult_tvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 다음 -->
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/cash_btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="돌아가기"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/primary"
+                android:textColor="@color/white"
+                android:layout_gravity="bottom"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

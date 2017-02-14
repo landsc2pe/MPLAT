@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--제목-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="상품권 구매 확인"
+            android:padding="10dp"
+            android:background="@color/darkblack"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/dialog_giftDetailbuy_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="페퍼로니(오리지널)M+콜라 1.25L"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="차감 포인트"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/primary"/>
+        <TextView
+            android:id="@+id/dialog_giftDetailbuy_goodsPoint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="-15,100 P"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@color/primary"/>
+        <TextView
+            android:id="@+id/dialog_giftDetailbuy_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="(문자 수신번호: 010-1234-5678)"
+            android:gravity="center"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="정말로 구매하시겠습니까?\n구매 후 취소 및 환불은 불가능 합니다."
+            android:gravity="center"
+            android:textSize="16sp"/>
+        <!-- 경계선 -->
+        <View android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_height="1dp"
+            android:background="@color/primaryBorder"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <TextView
+                android:id="@+id/dialog_giftDetailDesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="주의사항"
+                android:textSize="18sp"
+                android:lineSpacingExtra="2dp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="- "
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="보유하고 계신 포인트로 교환을 희망하는 모바일 상품교환권을 확인해 주세요."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="- "
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="모바일 상품교환권은 등록된 휴대전화 번호로 MMS(문자메일) 형식으로 발송됩니다."
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="- "
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="2dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="모바일 상품교환권으로 포인트 사용 후 취소가 불가능합니다."
+                    android:textSize="16sp"
+                    android:textColor="@color/red"
+                    android:lineSpacingExtra="2dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/dialog_giftDetailbuy_ok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="확인"
+                android:padding="10dp"
+                android:background="@color/primary"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/dialog_giftDetailbuy_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="취소"
+                android:padding="10dp"
+                android:background="@color/browngray"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:textSize="16sp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

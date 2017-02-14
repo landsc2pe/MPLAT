@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/agreement_svParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="회원탈퇴 신청 전 아래의 내용을 반드시 확인해 주시기 바랍니다."
+                    android:textSize="16dp"/>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 탈퇴안내-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <!--1. 탈퇴 후 회원정보 삭제-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/withraw_tvTitle11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1."
+                                android:textSize="16dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvTitle12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 후 회원정보 삭제"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="- "
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvdesc11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 신청 후 7일 후 모든 회원정보가 삭제 됩니다. (유예기간 7일)"
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="- "
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvdesc12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 신청 후 7일 이전에는 탈퇴를 취소할 수 있으며, 7일 경과 후 삭제된 회원정보는 복구되지 않습니다."
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                        <!--2. 탈퇴 및 재가입 제한, 아이디 재사용 불가-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/withraw_tvTitle21"
+                                android:text="1."
+                                android:textSize="16dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvTitle22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 후 회원정보 삭제"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="- "
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvdesc21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 신청 후 7일 후 모든 회원정보가 삭제 됩니다. (유예기간 7일)"
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="- "
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvdesc22"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 신청 후 7일 이전에는 탈퇴를 취소할 수 있으며, 7일 경과 후 삭제된 회원정보는 복구되지 않습니다."
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                        <!--3. 탈퇴 후 보유하는 정보-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/withraw_tvTitle31"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1."
+                                android:textSize="16dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvTitle32"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 후 회원정보 삭제"
+                                android:textSize="16dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="- "
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvdesc31"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 신청 후 7일 후 모든 회원정보가 삭제 됩니다. (유예기간 7일)"
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="- "
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvdesc32"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 신청 후 7일 이전에는 탈퇴를 취소할 수 있으며, 7일 경과 후 삭제된 회원정보는 복구되지 않습니다."
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="- "
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvdesc33"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 신청 후 7일 이전에는 탈퇴를 취소할 수 있으며, 7일 경과 후 삭제된 회원정보는 복구되지 않습니다."
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="12dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="- "
+                                android:textSize="12dp"/>
+                            <TextView
+                                android:id="@+id/withraw_tvdesc34"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="탈퇴 신청 후 7일 이전에는 탈퇴를 취소할 수 있으며, 7일 경과 후 삭제된 회원정보는 복구되지 않습니다."
+                                android:textSize="14dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- 경계선 -->
+                <View android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/primaryBorder"/>
+                <!-- 개인정보 수집 및 이용에 대한 아내(필수)-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" android:layout_marginTop="10dp">
+                    <CheckBox
+                        android:id="@+id/withraw_cbAgree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/primaryFont"
+                        android:checked="false"
+                        android:button="@null"
+                        android:background="@android:color/transparent"
+                        android:text="위의 내용을 확인하였으며, 이에 동의합니다."
+                        android:drawableLeft="@drawable/ncheckbox"
+                        android:drawablePadding="8dp"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 등급아이콘, 로그인아이디, 포인트아이콘, 포인트-->
+
+    </ScrollView>
+    <Button style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/withraw_btnNext"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="회원탈퇴"
+        android:textSize="@dimen/com_btnText"
+        android:background="@color/primary"
+        android:textColor="@color/white" />
+    <!-- 다음 -->
+    <Button style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_marginTop="10dp"
+        android:id="@+id/withraw_btnCancel"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="뒤로가기"
+        android:textSize="@dimen/com_btnText"
+        android:background="@color/darkblack"
+        android:textColor="@color/white" />
+</LinearLayout>

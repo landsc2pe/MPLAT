@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_weight="4">
+        <!-- 발급일 -->
+        <TextView
+            android:id="@+id/culturelandHistory_textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_weight="1" />
+        <!-- 금액 -->
+        <TextView
+            android:id="@+id/culturelandHistory_textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="16dp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_weight="1" />
+        <!-- 유효기간 -->
+        <TextView
+            android:id="@+id/culturelandHistory_textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="16dp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/culturelandHistory_textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="16dp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/culturelandHistory_btnNo"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:textSize="16dp"
+            android:background="@color/primary"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="번호확인"
+            android:layout_weight="1"
+            android:focusable="false"
+            android:clickable="false"/>
+</LinearLayout>

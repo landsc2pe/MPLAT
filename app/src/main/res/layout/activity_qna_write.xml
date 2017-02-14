@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/qnaWrite_tvInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center"/>
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <!-- 문의 분야 선택 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="문의 분야 선택"
+                    android:textSize="16sp"/>
+                <Spinner
+                    android:id="@+id/qnaWrite_spQnaCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></Spinner>
+            </LinearLayout>
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <!-- 답변 받으실 메일 주소 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="답변 받으실 메일 주소"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/qnaWrite_etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="문의 내용 입력"
+                    android:textSize="16sp"/>
+                <EditText
+                    android:id="@+id/qnaWrite_etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:hint="제목을 입력하세요. (한글 80자 이내)"
+                    android:textSize="14sp"/>
+                <EditText
+                    android:id="@+id/qnaWrite_etContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lines="8"
+                    android:inputType="textMultiLine"
+                    android:scrollHorizontally="false"
+                    android:background="@drawable/border"
+                    android:hint="내용을 입력하세요. 최대 (한글 1,000자 이내)"
+                    android:layout_gravity=""
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <!-- 다음 -->
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/qnaWrite_btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="문의하기"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/primary"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="94dp"
+    android:padding="10dp"
+    android:id="@+id/missionItem_llParent">
+        <ImageView
+            android:id="@+id/missionItem_ivImageIcon"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+                <TextView
+                    android:id="@+id/missionItem_tvAppTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="랜드슬라이더"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/missionItem_tvMission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="설치(즉시 지급)"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/missionItem_tvPoint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3,000P"
+                    android:textSize="20sp"
+                    android:gravity="center_vertical|center"/>
+        </LinearLayout>
+</LinearLayout>

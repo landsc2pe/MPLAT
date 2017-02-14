@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF">
+    <TextView
+        android:id="@+id/reviewlist_descinfo1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:text="도로명, 건물명, 지번에 대해서 통합검색이 가능합니다."
+        android:textSize="16sp"
+        android:textColor="@color/primaryFont"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/reviewsearchzipcode_etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="검색할 주소를 입력하세요"
+            android:background="@drawable/border"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/reviewsearchzipcode_btnsearch"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="검색"
+            android:textSize="@dimen/activity_fontSize"
+            android:background="@color/primary"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/reviewsearchzipcode_llDesc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="※ 검색예시 안내"
+            android:textSize="18sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="- 도로명 + 건물번호 예 : 영동대로86길 12"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="- 동/읍/면/리 + 번지 예 : 영동대로86길 12"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="- 건물명(아파트명) 예 : 동남유화빌딩"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    <!--TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="4dp"
+        android:text="리뷰 진행"
+        android:textSize="18sp"
+        android:textStyle="bold"/-->
+
+    <ListView
+        android:id="@+id/reviewsearchzipcode_lvList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:groupIndicator="@null" />
+
+
+</LinearLayout>

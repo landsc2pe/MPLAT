@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/google_tvInfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"
+                android:gravity="center"/>
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="4"
+                android:orientation="horizontal"
+                android:paddingTop="25dp"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="구글플레이 등록 여부"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/google_tvRegYN"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/google_tvLabel11"
+                    android:layout_width="150dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="구글플레이 아이디"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/google_tvGoogleplayID"
+                    android:ellipsize="end"
+                    android:textSize="16sp"/>
+            </GridLayout>
+            <!-- 구분선 -->
+            <View android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <!-- dla-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                >
+                <TextView
+                    android:id="@+id/google_tvInfo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="horizontal">
+                    <Button style="@style/Widget.AppCompat.Button.Borderless"
+                        android:id="@+id/google_btnBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="돌아가기"
+                        android:textSize="@dimen/activity_fontSize"
+                        android:background="@color/primary"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

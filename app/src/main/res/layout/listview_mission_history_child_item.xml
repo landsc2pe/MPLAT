@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp">
+        <TextView
+            android:id="@+id/missionHistory_tvMission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:textSize="14sp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/missionHistoryPanrentItem_tvPoint"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:textSize="18sp"
+            android:gravity="right|center_vertical"
+            android:layout_gravity="center_vertical"/>
+        <ImageView
+            android:id="@+id/missionHistory_ivHelp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:src="@drawable/ic_action_help"
+            android:layout_gravity="center_vertical"
+            android:background="@color/red"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

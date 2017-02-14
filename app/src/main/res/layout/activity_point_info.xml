@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp">
+    <ScrollView
+        android:id="@+id/pointinfo_svParent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:fadeScrollbars="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="엠플랫 포인트"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="앰플랫에서 진행하는 미션, 설문조사에 참여한 경우 일정한 포인트가 적립됩니다."
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="포인트는 미션 및 설문조사의 난이도, 소요시간을 고려하여 차등적으로 책정됩니다."
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="포인트는 실시간 적립 또는 추후 적립될 수 있습니다."
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="포인트 사용방법에 따라 최소 사용금액 및 사용단위가 달라집니다."
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="최종 포인트 적립 후 1년 이내 신규포인트 적립이 없을 경우, 보유한 포인트는 모두 소멸됩니다."
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="추가 포인트"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="회원등급에 따라 미션, 설문조사 참여 시 추가 포인트가 적립됩니다.(최대 5%)"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- "
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="추천등급에 따라 회원추천 시 추가 포인트가 적립됩니다.(최대 10%)"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <!-- 경계선 -->
+            <View android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="1dp"
+                android:background="@color/primaryBorder"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="포인트 사용방법"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="2dp"
+                android:orientation="horizontal"
+                android:background="@color/darkgray">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
+                    <View android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="사용방법"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="최소 사용금액"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="사용단위"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginRight="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/lightgray"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="수수료"/>
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="현금이체"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="5,000P"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="1,000P"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:padding="3dp"
+                            android:text="-"/>
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp">
+                        <LinearLayout
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="온라인\n문화상품권"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="1,100P"
+                                android:gravity="center|center_vertical"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1,000P"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+                            <TextView
+                                android:id="@+id/pointInfo_fees"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="10%"/>
+                        </LinearLayout>
+                    </TableRow>
+                    <TableRow android:layout_width="match_parent"
+                        android:layout_marginBottom="1dp">
+                        <LinearLayout
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="모바일 상품권"
+                                android:padding="3dp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="1,000P"
+                                android:padding="3dp"
+                                android:gravity="center|center_vertical"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginLeft="1dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:text="상품금액"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="1dp"
+                            android:background="@color/white"
+                            android:gravity="center">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="3dp"
+                                android:text="-"/>
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

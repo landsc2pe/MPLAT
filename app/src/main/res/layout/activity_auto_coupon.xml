@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_main"
+    android:background="#FFF">
+    <!-- 등급아이콘, 아이디 그룹-->
+    <LinearLayout
+        android:id="@+id/autoCoupon_llParent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:background="@color/darkgray">
+        <LinearLayout
+            android:id="@+id/autoCoupon_llCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/autoCoupon_tvCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="쿠폰 신청"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/primaryFont"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/autoCoupon_llCouponHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/autoCoupon_tvCouponHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="나의 쿠폰함"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/primaryFont"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/autoCoupon_llAutoCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/primary">
+            <TextView
+                android:id="@+id/autoCoupon_tvAutoCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="쿠폰 자동발급"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/autoCoupon_btnPointCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="전체 자동발급 신청"
+            android:textSize="@dimen/activity_fontSize"
+            android:background="@color/primary"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <!-- 구분선 -->
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primaryBorder"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="자동발급을 원하시는 게임 장르를 선택해 주시기 바랍니다."
+            android:textSize="14sp"/>
+        <ImageView
+            android:id="@+id/autoCoupon_ivHelp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_action_help"
+            android:layout_gravity="center_vertical"
+            android:background="@color/primary"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/autoCouponList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:columnCount="3"
+        android:useDefaultMargins="true">
+        <!--TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="1"
+            android:background="@drawable/border"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill|center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="2"
+            android:background="@drawable/border_primary"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:text="3"
+            android:background="@drawable/border"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"/-->
+    </GridLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/autoCoupon_btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="해제"
+            android:textSize="@dimen/activity_fontSize"
+            android:background="@color/browngray"
+            android:textColor="@color/white" />
+        <Button style="@style/Widget.AppCompat.Button.Borderless"
+            android:id="@+id/autoCoupon_btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="저장"
+            android:textSize="@dimen/activity_fontSize"
+            android:background="@color/primary"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

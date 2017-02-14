@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 블로그/SNS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:padding="1dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="리뷰 상품을 배송 받을 주소를 입력하세요."
+                    android:textSize="18sp"/>
+                <Button
+                    android:id="@+id/reviewRequest3_btnAddressHistory"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="이전에 신청한 주소 불러오기"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:background="@color/primary"/>
+                <!-- 구분선 -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/primaryBorder"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/reviewRequest3_etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text"
+                    android:hint="받는 사람 이름"
+                    android:background="@drawable/border"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/reviewRequest3_etZipCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text"
+                    android:hint="우편번호"
+                    android:background="@drawable/border"
+                    android:layout_weight="1"
+                    android:enabled="false"/>
+                <Button style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/reviewRequest3_btnSearchZipcode"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:text="우편번호 찾기"
+                    android:textSize="16sp"
+                    android:background="@color/primaryBlack"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/reviewRequest3_etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text"
+                    android:hint="주소 입력"
+                    android:background="@drawable/border"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/reviewRequest3_etAddressDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text"
+                    android:hint="세부 주소 입력"
+                    android:background="@drawable/border"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/reviewRequest3_etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:inputType="text"
+                    android:hint="받는 사람 휴대전화 버호를 '-' 빼고 입력하세요."
+                    android:background="@drawable/border"/>
+            </LinearLayout>
+
+
+            <!-- 다음 -->
+            <Button style="@style/Widget.AppCompat.Button.Borderless"
+                android:id="@+id/reviewRequest3_btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="신청 완료"
+                android:textSize="@dimen/activity_fontSize"
+                android:background="@color/primaryDisabled"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView><!-- 2-->
+</LinearLayout><!-- 1 -->

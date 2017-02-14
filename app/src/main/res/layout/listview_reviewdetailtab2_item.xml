@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:padding="10dp"
+    android:id="@+id/reviewItem_llParent">
+        <TextView
+            android:id="@+id/reviewDetailTab2_tvEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="gold**@naver.com"/>
+        <TextView
+            android:id="@+id/reviewDetailTab2_tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="바로 먹설턴트입니다 . 저를 뽑아주시면 쩌는 포스팅으로 상위노출 보장해 드림니다."/>
+</LinearLayout>

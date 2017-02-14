@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MPLAT"
+            android:padding="10dp"
+            android:background="@color/primary"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_checkNetwork"
+            android:textColor="@color/primary"
+            android:padding="30dp"
+            android:textSize="16dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/btn_common_checknetwork_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다시 시도"
+            android:padding="10dp"
+            android:background="@color/white"
+            android:textColor="@color/primary"
+            android:gravity="center"
+            android:onClick="start"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/couponHistoryItem_ivImgUrl"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical">
+                        <!-- AppTitle-->
+                        <TextView
+                            android:id="@+id/couponHistoryItem_tvAppTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp" />
+                        <TextView
+                            android:id="@+id/couponHistoryItem_tvReward"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:ellipsize="end"/>
+                        <TextView
+                            android:id="@+id/couponHistoryItem_tvOpenDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/couponHistoryItem_tvCouponNum"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:text="출시 이후 쿠폰이 발급됩니다."
+                    android:textSize="14sp"
+                    android:background="@drawable/border"
+                    android:clickable="true"/>
+                <Button style="@style/Widget.AppCompat.Button.Borderless"
+                    android:id="@+id/couponHistoryItem_btnDown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="게임 다운로드"
+                    android:textSize="14sp"
+                    android:background="@color/primaryDisabled"
+                    android:textColor="@color/white"
+                    />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/couponHistoryItem_tvCampaignCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/couponHistoryItem_tvDeveloperName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/couponHistoryItem_tvAppOpenYn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/couponHistoryItem_tvAndroidUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/couponHistoryItem_tvUsableYn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/couponHistoryItem_tvUsedYn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/couponHistoryItem_tvUseEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+</LinearLayout>

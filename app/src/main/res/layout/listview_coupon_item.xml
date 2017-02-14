@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="94dp"
+    android:padding="10dp">
+        <TextView
+            android:id="@+id/couponItem_tvCampaignCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/couponItem_ivImage"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/couponItem_appTitle"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="랜드슬라이더"
+                            android:textSize="15sp"
+                            android:layout_weight="1"/>
+                        <TextView
+                            android:id="@+id/couponItem_reserveYn"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:padding="2dp"
+                            android:text="사전예약"
+                            android:textSize="13sp"
+                            android:background="@color/primary"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/couponItem_developerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nexon Coperation"/>
+                <TextView
+                    android:id="@+id/couponItem_reward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다."
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+        </LinearLayout>
+
+</LinearLayout>

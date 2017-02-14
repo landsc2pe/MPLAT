@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:layout_weight="10">
+        <!-- 활동포인트 코드 , 숨김처리-->
+        <TextView
+            android:id="@+id/activepointInfo_tvActivePointCode"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"/>
+        <!-- 활동내용 -->
+        <TextView
+            android:id="@+id/activepointInfo_tvName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical"/>
+        <!-- 활동지수 -->
+        <TextView
+            android:id="@+id/activepointInfo_tvActivePoint"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="14sp"
+            android:gravity="right"
+            android:textColor="@color/primaryFont" android:layout_marginRight="40dp"/>
+        <!-- 부여한도 -->
+        <TextView
+            android:id="@+id/activepointInfo_tvLimitDesc"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:textSize="14sp"
+            android:textColor="@color/primaryFont"
+            android:gravity="left"
+            android:layout_gravity="center_vertical"/>
+</LinearLayout>

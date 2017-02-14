@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF">
+    <LinearLayout
+        android:id="@+id/review_llParent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/review_llReview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/review_tvRequest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="리뷰 신청"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/primaryFont"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/review_llHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/primary">
+            <TextView
+                android:id="@+id/review_tvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="리뷰 신청결과"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/review_llList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/review_tvList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="리뷰 등록"
+                android:textSize="16sp"
+                android:gravity="center_vertical|center"
+                android:textColor="@color/primaryFont"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/reviewHistory_descinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="오늘을 기준으로 최근 1년간의 리뷰 신청결과만 표시됩니다."
+        android:textSize="16sp"
+        android:textColor="@color/primaryFont"/>
+    <!-- 구분선 -->
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/primaryBorder"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--ListView
+            android:id="@+id/missionHistory_lvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/-->
+        <ExpandableListView
+            android:id="@+id/reviewHistory_elvList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:groupIndicator="@null" />
+        <!--TextView
+            android:id="@+id/missionHistory_tvPoint"
+            android:layout_width="200dp"
+            android:layout_height="44dp"
+            android:layout_marginBottom="10dp"
+            android:text="보유포인트 100P"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical|center"
+            android:layout_gravity="bottom|center"/-->
+    </FrameLayout>
+</LinearLayout>
