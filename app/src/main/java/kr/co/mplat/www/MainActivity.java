@@ -33,7 +33,7 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
     private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;
     private int dialogType = 0;
-    //test git
+    //test git22
 
     TextView tvEmail,tvPoint = null;
     ViewFlipper flipper = null;
