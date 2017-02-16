@@ -139,6 +139,19 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
             }
         });
 
+
+        String[] urls = {"http://mplat.co.kr/upload/201612061447454173.jpg","http://mplat.co.kr/upload/201612061448150956.jpg","http://mplat.co.kr/upload/201612061448337231.jpg","http://mplat.co.kr/upload/201612061448502008.jpg","http://mplat.co.kr/upload/201612061449061055.jpg"};
+        if(!bannerLoad) {
+            ImageViewPager imageViewPager = (ImageViewPager) findViewById(R.id.ivp);
+            ImageViewPager.ImageViewPagerClickListener imageViewPagerClickListener=new ImageViewPager.ImageViewPagerClickListener() {
+                @Override
+                public void onClick(int position) {
+                    Log.d("MYLOG",Integer.toString(position));
+                }
+            };
+            imageViewPager.start(this, getSupportFragmentManager(), urls,imageViewPagerClickListener, 3000, 3000, 1000);
+            bannerLoad=true;
+        }
     }
     @Override
     protected void onResume() {
@@ -212,21 +225,7 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
                     }
 
                     try {
-                        String[] urls = {"http://mplat.co.kr/upload/201612061447454173.jpg","http://mplat.co.kr/upload/201612061448150956.jpg","http://mplat.co.kr/upload/201612061448337231.jpg","http://mplat.co.kr/upload/201612061448502008.jpg","http://mplat.co.kr/upload/201612061449061055.jpg"};
-                        for (int i = 0; i < ary_banner.length(); i++) {
 
-                        }
-                        if(!bannerLoad) {
-                            ImageViewPager imageViewPager = (ImageViewPager) findViewById(R.id.ivp);
-                            ImageViewPager.ImageViewPagerClickListener imageViewPagerClickListener=new ImageViewPager.ImageViewPagerClickListener() {
-                                @Override
-                                public void onClick(int position) {
-                                    Log.d("MYLOG",Integer.toString(position));
-                                }
-                            };
-                            imageViewPager.start(this, getSupportFragmentManager(), urls,imageViewPagerClickListener, 1000, 1000, 3000);
-                            bannerLoad=true;
-                        }
                     }catch(Exception e){
                         Log.i("wtkim",e.toString());
                     }

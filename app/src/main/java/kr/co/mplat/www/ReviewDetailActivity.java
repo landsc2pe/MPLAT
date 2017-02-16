@@ -67,10 +67,7 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_detail);
 
-        //구글맵
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+
 
 
         setTvTitle("리뷰 상세 정보");
@@ -302,6 +299,10 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
                     Log.i("wtkim",ary_map[1]);
                     mapY = Double.parseDouble(ary_map[0]);
                     mapX = Double.parseDouble(ary_map[1]);
+                    //구글맵
+                    SupportMapFragment mapFragment =
+                            (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+                    mapFragment.getMapAsync(this);
                 }
 
                 String guideline = json.getString("GUIDELINE");
@@ -540,7 +541,7 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
         mMap = googleMap;
         Log.i("wtkim","mapX==>"+mapX);
         Log.i("wtkim","mapY==>"+mapY);
-        LatLng seoul = new LatLng( 37.5964348,127.1491819 );
+        LatLng seoul = new LatLng( mapX,mapY );
         mMap.addMarker( new MarkerOptions().position(seoul).title( "" ) );
         mMap.moveCamera( CameraUpdateFactory.newLatLng(seoul) );
 

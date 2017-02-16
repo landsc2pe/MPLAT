@@ -152,13 +152,10 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login);
         setTvTitle("로그인");
-
-        Common.setPreference(getApplicationContext(), "UID", "431");
-        Common.setPreference(getApplicationContext(), "KEY", "F18E109E557FE1F5CCE28177D1716B41709CC34D");
-      /*  String UID = Common.getPreference(getApplicationContext(), "UID");
+        String UID = Common.getPreference(getApplicationContext(), "UID");
         String KEY = Common.getPreference(getApplicationContext(), "KEY");
         Log.i("comm-loginActivity","UID==>"+UID);
-        Log.i("comm-loginActivity","KEY==>"+KEY);*/
+        Log.i("comm-loginActivity","KEY==>"+KEY);
 
         //구글 로그인
         // Views
@@ -755,9 +752,6 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
         LoginManager.getInstance().logOut();
         String UID = Common.getPreference(getApplicationContext(), "UID");
         String KEY = Common.getPreference(getApplicationContext(), "KEY");
-        //임시로 로그인 : 추후 삭제할것!
-        Common.setPreference(getApplicationContext(), "UID", "431");
-        Common.setPreference(getApplicationContext(), "KEY", "F18E109E557FE1F5CCE28177D1716B41709CC34D");
         if (!UID.equals("") && !KEY.equals("")) {
             Common.setPreference(getApplicationContext(), "UID", UID);
             Common.setPreference(getApplicationContext(), "KEY", KEY);
