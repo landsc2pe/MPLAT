@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MPLAT.iml" filepath="$PROJECT_DIR$/MPLAT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsyang-debug/jsyang-debug.iml" filepath="$PROJECT_DIR$/jsyang-debug/jsyang-debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jsyang-release/jsyang-release.iml" filepath="$PROJECT_DIR$/jsyang-release/jsyang-release.iml" />
     </modules>
   </component>
 </project>

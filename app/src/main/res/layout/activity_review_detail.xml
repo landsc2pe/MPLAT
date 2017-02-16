@@ -256,6 +256,7 @@
                         android:background="@color/browngray"
                         android:textColor="@color/white"/>
                     <TextView
+                        android:id="@+id/reviewDetail_tvJoinMethodInfo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
@@ -269,6 +270,12 @@
                         android:layout_marginTop="4dp"
                         android:text="설명입니다1111. 설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다.설명입니다."
                         android:textSize="14sp"/>
+                    <fragment
+                              xmlns:map="http://schemas.android.com/apk/res-auto"
+                              android:id="@+id/map"
+                              android:name="com.google.android.gms.maps.SupportMapFragment"
+                              android:layout_width="match_parent"
+                              android:layout_height="200dp"/>
                     <TextView
                         android:id="@+id/reviewDetail_tvTab1JoinBeware"
                         android:layout_width="match_parent"

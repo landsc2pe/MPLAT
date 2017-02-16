@@ -62,47 +62,10 @@
         </LinearLayout>
     </LinearLayout>
     <!-- 메인 배너 -->
-    <LinearLayout
-        android:id="@+id/main_llBanner"
+    <kr.co.marketlink.jsyang.ImageViewPager
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:orientation="vertical">
-        <ViewFlipper
-            android:id="@+id/main_vf"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!--ImageView
-            android:id="@+id/main_banner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/mainbanner"
-            android:background="@color/bluegreen"
-            android:scaleType="fitXY"/-->
-        </ViewFlipper>
-        <!-- viewFilpper 테스트용 -->
-        <!--LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <Button
-                android:id="@+id/main_prev"
-                android:text="이전"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:onClick="onClick"/>
-            <ToggleButton
-                android:id="@+id/main_tbAuto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textOff="auto"
-                android:textOn="stop"/>
-            <Button
-                android:id="@+id/main_next"
-                android:text="다음"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:onClick="onClick"/>
-        </LinearLayout-->
-
-    </LinearLayout>
+        android:id="@+id/ivp"/>
 
     <!-- 하단 메뉴 -->
     <ScrollView

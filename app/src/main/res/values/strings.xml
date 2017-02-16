@@ -279,5 +279,6 @@
     <string name="server_client_id">YOUR_SERVER_CLIENT_ID</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_activity_first_install_show_page1">FirstInstallShowPage1Activity</string>
+    <string name="title_activity_maps">Map</string>
     <!-- 구글 테스트용 끝-->
 </resources>
