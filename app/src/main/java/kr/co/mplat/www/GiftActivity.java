@@ -1,11 +1,13 @@
 package kr.co.mplat.www;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridLayout;
 import android.widget.ImageView;
@@ -122,24 +124,30 @@ public class GiftActivity extends NAppCompatActivity implements I_loaddata,I_sta
                         //vo
                         ll = new LinearLayout(this);
                         LinearLayout.LayoutParams position;
-                        position = new LinearLayout.LayoutParams(android.view.ViewGroup.LayoutParams.FILL_PARENT,
-                                android.view.ViewGroup.LayoutParams.FILL_PARENT, 1); // 맨 마지막 부분의 숫자가 가중치 입니
+                        position = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                                android.view.ViewGroup.LayoutParams.WRAP_CONTENT, 1); // 맨 마지막 부분의 숫자가 가중치 입니
+                        ll.setLayoutParams(position);
                         ll.setTag(giftItem);
+
                         ll.setOrientation(LinearLayout.VERTICAL);
                         ll.setGravity(Gravity.CENTER_HORIZONTAL);
                         ll.setGravity(Gravity.CENTER);
                         iv = new ImageView(this);
                         Picasso.with(getApplicationContext()).load(brand_img).into(iv);
                         tv = new TextView(this);
+                        if(Build.VERSION.SDK_INT>=17)tv.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
                         tv.setText(giftItem.getBrand());
 
                         ll.addView(iv);
                         ll.addView(tv);
                         gift_glList.addView(ll);
 
+                        int parentWidth=gift_glList.getMeasuredWidth();
+                        int parentHeight=300;
+
                         android.view.ViewGroup.LayoutParams layoutParams = iv.getLayoutParams();
-                        layoutParams.width = 380;
-                        layoutParams.height = 380;
+                        layoutParams.width = parentWidth/3;
+                        layoutParams.height = parentHeight;
 
                         iv.setLayoutParams(layoutParams);
 
