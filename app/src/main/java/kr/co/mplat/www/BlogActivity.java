@@ -145,8 +145,8 @@ public class BlogActivity extends NAppCompatActivity implements AdapterView.OnIt
         setTvTitle("블로그/SNS 매체 등록 및 변경");
         common = new Common(this);
         intent = getIntent();
-        pre_activity = intent.getStringExtra("PRE_ACTIVITY").toString();
-        pre_campaignCode = intent.getStringExtra("CAMPAIGN_CODE").toString();
+        pre_activity = intent.getStringExtra("PRE_ACTIVITY");
+        pre_campaignCode = intent.getStringExtra("CAMPAIGN_CODE");
 
         //문구변경
         ((TextView)findViewById(R.id.blog_tvInfo1)).setText(Html.fromHtml("리뷰(홍보글)를 게재하실<br/><font color='#7161C4'>본인 소유의 블로그 또는 SNS</font>를 등록해주시기 바랍니다."));
@@ -615,7 +615,7 @@ public class BlogActivity extends NAppCompatActivity implements AdapterView.OnIt
         }
 
 
-        if(!pre_campaignCode.equals("") && pre_activity.equals("ReviewDetailActivity")){
+        if(pre_campaignCode!=null && !pre_campaignCode.equals("") && pre_activity.equals("ReviewDetailActivity")){
             intent = new Intent(BlogActivity.this,ReviewDetailActivity.class);
             intent.putExtra("PRE_ACTIVITY","ReviewDetailActivity");
             intent.putExtra("CAMPAIGN_CODE",pre_campaignCode);
