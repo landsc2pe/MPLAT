@@ -67,9 +67,6 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_detail);
 
-
-
-
         setTvTitle("리뷰 상세 정보");
         common = new Common(this);
         intent = getIntent();

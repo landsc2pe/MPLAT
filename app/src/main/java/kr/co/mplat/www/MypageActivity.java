@@ -39,21 +39,24 @@ public class MypageActivity extends MAppCompatActivity implements I_loaddata,I_s
         ((TextView)findViewById(R.id.mypage_tvUserGrade)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("wtkim","회원등급 선택!");
+                Intent i = new Intent(MypageActivity.this,GradeActivity.class);
+                startActivity(i);
             }
         });
         //추천등급 선택시 이벤트 등록
         ((TextView)findViewById(R.id.mypage_tvRecommendGrade)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("wtkim","추천등급 선택!");
+                Intent i = new Intent(MypageActivity.this,RecommendGradeActivity.class);
+                startActivity(i);
             }
         });
         //보유포인트 선택시 이벤트 등록
         ((TextView)findViewById(R.id.mypage_tvPoint)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("wtkim","보유포인트 선택!");
+                Intent i = new Intent(MypageActivity.this,PointHistoryActivity.class);
+                startActivity(i);
             }
         });
         //리스트 메뉴*********************************************************************************

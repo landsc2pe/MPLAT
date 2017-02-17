@@ -22,7 +22,8 @@
                     android:layout_height="wrap_content"
                     android:text="랜드슬라이더"
                     android:textSize="18sp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:maxLines="2"/>
                 <TextView
                     android:id="@+id/missionItem_tvMission"
                     android:layout_width="wrap_content"
@@ -31,7 +32,7 @@
                     android:text="설치(즉시 지급)"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_width="60dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:orientation="horizontal">
                 <TextView
@@ -39,7 +40,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="3,000P"
-                    android:textSize="20sp"
-                    android:gravity="center_vertical|center"/>
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:layout_marginRight="10dp"/>
         </LinearLayout>
 </LinearLayout>

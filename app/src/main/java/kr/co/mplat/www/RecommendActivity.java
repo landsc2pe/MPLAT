@@ -40,7 +40,6 @@ public class RecommendActivity extends MAppCompatActivity implements I_loaddata,
     private final int CALLTYPE_FACEBOOK = 3;
     private final int CALLTYPE_URL = 4;
 
-
     private String dial_name = "";
     private String dial_email = "";
 

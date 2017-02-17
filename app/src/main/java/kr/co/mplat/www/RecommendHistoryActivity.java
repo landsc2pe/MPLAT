@@ -115,9 +115,10 @@ public class RecommendHistoryActivity extends MAppCompatActivity implements Adap
     }
 
     public void loadHandler(String str){
+        Log.i("wtkim","loadHandler 호출!===");
         try{
             JSONObject json = new JSONObject(str);
-            Log.i("wtkim",json.toString());
+
             String err = json.getString("ERR");
 
             if (err.equals("")) {
@@ -180,7 +181,7 @@ public class RecommendHistoryActivity extends MAppCompatActivity implements Adap
 
                 //String imageIcon,String appTitle,String mission,String point
                 // 위에서 생성한 listview에 클릭 이벤트 핸들러 정의.
-                listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+               /* listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
                     @Override
                     public void onItemClick(AdapterView parent, View v, int position, long id) {
                         Log.i("wtkim","리스트클릭!");
@@ -191,19 +192,19 @@ public class RecommendHistoryActivity extends MAppCompatActivity implements Adap
                         String recommendName = item.getRecommendName();
 
 
-                        /*String campaigncode = item.getCampaign_code();
+                        *//*String campaigncode = item.getCampaign_code();
                         String reward = item.getReward();
                         intent = new Intent(MissionActivity.this,CouponDetailActivity.class);
                         intent.putExtra("CAMPAIGN_CODE",campaigncode);
                         intent.putExtra("REWARD",reward);
-                        startActivity(intent);*/
+                        startActivity(intent);*//*
                     }
-                });
+                });*/
             }else{
-                Common.createDialog(this, getString(R.string.app_name).toString(),null, err, getString(R.string.btn_ok),null, false, false);
+                Common.createDialog(this, getString(R.string.app_name).toString(),null, err.toString(), getString(R.string.btn_ok),null, false, false);
             }
         }catch (Exception e){
-            Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
+            Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString()+"2222", getString(R.string.btn_ok),null, false, false);
         }
     }
 

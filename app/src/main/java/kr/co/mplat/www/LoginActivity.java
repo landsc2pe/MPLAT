@@ -666,7 +666,6 @@ public class LoginActivity extends BaseActivity implements GoogleApiClient.OnCon
             //startActivity(intent);
             //Toast.makeText(LoginActivity.this, "카카오아이디 인증이 실패하였습니다.", Toast.LENGTH_SHORT).show();
             // 세션 연결이 실패했을때
-            // 어쩔때 실패되는지는 테스트를 안해보았음 ㅜㅜ
         }
     }
     private Map<String,String> requestNaverUserInfo(String data) { // xml 파싱

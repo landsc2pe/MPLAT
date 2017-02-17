@@ -5,15 +5,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.json.JSONObject;
 
-public class GradeActivity extends NAppCompatActivity implements I_loaddata, I_startFinish, I_dialogdata {
+public class GradeActivity extends MAppCompatActivity implements I_loaddata, I_startFinish, I_dialogdata {
     private final int CALLTYPE_LOAD = 1;
     private int dialogType = 0;
     Common common = null;
@@ -32,12 +34,13 @@ public class GradeActivity extends NAppCompatActivity implements I_loaddata, I_s
     TextView tvActivePoint = null;
     TextView tvGradePeriod = null;
     TextView tvNextGradeDate = null;
+    View ab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade);
-        setTvTitle("회원등급");
+        //setTvTitle("회원등급");
         common = new Common(this);
         //String email = getIntent().getStringExtra("EMAIL");
 
@@ -139,5 +142,13 @@ public class GradeActivity extends NAppCompatActivity implements I_loaddata, I_s
             Common.createDialog(this, getString(R.string.app_name).toString(), null, e.toString(), getString(R.string.btn_ok), null, false, false);
         }
     }
+
+    /*@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        boolean ret = super.onCreateOptionsMenu(menu);
+        ImageButton ib_back = (ImageButton) ab.findViewById(R.id.ibBack);
+        ib_back.setImageResource(R.drawable.ic_action_cancel);
+        return ret;
+    }*/
 
 }

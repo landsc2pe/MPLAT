@@ -44,8 +44,6 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
 
 
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         ActionBar actionBar = getSupportActionBar();
@@ -194,33 +192,88 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
         try {
             JSONObject json = new JSONObject(str);
             String err = json.getString("ERR");
+            Log.i("wtkim",json.toString());
             if (err.equals("")) {
                 String result = json.getString("RESULT");
                 if (result.equals("OK")) {
                     String email = json.getString("EMAIL");
                     String point = json.getString("POINT");
                     ary_banner = json.getJSONArray("BANNER");
-
                     if(android.os.Build.VERSION.SDK_INT > 9) {
                         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                         StrictMode.setThreadPolicy(policy);
                     }
 
                     try {
-                        List<String> urls=new ArrayList<>();
+                        final List<String> urls=new ArrayList<>();
+                        final List<String> campaignCodes=new ArrayList<>();
+                        final List<String> campaignTypeCodes=new ArrayList<>();
+
                         for (int i = 0; i < ary_banner.length(); i++) {
                             JSONObject object=ary_banner.getJSONObject(i);
                             urls.add(object.getString("IMG_URL"));
+                            campaignCodes.add(object.getString("CAMPAIGN_CODE"));
+                            campaignTypeCodes.add(object.getString("CAMPAIGN_TYPE_CODE"));
+                            /*
+                             01 : 쿠폰
+                             02 : 리뷰
+                             03 : 리뷰
+                             04 : 리뷰
+                             05 : 설문조사
+                             06 : 이벤트
+                             */
                         }
+
                         if(!bannerLoad) {
                             ImageViewPager imageViewPager = (ImageViewPager) findViewById(R.id.ivp);
                             ImageViewPager.ImageViewPagerClickListener imageViewPagerClickListener=new ImageViewPager.ImageViewPagerClickListener() {
                                 @Override
                                 public void onClick(int position) {
                                     Log.d("MYLOG",Integer.toString(position));
+                                    String campaignType = campaignTypeCodes.get(position);
+                                    String campaignCode = campaignCodes.get(position);
+
+                                    /*switch (campaignType.substring(0,2)){
+                                        case "01"://쿠폰
+                                            Log.i("wtkim","쿠폰으로 보냅니다.");
+                                            Intent i1 = new Intent(MainActivity.this,CouponDetailActivity.class);
+                                            i1.putExtra("CAMPAIGN_CODE",campaignCode);
+                                            startActivity(i1);
+                                            break;
+                                        case "02"://리뷰
+                                            Log.i("wtkim","리뷰로 보냅니다.");
+                                            Intent i2 = new Intent(MainActivity.this,ReviewDetailActivity.class);
+                                            i2.putExtra("CAMPAIGN_CODE",campaignCode);
+                                            startActivity(i2);
+                                            break;
+                                        case "03"://베타테스트
+                                            Log.i("wtkim","베타테스트으로 보냅니다.");
+
+                                            break;
+                                        case "04"://미션
+                                            Log.i("wtkim","미션으로 보냅니다.");
+                                            Intent i4 = new Intent(MainActivity.this,CouponDetailActivity.class);
+                                            i4.putExtra("CAMPAIGN_CODE",campaignCode);
+                                            startActivity(i4);
+                                            break;
+                                        case "05"://설문조사
+                                            Log.i("wtkim","설문조사로 보냅니다.");
+                                            Intent i5 = new Intent(MainActivity.this,SurveyDetailActivity.class);
+                                            i5.putExtra("CAMPAIGN_CODE",campaignCode);
+                                            startActivity(i5);
+                                            break;
+                                        case "06"://이벤트,회원추천
+                                            Log.i("wtkim","이벤트로 보냅니다.");
+                                            Intent i6 = new Intent(MainActivity.this,CouponDetailActivity.class);
+                                            i6.putExtra("CAMPAIGN_CODE",campaignCode);
+                                            startActivity(i6);
+                                            break;
+                                    }*/
+
+
                                 }
                             };
-                            imageViewPager.start(this, urls,imageViewPagerClickListener, 1000, 3000);
+                            imageViewPager.start(this, urls,imageViewPagerClickListener, 3000, 3000);
                             bannerLoad=true;
                         }
                     }catch(Exception e){

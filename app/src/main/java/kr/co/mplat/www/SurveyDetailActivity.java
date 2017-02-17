@@ -44,14 +44,14 @@ public class SurveyDetailActivity extends NAppCompatActivity implements I_loadda
         setContentView(R.layout.activity_survey_detail);
         setTvTitle("설문참여 상세내용");
         common = new Common(this);
-        campaign_code = getIntent().getStringExtra("CAMPAIGN_CODE").toString();
-        title = getIntent().getStringExtra("TITLE").toString();
-        startDate = getIntent().getStringExtra("START_DATE").toString();
-        endDate = getIntent().getStringExtra("END_DATE").toString();
-        point = getIntent().getStringExtra("POINT").toString();
-        surveyTime = getIntent().getStringExtra("SURVEY_TIME").toString();
-        surveyUrl = getIntent().getStringExtra("SURVEY_URL").toString();
-        pointRealtimeYn = getIntent().getStringExtra("POINT_REALTIME_YN").toString();
+        campaign_code = getIntent().getStringExtra("CAMPAIGN_CODE");
+        title = getIntent().getStringExtra("TITLE");
+        startDate = getIntent().getStringExtra("START_DATE");
+        endDate = getIntent().getStringExtra("END_DATE");
+        point = getIntent().getStringExtra("POINT");
+        surveyTime = getIntent().getStringExtra("SURVEY_TIME");
+        surveyUrl = getIntent().getStringExtra("SURVEY_URL");
+        pointRealtimeYn = getIntent().getStringExtra("POINT_REALTIME_YN");
 
         //문구변경
         TextView tvTitle = (TextView)findViewById(R.id.surveyDetail_tvTitle);
