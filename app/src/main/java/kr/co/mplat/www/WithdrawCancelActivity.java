@@ -46,7 +46,6 @@ public class WithdrawCancelActivity extends NAppCompatActivity implements I_load
         ((Button)findViewById(R.id.withdrawCancel_btnCancel)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("wtkim","회원탈퇴 취소 이벤트");
                 common.loadData(CALLTYPE_WITHDRAWCANCEL, getString(R.string.url_withdrawCancel), null);
             }
         });
@@ -54,7 +53,6 @@ public class WithdrawCancelActivity extends NAppCompatActivity implements I_load
         ((Button)findViewById(R.id.withdrawCancel_btnBack)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("wtkim","뒤로가기 이벤트");
                 intent = new Intent(WithdrawCancelActivity.this,LoginActivity.class);
                 startActivity(intent);
                 finish();

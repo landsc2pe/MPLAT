@@ -133,15 +133,12 @@ public class PwdChangeActivity extends NAppCompatActivity implements View.OnClic
                 boolean regPwCheck1 = Common.validatePassword(pw1);
                 int regPwCheck2 = pw1.length();
                 if(regPwCheck1==false || regPwCheck2<6){
-                    Log.i("wtkim","!1111111111");
                     dialogType = 9;
                     Common.createDialog(this, "비밀번호 변경", null, "비밀번호 형식에 맞지 않습니다.", getString(R.string.btn_ok),null, false, false);
                 }else if(!pw1.equals(pw2)){
-                    Log.i("wtkim","22222222222");
                     dialogType = 1;
                     Common.createDialog(this, "비밀번호 변경", null, "비밀번호가 일치하지 않습니다.", getString(R.string.btn_ok),null, false, false);
                 }else {
-                    Log.i("wtkim","3333333333333");
                     String pre_pw = getIntent().getStringExtra("PW").toString();
                     String new_pw = etPw1.getText().toString();
 
@@ -149,8 +146,6 @@ public class PwdChangeActivity extends NAppCompatActivity implements View.OnClic
                              {"PW", pre_pw}
                             ,{"NEW_PW", new_pw}
                     };
-                    Log.i("wtkim","pre_pw==>"+pre_pw);
-                    Log.i("wtkim","NEW_PW==>"+new_pw);
                     //인증번호 발송
                     common.loadData(CALLTYPE_PWDUPDATE, getString(R.string.url_pwdChange), params);
                 }
@@ -169,19 +164,16 @@ public class PwdChangeActivity extends NAppCompatActivity implements View.OnClic
 
     @Override
     public void loaddataHandler(int calltype, String str) {
-        Log.i("wtkim","loaddataHandler()호출!");
         if (calltype == CALLTYPE_PWDUPDATE) updateHandler(str);
     }
 
     //저장 처리
     public void updateHandler(String str) {
-        Log.i("wtkim","updateHandler()호출!");
         try {
             JSONObject json = new JSONObject(str);
             String err = json.getString("ERR");
             if (err.equals("")) {
                 String result = json.getString("RESULT");
-                Log.i("wtKim","result=>"+result);
                 if (result.equals("OK")) {
                     dialogType = 2;
                     String key = json.getString("KEY");

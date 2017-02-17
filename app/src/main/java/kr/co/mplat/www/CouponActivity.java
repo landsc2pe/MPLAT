@@ -58,9 +58,6 @@ public class CouponActivity extends MAppCompatActivity implements I_loaddata,I_s
                 finish();
             }
         });
-
-        //((LinearLayout)findViewById(R.id.coupon_llCoupon)).performClick();
-
     }
 
     @Override
@@ -96,14 +93,6 @@ public class CouponActivity extends MAppCompatActivity implements I_loaddata,I_s
 
     @Override
     public void dialogHandler(String result) {
-       /* if(dialogType == 9 && result.equals("ok")){
-            Common.setPreference(getApplicationContext(), "UID", "");
-            Common.setPreference(getApplicationContext(), "KEY", "");
-
-            intent = new Intent(ActivepointHistoryActivity.this,LoginActivity.class);
-            startActivity(intent);
-            finish();
-        }*/
     }
 
     @Override

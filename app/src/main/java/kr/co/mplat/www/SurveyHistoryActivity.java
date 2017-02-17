@@ -122,9 +122,6 @@ public class SurveyHistoryActivity extends MAppCompatActivity implements I_loadd
                     @Override
                     public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                         //Toast.makeText(getApplicationContext(), lists.get(groupPosition).players.get(childPosition), Toast.LENGTH_LONG).show();
-
-                        Log.i("wtkim","하하하하");
-                        Log.i("wtkim","하하하하");
                         return false;
                     }
                 });

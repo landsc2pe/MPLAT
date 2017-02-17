@@ -151,8 +151,6 @@ public class GiftActivity extends NAppCompatActivity implements I_loaddata,I_sta
 
                         iv.setLayoutParams(layoutParams);
 
-                        Log.i("wtkim","brand_img==>"+giftItem.getBrandImg());
-                        Log.i("wtkim","brand==>"+giftItem.getBrand());
                         // ImageView 를 추가하기 위한 LinearLayout 생성
                         //Picasso.with(getApplicationContext()).load(imgIcon_str).resize(75, 65).into(ivImageIcon);
                         ll.setOnClickListener(new View.OnClickListener() {

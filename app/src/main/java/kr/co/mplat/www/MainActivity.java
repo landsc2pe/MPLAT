@@ -41,10 +41,6 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
     JSONArray ary_banner = new JSONArray();
     ArrayList<String> banner = new ArrayList<>();
 
-
-
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         ActionBar actionBar = getSupportActionBar();
@@ -193,10 +189,8 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
     }
 
     public void monClick(View view) {
-        Log.i("wtKim","onClick222 클릭!!");
         switch(view.getId()){
             case  R.id.menubar_ibNav4:
-                Log.i("wtKim","menubar_ibNav4 클릭!!");
                 intent = new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(intent);
                 break;
@@ -227,7 +221,7 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
                     try {
 
                     }catch(Exception e){
-                        Log.i("wtkim",e.toString());
+                        Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
                     }
 
                    /*for(int i=0;i<5;i++){

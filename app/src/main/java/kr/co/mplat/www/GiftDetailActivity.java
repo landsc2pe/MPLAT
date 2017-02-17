@@ -95,8 +95,7 @@ public class GiftDetailActivity extends NAppCompatActivity implements I_loaddata
             Log.i("wtkim",json.toString());
             if (err.equals("")) {
                 dialogType = 3;
-                /*((TextView)findViewById(R.id.giftDetail_info22)).setText(Html.fromHtml("<font color='#7161C4'>"+Common.getTvComma(goodsPoint)+" P</font>"));
-                ((TextView)findViewById(R.id.giftDetail_info32)).setText(Common.getTvComma(String.valueOf(remainPoint))+" P");*/
+
                 Common.createDialog(this, getString(R.string.app_name).toString(),null, "모바일 상품권 구매가 완료되었습니다.\n고객님의 휴대전화 문자메시지를 확인해주시기 바랍니다.", getString(R.string.btn_ok),null, false, false);
             }else{
                 dialogType = 9;
@@ -217,7 +216,6 @@ public class GiftDetailActivity extends NAppCompatActivity implements I_loaddata
                 ((Button)findViewById(R.id.giftDetail_btnInfo)).setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View view) {
-                        Log.i("wtkim","상품권안내안내!");
                         dialog = createDialog(R.layout.custom_dialog_gift_detail_check);
                         dialog.show();
                         ((TextView)dialog.findViewById(R.id.dialog_giftDetailDesc)).setText(Html.fromHtml("<font>"+brand_description+"</font>"));

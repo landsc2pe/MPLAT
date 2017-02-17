@@ -80,7 +80,6 @@ public class ReviewHistoryActivity extends MAppCompatActivity implements I_loadd
 
     @Override
     public void dialogHandler(String result) {
-        Log.i("wtkim","campaignCode==>"+campaignCode);
         if(result.equals("cancel") && dialogType == 2){
             Object[][] params = {
                     {"CAMPAIGN_CODE", campaignCode}
@@ -245,10 +244,5 @@ public class ReviewHistoryActivity extends MAppCompatActivity implements I_loadd
         }else if(type.equals("리뷰 종료")){
 
         }
-
-
-        Log.i("wtkim","type==>"+type);
-        Log.i("wtkim","campaignCode==>"+campaignCode);
-
     }
 }

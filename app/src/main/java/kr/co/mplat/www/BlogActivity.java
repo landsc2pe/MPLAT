@@ -895,7 +895,7 @@ public class BlogActivity extends NAppCompatActivity implements AdapterView.OnIt
                 }
             }
         }catch (Exception e){
-
+            Common.createDialog(BlogActivity.this, getString(R.string.app_name).toString(), null,e.toString(), getString(R.string.btn_ok), null, false, false);
         }
     }
 

@@ -192,13 +192,9 @@ public class ReviewRequest2Activity extends NAppCompatActivity implements Adapte
         try {
             switch (adapterView.getId()) {
                 case R.id.reviewRequest2_spBlogSns:
-                    Log.i("wtkim","changed!");
-                    Log.i("wtkim","adapterView.getSelectedItemPosition()==>"+adapterView.getSelectedItemPosition());
                     if(adapterView.getSelectedItemPosition()>0){ addNum = -1; }else{ addNum=0; }
                     object = (JSONObject)ary_blogSns.get(adapterView.getSelectedItemPosition()+addNum);
-                    Log.i("wtKim","object==>"+object.toString());
                     if(addNum==0){ strBlogSns = "";}else{ strBlogSns = object.get("CODE").toString(); }
-                    Log.i("wtKim", "strBlogSns==>"+strBlogSns);
                     break;
             }
         }catch(Exception e){

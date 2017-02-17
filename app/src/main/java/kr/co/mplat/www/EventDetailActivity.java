@@ -80,7 +80,6 @@ public class EventDetailActivity extends NAppCompatActivity implements I_loaddat
     public void loadHandler(String str){
         try{
             JSONObject json = new JSONObject(str);
-            Log.i("wtkim",json.toString());
             String err = json.getString("ERR");
 
             String title = "";

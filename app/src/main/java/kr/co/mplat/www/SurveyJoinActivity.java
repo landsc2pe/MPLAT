@@ -68,9 +68,6 @@ public class SurveyJoinActivity extends AppCompatActivity implements I_loaddata,
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    Log.i("wtkim","RESULT_CODE==>"+RESULT_CODE);
-                    Log.i("wtkim","point==>"+point);
-                    Log.i("wtkim","total_point==>"+total_point);
                     intent = new Intent(SurveyJoinActivity.this,SurveyResultActivity.class);
                     intent.putExtra("RESULT_CODE",RESULT_CODE);
                     intent.putExtra("POINT",point);

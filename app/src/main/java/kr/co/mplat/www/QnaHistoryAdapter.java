@@ -13,9 +13,9 @@ import java.util.ArrayList;
  * Created by gdfwo on 2017-01-10.
  */
 
-public class QnaHistoryAdapter extends BaseAdapter{
+public class QnaHistoryAdapter extends BaseAdapter {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
-    private ArrayList<QnaHistoryListViewItem> listViewItemList = new ArrayList<QnaHistoryListViewItem>() ;
+    private ArrayList<QnaHistoryListViewItem> listViewItemList = new ArrayList<QnaHistoryListViewItem>();
 
     public QnaHistoryAdapter() {
     }
@@ -41,14 +41,14 @@ public class QnaHistoryAdapter extends BaseAdapter{
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
 
 
-        TextView tvSeq = (TextView)convertView.findViewById(R.id.qnaHistory_tvSeq);
-        TextView tvAnswer = (TextView)convertView.findViewById(R.id.qnaHistory_tvAnswer);
-        TextView tvAnswerDate = (TextView)convertView.findViewById(R.id.qnaHistory_tvAnswerDate);
-        TextView tvQnaType = (TextView)convertView.findViewById(R.id.qnaHistory_tvQnaType);
-        TextView tvTitle = (TextView)convertView.findViewById(R.id.qnaHistory_tvTitle);
-        TextView tvQuestion = (TextView)convertView.findViewById(R.id.qnaHistory_tvQuestion);
-        TextView tvQuestionDate = (TextView)convertView.findViewById(R.id.qnaHistory_tvQuestionDate);
-        TextView tvGubun = (TextView)convertView.findViewById(R.id.qnaHistory_tvGubun);
+        TextView tvSeq = (TextView) convertView.findViewById(R.id.qnaHistory_tvSeq);
+        TextView tvAnswer = (TextView) convertView.findViewById(R.id.qnaHistory_tvAnswer);
+        TextView tvAnswerDate = (TextView) convertView.findViewById(R.id.qnaHistory_tvAnswerDate);
+        TextView tvQnaType = (TextView) convertView.findViewById(R.id.qnaHistory_tvQnaType);
+        TextView tvTitle = (TextView) convertView.findViewById(R.id.qnaHistory_tvTitle);
+        TextView tvQuestion = (TextView) convertView.findViewById(R.id.qnaHistory_tvQuestion);
+        TextView tvQuestionDate = (TextView) convertView.findViewById(R.id.qnaHistory_tvQuestionDate);
+        TextView tvGubun = (TextView) convertView.findViewById(R.id.qnaHistory_tvGubun);
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
         QnaHistoryListViewItem listViewItem = listViewItemList.get(position);
@@ -68,18 +68,18 @@ public class QnaHistoryAdapter extends BaseAdapter{
 
     // 지정한 위치(position)에 있는 데이터와 관계된 아이템(row)의 ID를 리턴. : 필수 구현
     @Override
-    public long getItemId(int position){
+    public long getItemId(int position) {
         return position;
     }
 
     // 지정한 위치(position)에 있는 데이터 리턴 : 필수 구현
     @Override
-    public Object getItem(int position){
+    public Object getItem(int position) {
         return listViewItemList.get(position);
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(String seq, String qnaType, String title,String question,String question_date, String answer, String answer_date, String gubun) {
+    public void addItem(String seq, String qnaType, String title, String question, String question_date, String answer, String answer_date, String gubun) {
         QnaHistoryListViewItem item = new QnaHistoryListViewItem();
         item.setSeq(seq);
         item.setQnaType(qnaType);

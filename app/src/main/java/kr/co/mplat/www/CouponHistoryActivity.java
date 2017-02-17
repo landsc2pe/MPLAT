@@ -73,7 +73,6 @@ public class CouponHistoryActivity extends MAppCompatActivity implements CouponH
         String clickTarget = info.clickTarget;
         if(clickTarget.equals("download")){
             if(!androidUrl.equals("")){
-                Log.i("wtkim","androidUrl==>"+androidUrl);
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(androidUrl));
                 startActivity(intent);
@@ -187,24 +186,6 @@ public class CouponHistoryActivity extends MAppCompatActivity implements CouponH
                     adapter.addItem(campaign_code, img_url,app_title,developer_name,reward,app_open_yn,open_date,coupon_num,android_url,ios_url,usable_yn,used_yn,use_end_date);
                 }
 
-                // 위에서 생성한 listview에 클릭 이벤트 핸들러 정의.
-                /*listview.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-                    @Override
-                    public void onItemClick(AdapterView parent, View v, int position, long id) {
-                        Log.i("wtkim","클릭==>"+v.getId());
-                        // get item
-                        CouponHistoryListViewItem item = (CouponHistoryListViewItem) parent.getItemAtPosition(position) ;
-                        String campaigncode = item.getCampaign_code();
-                        String reward = item.getReward();
-                        String couponNum = item.getCoupon_num();
-                        //intent = new Intent(CouponActivity.this,CouponDetailActivity.class);
-                        //intent.putExtra("CAMPAIGN_CODE",campaigncode);
-                        //intent.putExtra("REWARD",reward);
-                        //startActivity(intent);
-
-
-                    }
-                });*/
             }else{
                 Common.createDialog(this, getString(R.string.app_name).toString(),null, err, getString(R.string.btn_ok),null, false, false);
             }

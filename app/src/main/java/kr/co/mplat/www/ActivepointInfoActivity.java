@@ -16,7 +16,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ActivepointInfoActivity extends NAppCompatActivity implements I_loaddata,I_startFinish,I_dialogdata{
+public class ActivepointInfoActivity extends NAppCompatActivity implements I_loaddata, I_startFinish, I_dialogdata {
     private final int CALLTYPE_LOAD = 1;
     private final int CALLTYPE_PWDCHECK = 2;
     Common common = null;
@@ -28,7 +28,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
     ArrayList<String> lists = new ArrayList<String>();
 
     private int lastLoadedCnt = 99999;
-    private int rnum=0;
+    private int rnum = 0;
 
     Button btnAll = null;
     Button btnCoupon = null;
@@ -46,18 +46,18 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
         setTvTitle("활동지수가 부여되는 회원활동");
         common = new Common(this);
 
-        btnAll = (Button)findViewById(R.id.activepointInfo_btnAll);
-        btnCoupon = (Button)findViewById(R.id.activepointInfo_btnCoupon);
-        btnBetaTest = (Button)findViewById(R.id.activepointInfo_btnBetaTest);
-        btnMission = (Button)findViewById(R.id.activepointInfo_btnMission);
-        btnSurvey = (Button)findViewById(R.id.activepointInfo_btnSurvey);
-        btnMypage = (Button)findViewById(R.id.activepointInfo_btnMypage);
-        btnCommon = (Button)findViewById(R.id.activepointInfo_btnCommon);
+        btnAll = (Button) findViewById(R.id.activepointInfo_btnAll);
+        btnCoupon = (Button) findViewById(R.id.activepointInfo_btnCoupon);
+        btnBetaTest = (Button) findViewById(R.id.activepointInfo_btnBetaTest);
+        btnMission = (Button) findViewById(R.id.activepointInfo_btnMission);
+        btnSurvey = (Button) findViewById(R.id.activepointInfo_btnSurvey);
+        btnMypage = (Button) findViewById(R.id.activepointInfo_btnMypage);
+        btnCommon = (Button) findViewById(R.id.activepointInfo_btnCommon);
 
         btnAll.setBackgroundResource(R.color.primary);
         btnAll.setTextColor(this.getResources().getColor(R.color.white));
 
-        btnAll.setOnClickListener(new View.OnClickListener(){
+        btnAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnAll.setBackgroundResource(R.color.primary);
@@ -79,7 +79,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
             }
         });
 
-        btnCoupon.setOnClickListener(new View.OnClickListener(){
+        btnCoupon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnCoupon.setBackgroundResource(R.color.primary);
@@ -100,7 +100,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
             }
         });
 
-        btnBetaTest.setOnClickListener(new View.OnClickListener(){
+        btnBetaTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnBetaTest.setBackgroundResource(R.color.primary);
@@ -121,7 +121,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
             }
         });
 
-        btnMission.setOnClickListener(new View.OnClickListener(){
+        btnMission.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnMission.setBackgroundResource(R.color.primary);
@@ -142,7 +142,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
             }
         });
 
-        btnSurvey.setOnClickListener(new View.OnClickListener(){
+        btnSurvey.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnSurvey.setBackgroundResource(R.color.primary);
@@ -163,7 +163,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
             }
         });
 
-        btnMypage.setOnClickListener(new View.OnClickListener(){
+        btnMypage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnMypage.setBackgroundResource(R.color.primary);
@@ -184,7 +184,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
             }
         });
 
-        btnCommon.setOnClickListener(new View.OnClickListener(){
+        btnCommon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btnCommon.setBackgroundResource(R.color.primary);
@@ -217,7 +217,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
     @Override
     public void start(View view) {
         //네트워크 상태 확인
-        if(!common.isConnected()) {
+        if (!common.isConnected()) {
             common.showCheckNetworkDialog();
             return;
         }
@@ -225,41 +225,42 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
 
     }
 
-    public void dataload(String t){
+    public void dataload(String t) {
         String cate = "";
         //기본정보 호출
-        switch (t){
-            case "btnAll":cate = "";break;
-            case "btnCoupon":cate = "01";break;
-            case "btnBetaTest":cate = "03";break;
-            case "btnMission":cate = "04";break;
-            case "btnSurvey":cate = "05";break;
-            case "btnMypage":cate = "08";break;
-            case "btnCommon":cate = "10";break;
+        switch (t) {
+            case "btnAll":
+                cate = "";
+                break;
+            case "btnCoupon":
+                cate = "01";
+                break;
+            case "btnBetaTest":
+                cate = "03";
+                break;
+            case "btnMission":
+                cate = "04";
+                break;
+            case "btnSurvey":
+                cate = "05";
+                break;
+            case "btnMypage":
+                cate = "08";
+                break;
+            case "btnCommon":
+                cate = "10";
+                break;
         }
         lastseq = "";
         Object[][] params = {
-                {"LAST_SEQ",lastseq}
-                ,{"CATEGORY1",cate}
+                {"LAST_SEQ", lastseq}
+                , {"CATEGORY1", cate}
         };
-        Log.i("wtkim","======================");
-        Log.i("wtkim","lastseq==>"+lastseq);
-        Log.i("wtkim","cate==>"+cate);
-        Log.i("wtkim","======================");
-
         common.loadData(CALLTYPE_LOAD, getString(R.string.url_activepointInfo), params);
     }
 
     @Override
     public void dialogHandler(String result) {
-       /* if(dialogType == 9 && result.equals("ok")){
-            Common.setPreference(getApplicationContext(), "UID", "");
-            Common.setPreference(getApplicationContext(), "KEY", "");
-
-            intent = new Intent(ActivepointHistoryActivity.this,LoginActivity.class);
-            startActivity(intent);
-            finish();
-        }*/
     }
 
     @Override
@@ -267,17 +268,17 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
         if (calltype == CALLTYPE_LOAD) loadHandler(str);
     }
 
-    public void loadHandler(String str){
-        try{
+    public void loadHandler(String str) {
+        try {
             JSONObject json = new JSONObject(str);
-            Log.i("wtkim",json.toString());
+            Log.i("wtkim", json.toString());
             String err = json.getString("ERR");
             if (err.equals("")) {
                 ary_categories = json.getJSONArray("CATEGORIES");
                 ary_lists = json.getJSONArray("LIST");
                 lastseq = json.getString("LAST_SEQ");
-                lastLoadedCnt=ary_categories.length();
-                rnum+=lastLoadedCnt;
+                lastLoadedCnt = ary_categories.length();
+                rnum += lastLoadedCnt;
 
                 int i;
                 categories = new ArrayList<String>();
@@ -285,8 +286,8 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
                 String category1Name = "";
                 Button tmpBtn[] = new Button[ary_categories.length()];
                 //카테고리 버튼생성
-                LinearLayout ll_1 = (LinearLayout)findViewById(R.id.activepointInfo_ll_1);
-                LinearLayout ll_2 = (LinearLayout)findViewById(R.id.activepointInfo_ll_2);
+                LinearLayout ll_1 = (LinearLayout) findViewById(R.id.activepointInfo_ll_1);
+                LinearLayout ll_2 = (LinearLayout) findViewById(R.id.activepointInfo_ll_2);
 
                 //리스트뷰 로드
                 ListView listView;
@@ -294,7 +295,7 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
                 //adapter 새성
                 adapter = new ActivepointInfoAdapter();
                 //리스트뷰 참조 및 Adapter 달기
-                listView = (ListView)findViewById(R.id.activepointInfo_lvList);
+                listView = (ListView) findViewById(R.id.activepointInfo_lvList);
                 listView.setAdapter(adapter);
 
                 String activePointCode;
@@ -302,47 +303,19 @@ public class ActivepointInfoActivity extends NAppCompatActivity implements I_loa
                 String activePoint;
                 String limitDesc;
 
-                for(i=0;i<ary_lists.length();i++){
-                    activePointCode = ((JSONObject)ary_lists.get(i)).getString("ACTIVE_POINT_CODE");
-                    name = ((JSONObject)ary_lists.get(i)).getString("NAME");
-                    activePoint = ((JSONObject)ary_lists.get(i)).getString("ACTIVE_POINT");
-                    limitDesc = ((JSONObject)ary_lists.get(i)).getString("LIMIT_DESC");
+                for (i = 0; i < ary_lists.length(); i++) {
+                    activePointCode = ((JSONObject) ary_lists.get(i)).getString("ACTIVE_POINT_CODE");
+                    name = ((JSONObject) ary_lists.get(i)).getString("NAME");
+                    activePoint = ((JSONObject) ary_lists.get(i)).getString("ACTIVE_POINT");
+                    limitDesc = ((JSONObject) ary_lists.get(i)).getString("LIMIT_DESC");
 
-                    adapter.addItem(activePointCode,name,activePoint,limitDesc);
+                    adapter.addItem(activePointCode, name, activePoint, limitDesc);
                 }
-
-                // 위에서 생성한 listview에 클릭 이벤트 핸들러 정의.
-                /*listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView parent, View v, int position, long id) {
-                        // get item
-                        QnaHistoryListViewItem item = (QnaHistoryListViewItem) parent.getItemAtPosition(position) ;
-
-                        String seqstr = item.getSeq();
-                        String qnatypestr = item.getQnaType();
-                        String titlestr = item.getTitle();
-                        String questionstr = item.getQuestion();
-                        String questiondatestr = item.getQuestion_date();
-                        String answerstr = item.getAnswer();
-                        String answerdatestr = item.getAnswer_date();
-
-                        intent = new Intent(QnaHistoryActivity.this,QnaDetailActivity.class);
-                        intent.putExtra("SEQ",seqstr);
-                        intent.putExtra("QNA_TYPE",qnatypestr);
-                        intent.putExtra("TITLE",titlestr);
-                        intent.putExtra("QUESTION",questionstr);
-                        intent.putExtra("QUESTION_DATE",questiondatestr);
-                        intent.putExtra("ANSWER",answerstr);
-                        intent.putExtra("ANSWER_DATE",answerdatestr);
-                        startActivity(intent);
-                    }
-                }) ;*/
-
-            }else{
-                Common.createDialog(this, getString(R.string.app_name).toString(),null, err, getString(R.string.btn_ok),null, false, false);
+            } else {
+                Common.createDialog(this, getString(R.string.app_name).toString(), null, err, getString(R.string.btn_ok), null, false, false);
             }
-        }catch (Exception e){
-            Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
+        } catch (Exception e) {
+            Common.createDialog(this, getString(R.string.app_name).toString(), null, e.toString(), getString(R.string.btn_ok), null, false, false);
         }
     }
 

@@ -49,11 +49,9 @@ public class WithdrawActivity extends NAppCompatActivity implements I_loaddata,I
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(compoundButton.getId()==R.id.withraw_cbAgree){
                     if(b){
-                        Log.i("wtkim","눌림!");
                         flag_cbAgree = true;
 
                     }else{
-                        Log.i("wtkim","안눌림!");
                         flag_cbAgree = false;
                     }
                 }

@@ -57,8 +57,6 @@ public class JoinActivity extends NAppCompatActivity implements View.OnClickList
         common = new Common(this);
         String UID = Common.getPreference(getApplicationContext(), "UID");
         String KEY = Common.getPreference(getApplicationContext(), "KEY");
-        Log.i("comm-joinActivity","UID==>"+UID);
-        Log.i("comm-joinActivity","KEY==>"+KEY);
 
         mobile = getIntent().getStringExtra("MOBILE_TEL").toString();
         joinQueueSeq = getIntent().getStringExtra("JOIN_QUEUE_SEQ").toString();
@@ -92,9 +90,8 @@ public class JoinActivity extends NAppCompatActivity implements View.OnClickList
         sns_id = getIntent().getStringExtra("SNS_ID").toString();
         sns_type = getIntent().getStringExtra("SNS_TYPE").toString();
         sns_email = getIntent().getStringExtra("SNS_EMAIL").toString();
-        Log.i("wtKim","sns_email==>>"+sns_email);
+
         if(sns_email.equals("") || sns_email.equals("null")){
-            Log.i("wtkim","이메일 disabled!");
             etEmail.setText("");
             etEmail.setClickable(true);
             etEmail.setEnabled(true);
@@ -107,9 +104,6 @@ public class JoinActivity extends NAppCompatActivity implements View.OnClickList
             etEmail.setFocusable(false);
             etEmail.setFocusableInTouchMode(false);
         }
-
-
-        Log.i("wtKim","sns_type==>"+sns_type);
 
         if(!sns_type.equals(String.valueOf(CHANNEL_TYPE_MPLAT))){
             etIdCheck.setVisibility(View.GONE);

@@ -127,11 +127,6 @@ public class ReviewHistoryAdapter extends BaseExpandableListAdapter{
         String joinEndDate = child.getJoinEndDate();
         String reviewUrl = child.getReviewUrl();
 
-
-
-
-        Log.i("wtkim",convertView.toString());
-
         //set the child name
         TextView tvTitle = (TextView) convertView.findViewById(R.id.reviewHistory_tvTitle);
         TextView tvChoiceDate = (TextView)convertView.findViewById(R.id.reviewHistory_tvChoiceDate);
