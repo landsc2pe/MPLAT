@@ -25,6 +25,7 @@ import java.io.BufferedInputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.List;
 
 import kr.co.marketlink.jsyang.ImageViewPager;
 
@@ -212,10 +213,12 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
                     }
 
                     try {
-                        String[] urls = {"http://mplat.co.kr/upload/201612061447454173.jpg","http://mplat.co.kr/upload/201612061448150956.jpg","http://mplat.co.kr/upload/201612061448337231.jpg","http://mplat.co.kr/upload/201612061448502008.jpg","http://mplat.co.kr/upload/201612061449061055.jpg"};
+                        List<String> urls=new ArrayList<>();
                         for (int i = 0; i < ary_banner.length(); i++) {
-
+                            JSONObject object=ary_banner.getJSONObject(i);
+                            urls.add(object.getString("IMG_URL"));
                         }
+                        Common.Logg(urls.toString());
                         if(!bannerLoad) {
                             ImageViewPager imageViewPager = (ImageViewPager) findViewById(R.id.ivp);
                             ImageViewPager.ImageViewPagerClickListener imageViewPagerClickListener=new ImageViewPager.ImageViewPagerClickListener() {
@@ -224,7 +227,7 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
                                     Log.d("MYLOG",Integer.toString(position));
                                 }
                             };
-                            imageViewPager.start(this, getSupportFragmentManager(), urls,imageViewPagerClickListener, 1000, 1000, 3000);
+                            imageViewPager.start(this, urls,imageViewPagerClickListener, 1000, 3000);
                             bannerLoad=true;
                         }
                     }catch(Exception e){
