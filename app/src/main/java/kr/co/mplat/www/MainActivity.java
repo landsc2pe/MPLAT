@@ -146,9 +146,6 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
         start(null);
     }
 
-
-
-
     @Override
     public void onBackPressed() {
         dialogType = 9;//종료타입
@@ -180,10 +177,8 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
     }
 
     public void monClick(View view) {
-        Log.i("wtKim","onClick222 클릭!!");
         switch(view.getId()){
             case  R.id.menubar_ibNav4:
-                Log.i("wtKim","menubar_ibNav4 클릭!!");
                 intent = new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(intent);
                 break;
