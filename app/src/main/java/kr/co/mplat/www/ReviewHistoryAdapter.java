@@ -189,7 +189,6 @@ public class ReviewHistoryAdapter extends BaseExpandableListAdapter{
         });
         */
         //String positionName = (String) getGroup(groupPosition).toString();
-
         return convertView;
     }
 
