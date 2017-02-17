@@ -31,10 +31,8 @@ public class NTextView extends TextView implements View.OnTouchListener {
     @Override
     public boolean onTouch(View view, MotionEvent motionEvent) {
         if(motionEvent.getAction() == MotionEvent.ACTION_DOWN){
-            Log.d("tag", "DOWN");
             view.setPressed(true);
         } else if(motionEvent.getAction() == MotionEvent.ACTION_UP){
-            Log.d("tag", "UP");
             view.setPressed(false);
         }
         return true;

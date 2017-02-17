@@ -22,13 +22,13 @@ import java.util.ArrayList;
  * Created by gdfwo on 2017-01-15.
  */
 
-public class CouponAdapter extends BaseAdapter{
+public class CouponAdapter extends BaseAdapter {
     Handler handler = new Handler();
     Bitmap bm;
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
     private ArrayList<CouponListViewItem> listViewItemList = new ArrayList<CouponListViewItem>();
 
-    public CouponAdapter(){
+    public CouponAdapter() {
 
     }
 
@@ -50,12 +50,12 @@ public class CouponAdapter extends BaseAdapter{
         }
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
-        TextView tvCampaignCode = (TextView)convertView.findViewById(R.id.couponItem_tvCampaignCode);
-        final ImageView ivImage = (ImageView)convertView.findViewById(R.id.couponItem_ivImage);
-        TextView appTitle = (TextView)convertView.findViewById(R.id.couponItem_appTitle);
-        TextView reserveYn = (TextView)convertView.findViewById(R.id.couponItem_reserveYn);
-        TextView developerName = (TextView)convertView.findViewById(R.id.couponItem_developerName);
-        TextView reward = (TextView)convertView.findViewById(R.id.couponItem_reward);
+        TextView tvCampaignCode = (TextView) convertView.findViewById(R.id.couponItem_tvCampaignCode);
+        final ImageView ivImage = (ImageView) convertView.findViewById(R.id.couponItem_ivImage);
+        TextView appTitle = (TextView) convertView.findViewById(R.id.couponItem_appTitle);
+        TextView reserveYn = (TextView) convertView.findViewById(R.id.couponItem_reserveYn);
+        TextView developerName = (TextView) convertView.findViewById(R.id.couponItem_developerName);
+        TextView reward = (TextView) convertView.findViewById(R.id.couponItem_reward);
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
         final CouponListViewItem listViewItem = listViewItemList.get(position);
@@ -67,7 +67,7 @@ public class CouponAdapter extends BaseAdapter{
             @Override
             public void run() {    // 오래 거릴 작업을 구현한다
                 // TODO Auto-generated method stub
-                try{
+                try {
                     URL url = new URL(listViewItem.getImg_url());
                     InputStream is = url.openStream();
                     bm = BitmapFactory.decodeStream(is);
@@ -79,25 +79,25 @@ public class CouponAdapter extends BaseAdapter{
                         }
                     });
                     //mContentView.setImageBitmap(bm); //비트맵 객체로 보여주기
-                } catch(Exception e){
-                    Log.d("wtkim","---5");
+                } catch (Exception e) {
+                    Log.d("wtkim", "---5");
                 }
             }
         });
 
         t.start();
 
-        appTitle.setText(Html.fromHtml("<font><b>"+listViewItem.getApp_title()+"</b></font>"));
-        if((listViewItem.getReserve_yn()).equals("Y")){
+        appTitle.setText(Html.fromHtml("<font><b>" + listViewItem.getApp_title() + "</b></font>"));
+        if ((listViewItem.getReserve_yn()).equals("Y")) {
             //reserveYn.setText(listViewItem.getReserve_yn());
             //reserveYn.setText(Html.fromHtml("<font color='#000000'>사전예약</font>"));
             reserveYn.setVisibility(View.VISIBLE);
-        }else{
+        } else {
             reserveYn.setVisibility(View.INVISIBLE);
         }
 
         developerName.setText(listViewItem.getDeveloper_name());
-        reward.setText(Html.fromHtml("<font color='#7161C4'>"+listViewItem.getReward()+"</font>"));
+        reward.setText(Html.fromHtml("<font color='#7161C4'>" + listViewItem.getReward() + "</font>"));
 
         return convertView;
     }
@@ -114,7 +114,7 @@ public class CouponAdapter extends BaseAdapter{
     }
 
     // 아이템 데이터 추가를 위한 함수. 개발자가 원하는대로 작성 가능.
-    public void addItem(String campaign_code, String img_url, String app_title, String developer_name, String reward,String reserve_yn,String join_yn) {
+    public void addItem(String campaign_code, String img_url, String app_title, String developer_name, String reward, String reserve_yn, String join_yn) {
         CouponListViewItem item = new CouponListViewItem();
         item.setCampaign_code(campaign_code);
         item.setImg_url(img_url);

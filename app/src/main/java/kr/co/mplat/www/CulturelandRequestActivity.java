@@ -173,9 +173,6 @@ public class CulturelandRequestActivity extends NAppCompatActivity implements I_
                     ,{"MOBILE",String.valueOf(etMobile)}
 
             };
-            Log.i("wtkim","JOB_NUM==>"+ String.valueOf(strRnd));
-            Log.i("wtkim","PRICE==>"+selectedPrice);
-            Log.i("wtkim","etMobile==>"+String.valueOf(etMobile));
             common.loadData(CALLTYPE_SAVE, getString(R.string.url_culturelandRequest), params);
         }
     }
@@ -185,7 +182,6 @@ public class CulturelandRequestActivity extends NAppCompatActivity implements I_
         else if (calltype == CALLTYPE_SAVE) saveDataHandler(str);
     }
     public void startHandler(String str){
-        Log.i("wtkim","cashResultActivity==>startHandler()호출!");
         try {
             JSONObject json = new JSONObject(str);
             String err = json.getString("ERR");
@@ -206,19 +202,16 @@ public class CulturelandRequestActivity extends NAppCompatActivity implements I_
                     ((TextView)findViewById(R.id.culturelandRequest_etMobile)).setText(mobile);
                 }
             } else {
-                Log.i("wtkim","11111111");
                 dialogType = 9;
                 Common.createDialog(this, getString(R.string.app_name).toString(),null, err.toString(), getString(R.string.btn_ok),null, false, false);
             }
         } catch (Exception e) {
-            Log.i("wtkim","222222222");
             dialogType = 9;
             Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
         }
     }
 
     public void saveDataHandler(String str){
-        Log.i("wtkim","saveDataHandler호출!");
         try {
             JSONObject json = new JSONObject(str);
             Log.i("wtkim",json.toString());
@@ -233,12 +226,10 @@ public class CulturelandRequestActivity extends NAppCompatActivity implements I_
                     startActivity(intent);*/
                 }
             } else {
-                Log.i("wtkim","aaaaaaaaaa");
                 dialogType = 9;
                 Common.createDialog(this, getString(R.string.app_name).toString(),null, err, getString(R.string.btn_ok),null, false, false);
             }
         } catch (Exception e) {
-            Log.i("wtkim","bbbbbbbbbbbb");
             dialogType = 9;
             Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
         }

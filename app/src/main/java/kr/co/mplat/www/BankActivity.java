@@ -131,11 +131,10 @@ public class BankActivity extends NAppCompatActivity implements AdapterView.OnIt
                     }else{
                         ((Button)findViewById(R.id.bank_btnNext)).setBackgroundResource(R.color.primaryDisabled);
                     }
-                    Log.i("wtkim","bankCheckOK==>"+bankCheckOK);
                     break;
             }
         }catch (Exception e){
-            Log.i("wtkim","error :"+e.toString());
+            Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, true, false);
         }
     }
 
@@ -170,9 +169,6 @@ public class BankActivity extends NAppCompatActivity implements AdapterView.OnIt
             }else{
                 ((Button)findViewById(R.id.bank_btnNext)).setBackgroundResource(R.color.primaryDisabled);
             }
-
-            Log.i("wtkim","strName==>"+strName);
-
         }
     };
     //계좌번호
@@ -209,7 +205,6 @@ public class BankActivity extends NAppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void dialogHandler(String result) {
-        Log.i("wtkim","pre_activity==>"+pre_activity);
         if(result.equals("ok") && dialogType==1 && pre_activity.equals("CashAuthDescActivity")){
             intent = new Intent(BankActivity.this,MypageActivity.class);
             startActivity(intent);
@@ -256,10 +251,6 @@ public class BankActivity extends NAppCompatActivity implements AdapterView.OnIt
             String bank_code = json.getString("BANK_CODE");
             String account_num = json.getString("ACCOUNT_NUM");
 
-            Log.i("wtkim","name==>"+name);
-            Log.i("wtkim","bank_code==>"+bank_code);
-            Log.i("wtkim","account_num==>"+account_num);
-
             int i;
             banks = new ArrayList<>();
             banks.add("선택");
@@ -272,7 +263,6 @@ public class BankActivity extends NAppCompatActivity implements AdapterView.OnIt
 
             //기존값이 있을경우 값 불러옴
             if(!name.equals("") || !bank_code.equals("") || !account_num.equals("")){
-                Log.i("wktim","문구변경하는곳");
                 BankActivity.this.setTvTitle("계좌번호 변경");
                 ((TextView)findViewById(R.id.bank_tvInfo)).setText("등록된 이체 계좌번호를 변경할 수 있습니다.");
             }

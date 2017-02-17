@@ -21,13 +21,7 @@ public class PointActivity extends MAppCompatActivity implements I_loaddata,I_st
     private String point = "";
     private String authMobileYn = "";
     private String bankAccountYn = "";
-    /*
-    Log.i("wtkim","email==>"+email);
-    Log.i("wtkim","point==>"+point);
-    Log.i("wtkim","authMobileYn==>"+authMobileYn);
-    Log.i("wtkim","bankAccountYn==>"+bankAccountYn);
-    Log.i("wtkim","result==>"+result);
-    * */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

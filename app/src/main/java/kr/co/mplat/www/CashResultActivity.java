@@ -24,13 +24,11 @@ public class CashResultActivity extends NAppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_cash_result);
         setTvTitle("현금이체 결과 확인");
         common = new Common(this);
-        Log.i("wtkim","cashResultActivity==>onCreate호출!");
         ((Button)findViewById(R.id.cash_btnBack)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 intent = new Intent(CashResultActivity.this,PointActivity.class);
                 startActivity(intent);
-                Log.i("wtkim","aaa");
             }
         });
     }
@@ -65,13 +63,11 @@ public class CashResultActivity extends NAppCompatActivity implements View.OnCli
 
     @Override
     public void loaddataHandler(int calltype, String str) {
-        Log.i("wtkim","loaddataHandler()호출!");
         if (calltype == CALLTYPE_LOAD) startHandler(str);
         else if (calltype == CALLTYPE_SAVE) saveDataHandler(str);
     }
 
     public void startHandler(String str){
-        Log.i("wtkim","cashResultActivity==>startHandler()호출!");
         try {
             JSONObject json = new JSONObject(str);
             String err = json.getString("ERR");
@@ -89,16 +85,6 @@ public class CashResultActivity extends NAppCompatActivity implements View.OnCli
                     String accountNum = getIntent().getStringExtra("ACCOUNT_NUM").toString();
                     String name = getIntent().getStringExtra("NAME").toString();
                     String cashDate = getIntent().getStringExtra("CASH_DATE").toString();
-                    Log.i("wtkim","===================");
-                    Log.i("wtkim","email==>"+email);
-                    Log.i("wtkim","point==>"+point);
-                    Log.i("wtkim","mobile==>"+mobile);
-                    Log.i("wtkim","price==>"+price);
-                    Log.i("wtkim","bank==>"+bank);
-                    Log.i("wtkim","accountNum==>"+accountNum);
-                    Log.i("wtkim","name==>"+name);
-                    Log.i("wtkim","cashDate==>"+cashDate);
-                    Log.i("wtkim","===================");
 
                     //Common.createDialog(this, getString(R.string.app_name).toString(),null, getString(R.string.dial_msg6), getString(R.string.btn_ok),null, true, false);
                     ((TextView)findViewById(R.id.cashResult_tvEmail)).setText(email);
@@ -109,10 +95,6 @@ public class CashResultActivity extends NAppCompatActivity implements View.OnCli
                     ((EditText)findViewById(R.id.cashResult_etName)).setText(name);
                     ((TextView)findViewById(R.id.cashResult_tvDate)).setText(cashDate);
 
-                   /* ((TextView)findViewById(R.id.cash_tvPoint)).setText(Common.getTvComma(point));
-                    ((EditText)findViewById(R.id.cash_etBank)).setText(bank);
-                    ((EditText)findViewById(R.id.cash_etAccountNum)).setText(account_num);
-                    ((EditText)findViewById(R.id.cash_etName)).setText(name);*/
                 }
             } else {
                 dialogType = 9;

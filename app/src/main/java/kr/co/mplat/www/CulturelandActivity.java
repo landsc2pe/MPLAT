@@ -27,7 +27,6 @@ public class CulturelandActivity extends MAppCompatActivity implements I_loaddat
         ((ImageButton)findViewById(R.id.cultureland_ibCultureTransfer)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("wtkim","상품권교환선택!");
                 intent = new Intent(CulturelandActivity.this,CulturelandRequestActivity.class);
                 startActivity(intent);
             }
@@ -36,7 +35,6 @@ public class CulturelandActivity extends MAppCompatActivity implements I_loaddat
         ((ImageButton)findViewById(R.id.cultureland_ibCulturelandCart)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("wtkim","상품권 보관함 선택!");
                 intent = new Intent(CulturelandActivity.this,CulturelandHistoryActivity.class);
                 startActivity(intent);
             }

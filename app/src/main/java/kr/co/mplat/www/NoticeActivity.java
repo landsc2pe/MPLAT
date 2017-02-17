@@ -87,7 +87,6 @@ public class NoticeActivity extends NAppCompatActivity implements AdapterView.On
         }
         //기본정보 호출
         //common.loadData(CALLTYPE_LOAD, getString(R.string.url_notice), null);
-        Log.i("wtkim","start!!");
     }
 
     public void dataload(){
@@ -95,10 +94,9 @@ public class NoticeActivity extends NAppCompatActivity implements AdapterView.On
             mustLoad=true;
             return;
         }
-        Log.i("wtkim","---------------------dataload");
         mustLoad=false;
         busy=true;
-        Log.i("wtkim","dataload!!");
+
         Object[][] params = {
                  {"LAST_SEQ",lastseq}
                 ,{"NOTICE_CODE",strNotice_code}
@@ -118,7 +116,6 @@ public class NoticeActivity extends NAppCompatActivity implements AdapterView.On
                         filterLoaded =true;
                         return;
                     }
-                    Log.i("wtkim","---------------------strNotice_code==>"+strNotice_code);
                     if(flag_spinner){
                         DataList = new ArrayList<ConfigGroup>();
                         rnum=0;
@@ -126,7 +123,6 @@ public class NoticeActivity extends NAppCompatActivity implements AdapterView.On
                     if(adapterView.getSelectedItemPosition()>0){ addNum = -1; }else{ addNum=0; }
                     object = (JSONObject)ary_notice_codes.get(adapterView.getSelectedItemPosition()+addNum);
                     if(addNum==0){ strNotice_code = "";}else{ strNotice_code = object.get("CODE").toString(); }
-                    Log.i("wtkim","strNotice_code==>"+strNotice_code);
                     lastseq = "";
                     dataload();
                     break;
@@ -161,8 +157,6 @@ public class NoticeActivity extends NAppCompatActivity implements AdapterView.On
                 ary_lists = json.getJSONArray("LIST");
                 lastLoadedCnt=ary_lists.length();
                 rnum+=lastLoadedCnt;
-                Log.i("wtkim","lastLoadedCnt==>"+lastLoadedCnt);
-                Log.i("wtkim","rnum==>"+rnum);
                 ary_notice_codes = json.getJSONArray("NOTICE_CODES");
                 lastseq = json.getString("LAST_SEQ");
 
@@ -178,7 +172,6 @@ public class NoticeActivity extends NAppCompatActivity implements AdapterView.On
                         aa.setDropDownViewResource(R.layout.spinner_item);
                         spin_notice_code.setAdapter(aa);
                     }
-                    Log.i("wtkim","-------------------------flag_spinner");
                 }
 
                 for(i=0;i<ary_lists.length();i++){

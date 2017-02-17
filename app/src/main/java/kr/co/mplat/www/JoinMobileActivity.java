@@ -27,9 +27,6 @@ public class JoinMobileActivity extends NAppCompatActivity implements View.OnCli
 
         String UID = Common.getPreference(getApplicationContext(), "UID");
         String KEY = Common.getPreference(getApplicationContext(), "KEY");
-        Log.i("comm-joinMobileActivity","UID==>"+UID);
-        Log.i("comm-joinMobileActivity","KEY==>"+KEY);
-
 
         etMobile = (EditText) findViewById(R.id.joinmobile_etMobile);
 

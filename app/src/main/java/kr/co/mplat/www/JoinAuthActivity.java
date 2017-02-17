@@ -36,8 +36,6 @@ public class JoinAuthActivity extends NAppCompatActivity implements NTextView.On
 
         String UID = Common.getPreference(getApplicationContext(), "UID");
         String KEY = Common.getPreference(getApplicationContext(), "KEY");
-        Log.i("comm-joinAuthActivity","UID==>"+UID);
-        Log.i("comm-joinAuthActivity","KEY==>"+KEY);
 
         TvCount = (TextView) findViewById(R.id.joinauth_tvCount);
         AuthcodeTimer();
@@ -132,14 +130,12 @@ public class JoinAuthActivity extends NAppCompatActivity implements NTextView.On
     }
     //재발송 처리
     public void resendHandler(String str) {
-        Log.i("wtKim","resendHandler() call!");
         try {
             JSONObject json = new JSONObject(str);
             String err = json.getString("ERR");
             if (err.equals("")) {
                 String result = json.getString("RESULT");
                 if (result.equals("OK") && dialogType == 1) {
-                    Log.i("wtKim","resendHandler() ==>1 call!");
                     EditText etAuthcode = (EditText)findViewById(R.id.joinauth_etAuthcode);
                     authcode = etAuthcode.getText().toString();
                     timer.cancel();//기존타이머 취소
@@ -147,17 +143,14 @@ public class JoinAuthActivity extends NAppCompatActivity implements NTextView.On
                     etAuthcode.setText("");
                 }
             } else {
-                Log.i("wtKim","resendHandler() ==>2 call!");
                 Common.createDialog(this, getString(R.string.txt_authCodeOK).toString(),null, err, getString(R.string.btn_ok),null, false, false);
             }
         } catch (Exception e) {
-            Log.i("wtKim","resendHandler() ==>3 call!");
             Common.createDialog(this, getString(R.string.txt_authCodeOK).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
         }
     }
     //저장 처리
     public void saveHandler(String str) {
-        Log.i("wtKim","saveHandler() call!");
         try {
             JSONObject json = new JSONObject(str);
             String err = json.getString("ERR");
@@ -177,11 +170,9 @@ public class JoinAuthActivity extends NAppCompatActivity implements NTextView.On
                     startActivity(intent);
                 }
             } else {
-                Log.i("wtKim","saveHandler() ==> 2 call!");
                 Common.createDialog(this, getString(R.string.txt_authCodeOK).toString(),null, err, getString(R.string.btn_ok),null, false, false);
             }
         } catch (Exception e) {
-            Log.i("wtKim","saveHandler() ==> 3 call!");
             Common.createDialog(this, getString(R.string.txt_authCodeOK).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
         }
     }

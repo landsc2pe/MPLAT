@@ -30,12 +30,6 @@ public class AgreeChangeActivity extends NAppCompatActivity implements I_loaddat
     Switch swcAgreeNotice = null;
     Switch swcAgreeEvent = null;
 
-    String agree_email = "";
-    String agree_email_date = "";
-    String agree_sms = "";
-    String agree_sms_date = "";
-    String noti_notice = "";
-    String noti_event = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -181,7 +175,6 @@ public class AgreeChangeActivity extends NAppCompatActivity implements I_loaddat
     public void updateHandler(String str){
         try{
             JSONObject json = new JSONObject(str);
-            Log.i("wtkim",json.toString());
             String err = json.getString("ERR");
             if (err.equals("")) {
                 if(dialogType==1){
@@ -209,9 +202,6 @@ public class AgreeChangeActivity extends NAppCompatActivity implements I_loaddat
                         //Common.createDialog(AgreeChangeActivity.this, getString(R.string.app_name).toString(),null, "이벤트 및 광고 수신 상태가 수신거부로 변경되었습니다.\n\n변경일자:"+Common.getDateString("yyyy-MM-dd"), getString(R.string.btn_ok),null, false, false);
                     }
                 }
-
-
-
             }else{
                 Common.createDialog(this, getString(R.string.app_name).toString(),null, err, getString(R.string.btn_ok),null, false, false);
             }

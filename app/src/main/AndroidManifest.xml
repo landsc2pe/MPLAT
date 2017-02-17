@@ -307,19 +307,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CouponRequestActivity"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name=".CouponHistoryActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".CouponUseActivity"
-            android:screenOrientation="portrait"/>
-        <activity
             android:name=".AutoCouponActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".AutoCouponSaveActivity"
             android:screenOrientation="portrait"/>
 
         <provider
@@ -335,9 +326,6 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".MissionDetailActivity"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".MissionRequestActivity"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".SurveyHistoryActivity"
@@ -420,10 +408,6 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key"/>
 
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-        </activity>
     </application>
 
 </manifest>

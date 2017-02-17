@@ -91,7 +91,6 @@ public class SearchPwChangeActivity extends NAppCompatActivity implements View.O
             String err = json.getString("ERR");
             if (err.equals("")) {
                 String result = json.getString("RESULT");
-                Log.i("wtKim","result=>"+result);
                 if (result.equals("OK")) {
                     dialogType = 2;
                     Common.createDialog(this, "비밀번호 변경", null,"비밀번호가 변경되었습니다.", getString(R.string.btn_ok),null ,false, false);

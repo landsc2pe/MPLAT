@@ -327,12 +327,6 @@ public class CulturelandHistoryActivity extends NAppCompatActivity implements Ab
                         String tvValidDate = ((ViewHolder)view.getTag()).getTvValidDate();
                         String tvPincode = ((ViewHolder)view.getTag()).getTvPincode();
 
-                        Log.i("wtkim","tvDate==>"+tvDate);
-                        Log.i("wtkim","tvPrice==>"+tvPrice);
-                        Log.i("wtkim","tvValidDate==>"+tvValidDate);
-                        Log.i("wtkim","tvPincode==>"+tvPincode);
-
-
                         // LayoutInflater를 통해 위의 custom layout을 AlertDialog에 반영. 이 외에는 거의 동일하다.
                         LayoutInflater inflater = (LayoutInflater)getApplicationContext().getSystemService(LAYOUT_INFLATER_SERVICE);
                         View row_v = inflater.inflate(R.layout.custom_dialog_cultureland, null);
@@ -374,10 +368,6 @@ public class CulturelandHistoryActivity extends NAppCompatActivity implements Ab
                         dialog=dlog;
                         dlog.show();
 
-
-
-
-                        Log.i("wtkim","========>>>"+((ViewHolder)view.getTag()).getTvDate());
                     }
                 });
 

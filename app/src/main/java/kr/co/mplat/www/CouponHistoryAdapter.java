@@ -79,24 +79,17 @@ public class CouponHistoryAdapter extends BaseAdapter implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-        Log.i("wtkim","getid===>"+view.getId());
         TagInfo ti=(TagInfo)view.getTag();
         if(view.getId()==R.id.couponHistoryItem_btnDown){
             ti.clickTarget="download";
-            Log.i("wtkim","download!");
         } else if(view.getId()==R.id.couponHistoryItem_tvCouponNum){
             ti.clickTarget="couponnum";
-            Log.i("wtkim","couponnum!");
         }
         view.setTag(ti);
         // ListBtnClickListener(MainActivity)의 onListBtnClick() 함수 호출.
         if (this.listBtnClickListener != null) {
             this.listBtnClickListener.onListBtnClick((TagInfo) view.getTag()) ;
         }
-
-        /*if (this.listCouponClickListener != null && this.listBtnClickListener==null) {
-            this.listCouponClickListener.onListCouponClick((String) view.getTag()) ;
-        }*/
     }
 
     @Override
@@ -208,20 +201,6 @@ public class CouponHistoryAdapter extends BaseAdapter implements View.OnClickLis
 
             t.start();
         }
-
-
-
-       /* appTitle.setText(Html.fromHtml("<font><b>"+listViewItem.getApp_title()+"</b></font>"));
-        if((listViewItem.getReserve_yn()).equals("Y")){
-            //reserveYn.setText(listViewItem.getReserve_yn());
-            reserveYn.setText(Html.fromHtml("<font color='#FFF'>사전예약</font>"));
-            reserveYn.setVisibility(View.VISIBLE);
-        }else{
-            reserveYn.setVisibility(View.INVISIBLE);
-        }
-
-        developerName.setText(listViewItem.getDeveloper_name());
-        reward.setText(Html.fromHtml("<font color='#7161C4'>"+listViewItem.getReward()+"</font>"));*/
 
         //게임다운로드 버튼 선택시
         Button down = (Button)convertView.findViewById(R.id.couponHistoryItem_btnDown);

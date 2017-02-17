@@ -65,7 +65,6 @@ public class SearchPwMobileActivity extends NAppCompatActivity implements View.O
     public void dialogHandler(String result) {
         String mobile = etMobile.getText().toString();
         String id = getIntent().getStringExtra("ID");
-        Log.i("wtKim","id===="+id);
         if(result.equals("ok") && dialogType == 2){
             Object[][] params = {
                      {"ID", id}

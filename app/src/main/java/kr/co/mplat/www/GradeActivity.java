@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import org.json.JSONObject;
 
-public class GradeActivity extends NAppCompatActivity implements I_loaddata,I_startFinish,I_dialogdata{
+public class GradeActivity extends NAppCompatActivity implements I_loaddata, I_startFinish, I_dialogdata {
     private final int CALLTYPE_LOAD = 1;
     private int dialogType = 0;
     Common common = null;
@@ -41,28 +41,28 @@ public class GradeActivity extends NAppCompatActivity implements I_loaddata,I_st
         common = new Common(this);
         //String email = getIntent().getStringExtra("EMAIL");
 
-        tvEmail = (TextView)findViewById(R.id.grade_tvEmail);
-        ivGradeImage = (ImageView)findViewById(R.id.grade_ivGradeImage);
-        tvGradeLabel = (TextView)findViewById(R.id.grade_tvGradeLabel);
-        tvExtraRate = (TextView)findViewById(R.id.grade_tvExtraRate);
-        tvActivePoint = (TextView)findViewById(R.id.grade_tvActivePoint);
-        tvGradePeriod = (TextView)findViewById(R.id.grade_tvGradePeriod);
-        tvNextGradeDate = (TextView)findViewById(R.id.grade_tvNextGradeDate);
+        tvEmail = (TextView) findViewById(R.id.grade_tvEmail);
+        ivGradeImage = (ImageView) findViewById(R.id.grade_ivGradeImage);
+        tvGradeLabel = (TextView) findViewById(R.id.grade_tvGradeLabel);
+        tvExtraRate = (TextView) findViewById(R.id.grade_tvExtraRate);
+        tvActivePoint = (TextView) findViewById(R.id.grade_tvActivePoint);
+        tvGradePeriod = (TextView) findViewById(R.id.grade_tvGradePeriod);
+        tvNextGradeDate = (TextView) findViewById(R.id.grade_tvNextGradeDate);
 
 
         //활동지수 상세내역 클릭이벤트 등록
-        ((Button)findViewById(R.id.grade_btnDetail)).setOnClickListener(new View.OnClickListener(){
+        ((Button) findViewById(R.id.grade_btnDetail)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(GradeActivity.this,ActivepointActivity.class);
+                intent = new Intent(GradeActivity.this, ActivepointActivity.class);
                 startActivity(intent);
             }
         });
         //회원등급별 혜택안내 클릭이벤트 등록
-        ((Button)findViewById(R.id.grade_btnGradeInfo)).setOnClickListener(new View.OnClickListener(){
+        ((Button) findViewById(R.id.grade_btnGradeInfo)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(GradeActivity.this,GradeInfoActivity.class);
+                intent = new Intent(GradeActivity.this, GradeInfoActivity.class);
                 startActivity(intent);
             }
         });
@@ -77,7 +77,7 @@ public class GradeActivity extends NAppCompatActivity implements I_loaddata,I_st
     @Override
     public void start(View view) {
         //네트워크 상태 확인
-        if(!common.isConnected()) {
+        if (!common.isConnected()) {
             common.showCheckNetworkDialog();
             return;
         }
@@ -95,10 +95,10 @@ public class GradeActivity extends NAppCompatActivity implements I_loaddata,I_st
         if (calltype == CALLTYPE_LOAD) loadHandler(str);
     }
 
-    public void loadHandler(String str){
-        try{
+    public void loadHandler(String str) {
+        try {
             JSONObject json = new JSONObject(str);
-            Log.i("wtkim",json.toString());
+            Log.i("wtkim", json.toString());
             String err = json.getString("ERR");
             if (err.equals("")) {
                 String today = json.getString("TODAY");
@@ -112,7 +112,7 @@ public class GradeActivity extends NAppCompatActivity implements I_loaddata,I_st
 
                 //문구변경
                 tvEmail.setText(email);
-                switch(grade){
+                switch (grade) {
                     case "0":
                         ivGradeImage.setImageResource(R.drawable.grade_bronze);
                         break;
@@ -127,16 +127,16 @@ public class GradeActivity extends NAppCompatActivity implements I_loaddata,I_st
                         break;
                 }
 
-                tvGradeLabel.setText(Html.fromHtml(today+" 기준 회원님의 등급은 <font color='#F07907'>"+gradeLabel+"</font> 입니다"));
-                tvExtraRate.setText(Html.fromHtml("<font color='#7161C4'>"+extraRate+"</font>"));
-                tvActivePoint.setText(Html.fromHtml("<font color='#7161C4'>"+activePoint+"</font>"));
-                tvGradePeriod.setText(Html.fromHtml("<font color='#7161C4'>"+gradePeriod+"</font>"));
-                tvNextGradeDate.setText(Html.fromHtml("<font color='#7161C4'>"+nextGradeDate+"</font>"));
-            }else{
-                Common.createDialog(this, getString(R.string.app_name).toString(),null, err, getString(R.string.btn_ok),null, false, false);
+                tvGradeLabel.setText(Html.fromHtml(today + " 기준 회원님의 등급은 <font color='#F07907'>" + gradeLabel + "</font> 입니다"));
+                tvExtraRate.setText(Html.fromHtml("<font color='#7161C4'>" + extraRate + "</font>"));
+                tvActivePoint.setText(Html.fromHtml("<font color='#7161C4'>" + activePoint + "</font>"));
+                tvGradePeriod.setText(Html.fromHtml("<font color='#7161C4'>" + gradePeriod + "</font>"));
+                tvNextGradeDate.setText(Html.fromHtml("<font color='#7161C4'>" + nextGradeDate + "</font>"));
+            } else {
+                Common.createDialog(this, getString(R.string.app_name).toString(), null, err, getString(R.string.btn_ok), null, false, false);
             }
-        }catch (Exception e){
-            Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
+        } catch (Exception e) {
+            Common.createDialog(this, getString(R.string.app_name).toString(), null, e.toString(), getString(R.string.btn_ok), null, false, false);
         }
     }
 

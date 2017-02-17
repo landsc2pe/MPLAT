@@ -69,8 +69,6 @@ public class AuthActivity extends MAppCompatActivity implements I_loaddata,I_sta
         //정보 로드
         String UID = Common.getPreference(getApplicationContext(), "UID");
         String KEY = Common.getPreference(getApplicationContext(), "KEY");
-        Log.i("wtkim","UID==>"+UID);
-        Log.i("wtkim","KEY==>"+KEY);
         //네트워크 상태 확인
         /*if(!common.isConnected()) {
             Log.i("wtKim","isConnected==>"+common.isConnected());

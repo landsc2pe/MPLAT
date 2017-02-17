@@ -18,7 +18,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ActivepointHistoryActivity extends NAppCompatActivity implements I_loaddata,I_startFinish,I_dialogdata{
+public class ActivepointHistoryActivity extends NAppCompatActivity implements I_loaddata, I_startFinish, I_dialogdata {
     private final int CALLTYPE_LOAD = 1;
     private final int CALLTYPE_PWDCHECK = 2;
     Common common = null;
@@ -29,7 +29,7 @@ public class ActivepointHistoryActivity extends NAppCompatActivity implements I_
     JSONArray ary_historys = new JSONArray();
     ArrayList<String> historys = new ArrayList<String>();
     private int lastLoadedCnt = 99999;
-    private int rnum=0;
+    private int rnum = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +41,8 @@ public class ActivepointHistoryActivity extends NAppCompatActivity implements I_
         monthcode = intent.getStringExtra("MONTHCODE").toString();
         month = intent.getStringExtra("MONTH").toString();
 
-        if(!monthcode.equals("")){
-            ((TextView)findViewById(R.id.activepointHistory_tvTitle)).setText(Html.fromHtml(monthcode.substring(0,4)+"년 "+monthcode.substring(4,6)+"월 활동 지수 : <font color='#7161C4'>"+Common.getTvComma(month)+"</font>"));
+        if (!monthcode.equals("")) {
+            ((TextView) findViewById(R.id.activepointHistory_tvTitle)).setText(Html.fromHtml(monthcode.substring(0, 4) + "년 " + monthcode.substring(4, 6) + "월 활동 지수 : <font color='#7161C4'>" + Common.getTvComma(month) + "</font>"));
         }
 
         dataload();
@@ -58,7 +58,7 @@ public class ActivepointHistoryActivity extends NAppCompatActivity implements I_
     @Override
     public void start(View view) {
         //네트워크 상태 확인
-        if(!common.isConnected()) {
+        if (!common.isConnected()) {
             common.showCheckNetworkDialog();
             return;
         }
@@ -66,11 +66,11 @@ public class ActivepointHistoryActivity extends NAppCompatActivity implements I_
 
     }
 
-    public void dataload(){
+    public void dataload() {
         //기본정보 호출
         Object[][] params = {
-                {"MONTHCODE",monthcode}
-                ,{"LAST_SEQ",""}
+                {"MONTHCODE", monthcode}
+                , {"LAST_SEQ", ""}
         };
         common.loadData(CALLTYPE_LOAD, getString(R.string.url_activepointHistory), params);
 
@@ -78,14 +78,7 @@ public class ActivepointHistoryActivity extends NAppCompatActivity implements I_
 
     @Override
     public void dialogHandler(String result) {
-       /* if(dialogType == 9 && result.equals("ok")){
-            Common.setPreference(getApplicationContext(), "UID", "");
-            Common.setPreference(getApplicationContext(), "KEY", "");
 
-            intent = new Intent(ActivepointHistoryActivity.this,LoginActivity.class);
-            startActivity(intent);
-            finish();
-        }*/
     }
 
     @Override
@@ -93,17 +86,17 @@ public class ActivepointHistoryActivity extends NAppCompatActivity implements I_
         if (calltype == CALLTYPE_LOAD) loadHandler(str);
     }
 
-    public void loadHandler(String str){
-        try{
+    public void loadHandler(String str) {
+        try {
             JSONObject json = new JSONObject(str);
-            Log.i("wtkim",json.toString());
+            Log.i("wtkim", json.toString());
             String err = json.getString("ERR");
             if (err.equals("")) {
                 //문구변경
                 ary_historys = json.getJSONArray("HISTORY");
-                lastseq =  json.getString("LAST_SEQ");
-                lastLoadedCnt=ary_historys.length();
-                rnum+=lastLoadedCnt;
+                lastseq = json.getString("LAST_SEQ");
+                lastLoadedCnt = ary_historys.length();
+                rnum += lastLoadedCnt;
 
                 int i;
                 historys = new ArrayList<String>();
@@ -121,52 +114,26 @@ public class ActivepointHistoryActivity extends NAppCompatActivity implements I_
                 String label;
                 String active_point;
 
-                for(i=0;i<ary_historys.length();i++){
-                    seq = ((JSONObject)ary_historys.get(i)).getString("SEQ");
-                    datetime = ((JSONObject)ary_historys.get(i)).getString("DATETIME");
+                for (i = 0; i < ary_historys.length(); i++) {
+                    seq = ((JSONObject) ary_historys.get(i)).getString("SEQ");
+                    datetime = ((JSONObject) ary_historys.get(i)).getString("DATETIME");
                     //datetime = "2016-12-13 09:56:01";
-                    label = ((JSONObject)ary_historys.get(i)).getString("LABEL");
-                    active_point = ((JSONObject)ary_historys.get(i)).getString("ACTIVE_POINT");
-                    Log.i("wtkim","seq==>"+datetime);
+                    label = ((JSONObject) ary_historys.get(i)).getString("LABEL");
+                    active_point = ((JSONObject) ary_historys.get(i)).getString("ACTIVE_POINT");
+                    Log.i("wtkim", "seq==>" + datetime);
 
-                    adapter.addItem(seq,datetime,label,active_point);
+                    adapter.addItem(seq, datetime, label, active_point);
                 }
 
-                // 위에서 생성한 listview에 클릭 이벤트 핸들러 정의.
-                /*listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView parent, View v, int position, long id) {
-                        // get item
-                        QnaHistoryListViewItem item = (QnaHistoryListViewItem) parent.getItemAtPosition(position) ;
-
-                        String seqstr = item.getSeq();
-                        String qnatypestr = item.getQnaType();
-                        String titlestr = item.getTitle();
-                        String questionstr = item.getQuestion();
-                        String questiondatestr = item.getQuestion_date();
-                        String answerstr = item.getAnswer();
-                        String answerdatestr = item.getAnswer_date();
-
-                        intent = new Intent(QnaHistoryActivity.this,QnaDetailActivity.class);
-                        intent.putExtra("SEQ",seqstr);
-                        intent.putExtra("QNA_TYPE",qnatypestr);
-                        intent.putExtra("TITLE",titlestr);
-                        intent.putExtra("QUESTION",questionstr);
-                        intent.putExtra("QUESTION_DATE",questiondatestr);
-                        intent.putExtra("ANSWER",answerstr);
-                        intent.putExtra("ANSWER_DATE",answerdatestr);
-                        startActivity(intent);
-                    }
-                }) ;*/
-            }else{
-                Common.createDialog(this, getString(R.string.app_name).toString(),null, err, getString(R.string.btn_ok),null, false, false);
+            } else {
+                Common.createDialog(this, getString(R.string.app_name).toString(), null, err, getString(R.string.btn_ok), null, false, false);
             }
-        }catch (Exception e){
-            Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
+        } catch (Exception e) {
+            Common.createDialog(this, getString(R.string.app_name).toString(), null, e.toString(), getString(R.string.btn_ok), null, false, false);
         }
     }
 
-     @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         boolean ret = super.onCreateOptionsMenu(menu);
         ImageButton ib_back = (ImageButton) ab.findViewById(R.id.ibBack);

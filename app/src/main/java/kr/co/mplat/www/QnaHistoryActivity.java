@@ -85,7 +85,6 @@ public class QnaHistoryActivity extends NAppCompatActivity implements AdapterVie
     }
 
     public void dataload(){
-        Log.i("wtkim","dataload!!");
 
         Object[][] params = {
                 {"LAST_SEQ",lastseq}
@@ -112,7 +111,6 @@ public class QnaHistoryActivity extends NAppCompatActivity implements AdapterVie
                 ary_lists = json.getJSONArray("LIST");
                 lastLoadedCnt=ary_lists.length();
                 rnum+=lastLoadedCnt;
-                Log.i("wtkim",ary_lists.toString());
 
                 int i;
                 qnacodes = new ArrayList<>();
@@ -184,16 +182,6 @@ public class QnaHistoryActivity extends NAppCompatActivity implements AdapterVie
                 }) ;
             }
 
-
-
-
-
-
-
-
-
-
-
             //기존정보가 있는지 로드
             //common.loadData(CALLTYPE_INFOCHECK, getString(R.string.url_addinfo), null);
         } catch (Exception e) {
@@ -215,7 +203,6 @@ public class QnaHistoryActivity extends NAppCompatActivity implements AdapterVie
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Log.i("wtkim","onItemSelected!!");
         JSONObject object;
         int addNum=0;
         try{
@@ -232,16 +219,14 @@ public class QnaHistoryActivity extends NAppCompatActivity implements AdapterVie
                         rnum=0;
                     }
                     if(adapterView.getSelectedItemPosition()>0){ addNum = -1; }else{ addNum=0; }
-                    Log.i("wtkim",Integer.toString(ary_qnacodes.length()));
                     object = (JSONObject)ary_qnacodes.get(adapterView.getSelectedItemPosition()+addNum);
                     if(addNum==0){ strQnacode = "";}else{ strQnacode = object.get("CODE").toString(); }
-                    Log.i("wtkim","strFaq_code==>"+strQnacode);
                     lastseq = "";
                     dataload();
                     break;
             }
         }catch (Exception e){
-            Log.i("wtkim",e.toString());
+            Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
         }
     }
 

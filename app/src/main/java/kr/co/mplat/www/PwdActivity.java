@@ -118,7 +118,6 @@ public class PwdActivity extends NAppCompatActivity implements I_loaddata,I_star
 
     @Override
     public void loaddataHandler(int calltype, String str) {
-        Log.i("wtkim","loaddataHandler()호출!");
         if (calltype == CALLTYPE_PWDCHECK) pwdCheckHandler(str);
         else if (calltype == CALLTYPE_LOAD) loadHandler(str);
     }

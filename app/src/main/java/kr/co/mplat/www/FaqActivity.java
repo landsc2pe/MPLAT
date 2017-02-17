@@ -68,9 +68,6 @@ public class FaqActivity extends NAppCompatActivity implements AdapterView.OnIte
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
                 try {
-                    Log.d("wtkim","-------scroll!");
-                    Log.d("wtkim","-------rnum:"+rnum);
-                    Log.d("wtkim","-------itemcnt:"+(firstVisibleItem + visibleItemCount + 10));
                     if (lastLoadedCnt>0 && (rnum < (firstVisibleItem + visibleItemCount + 15)))
                         dataload();
                 } catch (Exception e) {
@@ -89,7 +86,6 @@ public class FaqActivity extends NAppCompatActivity implements AdapterView.OnIte
         }
         //기본정보 호출
         //common.loadData(CALLTYPE_LOAD, getString(R.string.url_notice), null);
-        Log.i("wtkim","start!!");
     }
 
     public void dataload(){
@@ -97,10 +93,8 @@ public class FaqActivity extends NAppCompatActivity implements AdapterView.OnIte
             mustLoad=true;
             return;
         }
-        Log.i("wtkim","---------------------dataload");
         mustLoad=false;
         busy=true;
-        Log.i("wtkim","dataload!!");
         Object[][] params = {
                 {"LAST_SEQ",lastseq}
                 ,{"QNA_CATEGORY1",strFaq_code}
@@ -120,16 +114,13 @@ public class FaqActivity extends NAppCompatActivity implements AdapterView.OnIte
                         filterLoaded =true;
                         return;
                     }
-                    Log.i("wtkim","---------------------strFaq_code==>"+strFaq_code);
                     if(flag_spinner){
                         DataList = new ArrayList<ConfigGroup>();
                         rnum=0;
                     }
                     if(adapterView.getSelectedItemPosition()>0){ addNum = -1; }else{ addNum=0; }
-                    Log.i("wtkim",Integer.toString(ary_faq_codes.length()));
                     object = (JSONObject)ary_faq_codes.get(adapterView.getSelectedItemPosition()+addNum);
                     if(addNum==0){ strFaq_code = "";}else{ strFaq_code = object.get("CODE").toString(); }
-                    Log.i("wtkim","strFaq_code==>"+strFaq_code);
                     lastseq = "";
                     dataload();
                     break;

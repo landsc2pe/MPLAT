@@ -21,9 +21,10 @@ import java.util.ArrayList;
  * Created by gdfwo on 2017-01-15.
  */
 
-public class AddressAdapter extends BaseAdapter{
+public class AddressAdapter extends BaseAdapter {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
     private ArrayList<AddressListViewItem> listViewItemList = new ArrayList<AddressListViewItem>();
+
     // ListViewAdapter의 생성자
     public AddressAdapter() {
     }
@@ -39,7 +40,7 @@ public class AddressAdapter extends BaseAdapter{
         Context context = parent.getContext();
 
         // "listview_item" Layout을 inflate하여 convertView 참조 획득.
-        if(convertView == null){
+        if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.listview_address_item, parent, false);
         }
@@ -57,7 +58,7 @@ public class AddressAdapter extends BaseAdapter{
 
         // 아이템 내 각 위젯에 데이터 반영
         tvZipNo.setText(listViewItem.getZipNo());
-        tvRoadAddrPart1.setText(Html.fromHtml("<font color='#7161C4'>"+listViewItem.getRoadAddrPart1()+""+listViewItem.getRoadAddrPart2()+"</font>"));
+        tvRoadAddrPart1.setText(Html.fromHtml("<font color='#7161C4'>" + listViewItem.getRoadAddrPart1() + "" + listViewItem.getRoadAddrPart2() + "</font>"));
         //tvRoadAddrPart2.setText(Html.fromHtml("<font color='#7161C4'>"+listViewItem.getRoadAddrPart2()+"</font>"));
         tvJibunAddr.setText(listViewItem.getJibunAddr());
 
@@ -68,6 +69,7 @@ public class AddressAdapter extends BaseAdapter{
     public long getItemId(int position) {
         return position;
     }
+
     // 지정한 위치(position)에 있는 데이터 리턴 : 필수 구현
     @Override
     public Object getItem(int position) {

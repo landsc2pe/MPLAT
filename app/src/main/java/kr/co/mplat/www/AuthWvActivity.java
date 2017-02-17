@@ -74,9 +74,6 @@ public class AuthWvActivity extends AppCompatActivity implements I_loaddata,I_st
         //인증성공
         @JavascriptInterface
         public void auth_success(final String name, final String birth_date, final String gender){
-        /*    setDismiss(dialog);
-            dialog = createDialog(R.layout.dialog_loading);
-            dialog.show();*/
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -97,8 +94,6 @@ public class AuthWvActivity extends AppCompatActivity implements I_loaddata,I_st
     }
     //저장 후 처리
     public void authHandler(String str) {
-        //Log.d("MYLOG", "STR:" + str.substring(0, str.length() - 1));
-        //setDismiss(dialog);
         try {
             JSONObject json = new JSONObject(str);
             String err = json.getString("ERR");
@@ -111,13 +106,11 @@ public class AuthWvActivity extends AppCompatActivity implements I_loaddata,I_st
                 Common.createDialog(AuthWvActivity.this, getString(R.string.app_name).toString(),null, err, getString(R.string.btn_ok),null, false, false);
             }
         } catch (Exception e) {
-            //Log.d("MYLOG", e.toString());
-            //Log.d("MYLOG", "STR:" + str.substring(0, str.length() - 1));
+            Common.createDialog(AuthWvActivity.this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
         }
     }
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 안내문 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     private AlertDialog createDialog(int layoutResource) {
-        //if (dialog != null && dialog.isShowing()) return dialog;
         final View innerView = getLayoutInflater().inflate(layoutResource, null);
         AlertDialog.Builder ab = new AlertDialog.Builder(this);
         ab.setView(layoutResource);

@@ -99,7 +99,6 @@ public class JoinAddInfoActivity extends NAppCompatActivity implements AdapterVi
         //mypage에서 넘어온 경우, 버튼변경
         intent = getIntent();
         pre_activity = intent.getStringExtra("PRE_ACTIVITY").toString();
-        Log.i("wtkim","pre_activity==>"+pre_activity);
         if(pre_activity.equals("3")){
             //버튼변경
             ((Button)findViewById(R.id.jojnaddinfo_btnNext)).setText("변경완료");
@@ -167,14 +166,7 @@ public class JoinAddInfoActivity extends NAppCompatActivity implements AdapterVi
                             ,{"AREA",strArea}
                             ,{"JOB",strJob}
                     };
-                   /* Log.i("wtKim","UID==>"+UID);
-                    Log.i("wtKim","KEY==>"+KEY);
-                    Log.i("wtKim","strTelecom==>"+strTelecom);
-                    Log.i("wtKim","strPhoneType==>"+strPhoneType);
-                    Log.i("wtKim","strOs==>"+strOs);
-                    Log.i("wtKim","strWedding==>"+strWedding);
-                    Log.i("wtKim","strArea==>"+strArea);
-                    Log.i("wtKim","strJob==>"+strJob);*/
+
                     common.loadData(CALLTYPE_SAVE, getString(R.string.url_joinAddinfo), params);
                 }
                 break;
@@ -202,25 +194,21 @@ public class JoinAddInfoActivity extends NAppCompatActivity implements AdapterVi
                     object = (JSONObject)ary_telecoms.get(adapterView.getSelectedItemPosition()+addNum);
                     //Log.i("wtKim","object==>"+object.toString());
                     if(addNum==0){ strTelecom = "";}else{ strTelecom = object.get("CODE").toString(); }
-                    Log.i("wtKim", "strTelecom==>"+strTelecom);
                     break;
                 case R.id.joinaddinfo_spOS:
                     if(adapterView.getSelectedItemPosition()>0){ addNum = -1; }else{ addNum=0; }
                     object = (JSONObject)ary_oss.get(adapterView.getSelectedItemPosition()+addNum);
                     if(addNum==0){ strOs = "";}else{ strOs = object.get("CODE").toString(); }
-                    Log.i("wtKim", "strOs==>"+strOs);
                     break;
                 case R.id.joinaddinfo_spAREA:
                     if(adapterView.getSelectedItemPosition()>0){ addNum = -1; }else{ addNum=0; }
                     object = (JSONObject)ary_areas.get(adapterView.getSelectedItemPosition()+addNum);
                     if(addNum==0){ strArea = "";}else{ strArea = object.get("CODE").toString(); }
-                    Log.i("wtKim", "strArea==>"+strArea);
                     break;
                 case R.id.joinaddinfo_spJOB:
                     if(adapterView.getSelectedItemPosition()>0){ addNum = -1; }else{ addNum=0; }
                     object = (JSONObject)ary_jobs.get(adapterView.getSelectedItemPosition()+addNum);
                     if(addNum==0){ strJob = "";}else{ strJob = object.get("CODE").toString(); }
-                    Log.i("wtKim", "strJob==>"+strJob);
                     break;
             }
         } catch(Exception e){
@@ -322,7 +310,6 @@ public class JoinAddInfoActivity extends NAppCompatActivity implements AdapterVi
     }
     //기존정보체크
     public void infocheckHandler(String str){
-        Log.i("wtkim","infocheckHandler()호출!");
         try {
             JSONObject json = new JSONObject(str);
             Log.i("wtkim","json==>"+json.toString());
@@ -336,13 +323,6 @@ public class JoinAddInfoActivity extends NAppCompatActivity implements AdapterVi
                     String wedding = json.getString("WEDDING");
                     String area = json.getString("AREA");
                     String job = json.getString("JOB");
-
-                    Log.i("wtkim","telecom==>"+telecom);
-                    Log.i("wtkim","phone_type==>"+phone_type);
-                    Log.i("wtkim","os==>"+os);
-                    Log.i("wtkim","wedding==>"+wedding);
-                    Log.i("wtkim","area==>"+area);
-                    Log.i("wtkim","job==>"+job);
 
                     if(!telecom.equals("")) CheckedTelecom(telecom);
                     if(!phone_type.equals("")) CheckedPhone_type(phone_type);
@@ -406,7 +386,6 @@ public class JoinAddInfoActivity extends NAppCompatActivity implements AdapterVi
 
         }
         ((Spinner)findViewById(R.id.joinaddinfo_spAREA)).setSelection(areas_selectedIdx);
-        Log.i("wtkim","CheckedArea==>"+str);
     }
     //직업 정보로드
     public void CheckedJob(String str){
@@ -420,7 +399,6 @@ public class JoinAddInfoActivity extends NAppCompatActivity implements AdapterVi
         }catch (Exception e){
 
         }
-        Log.i("wtkim","CheckedJob==>"+str);
         ((Spinner)findViewById(R.id.joinaddinfo_spJOB)).setSelection(jobs_selectedIdx);
     }
 

@@ -116,12 +116,9 @@ public class SearchIdAuthActivity extends NAppCompatActivity implements NTextVie
                     etMobile.setText("");
                 }
             } else {
-                Log.i("wtKim","3333333");
                 Common.createDialog(this, getString(R.string.txt_authCodeOK).toString(),null, err, getString(R.string.btn_ok),null, false, false);
-
             }
         } catch (Exception e) {
-            Log.i("wtKim","444444444");
             Common.createDialog(this, getString(R.string.txt_authCodeOK).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
         }
     }

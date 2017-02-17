@@ -67,10 +67,7 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_detail);
 
-        //구글맵
-        SupportMapFragment mapFragment =
-                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
+
 
 
         setTvTitle("리뷰 상세 정보");
@@ -135,7 +132,6 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
                 ((ImageView) dialog.findViewById(R.id.reviewDetail_ivKakaostroy)).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Log.i("wtkim", "aaa");
                         String shareBody = shareUrl;
                         String appId = getPackageName();
                         String appName = title;
@@ -233,9 +229,6 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
                     comment = ((JSONObject) ary_lists.get(i)).getString("COMMENT");
                     registDatetime = ((JSONObject) ary_lists.get(i)).getString("REGIST_DATETIME");
                     adapter.addItem(email, comment, registDatetime);
-                    Log.i("wtkim", "email==>" + email);
-                    Log.i("wtkim", "comment==>" + comment);
-                    Log.i("wtkim", "registDatetime==>" + registDatetime);
                 }
 
             } else {
@@ -273,10 +266,7 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
 
     public void loadHandler(String str) {
         try {
-            Common.Logg("-------");
-            Common.Logg(Integer.toString(str.length()));
             JSONObject json = new JSONObject(str);
-            Log.i("wtkim", "------" + json.toString());
             String err = json.getString("ERR");
 
             if (err.equals("")) {
@@ -298,10 +288,12 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
                 String mapXy = json.getString("MAP_XY");
                 if(!mapXy.equals("")){
                     String[] ary_map = mapXy.split("\\:::");
-                    Log.i("wtkim",ary_map[0]);
-                    Log.i("wtkim",ary_map[1]);
                     mapY = Double.parseDouble(ary_map[0]);
                     mapX = Double.parseDouble(ary_map[1]);
+                    //구글맵
+                    SupportMapFragment mapFragment =
+                            (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+                    mapFragment.getMapAsync(this);
                 }
 
                 String guideline = json.getString("GUIDELINE");
@@ -333,19 +325,15 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
                     @Override
                     public void onClick(View view) {
                         if (!authDate.equals("")) {//본인인증을 받은경우
-                            Log.i("wtkim", "authDate : Y");
                             if (blogSnsYn.equals("Y")) {//블로그/SNS 매체 등록한 경우
-                                Log.i("wtkim", "blogSnsYn : Y");
                                 intent = new Intent(ReviewDetailActivity.this, ReviewRequest1Activity.class);
                                 intent.putExtra("CAMPAIGN_CODE", campaign_code);
                                 startActivity(intent);
                             } else {//블로그/SNS 매체 등록하지 않은 경우
-                                Log.i("wtkim", "blogSnsYn : N");
                                 dialogType = 2;
                                 Common.createDialog(ReviewDetailActivity.this, getString(R.string.app_name).toString(), null, "리뷰신청은 블로그 및 SNS 매체를 등록하신 후 이용하실 수 있습니다. 지금 바로 등록 하시겠습니까?", getString(R.string.btn_cancel), getString(R.string.btn_ok), false, false);
                             }
                         } else {//본인인증을 받지 않은경우
-                            Log.i("wtkim", "authDate : N");
                             intent = new Intent(ReviewDetailActivity.this, AuthDescActivity.class);
                             intent.putExtra("PRE_ACTIVITY", "ReviewDetailActivity");
                             intent.putExtra("CAMPAIGN_CODE", campaign_code);
@@ -538,9 +526,7 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        Log.i("wtkim","mapX==>"+mapX);
-        Log.i("wtkim","mapY==>"+mapY);
-        LatLng seoul = new LatLng( 37.5964348,127.1491819 );
+        LatLng seoul = new LatLng( mapX,mapY );
         mMap.addMarker( new MarkerOptions().position(seoul).title( "" ) );
         mMap.moveCamera( CameraUpdateFactory.newLatLng(seoul) );
 

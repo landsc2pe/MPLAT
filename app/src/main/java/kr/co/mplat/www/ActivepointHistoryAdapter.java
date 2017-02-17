@@ -14,11 +14,11 @@ import java.util.ArrayList;
  * Created by gdfwo on 2017-01-12.
  */
 
-public class ActivepointHistoryAdapter extends BaseAdapter{
+public class ActivepointHistoryAdapter extends BaseAdapter {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
     private ArrayList<ActivepointHistoryListViewItem> listViewItemList = new ArrayList<ActivepointHistoryListViewItem>();
 
-    public ActivepointHistoryAdapter(){
+    public ActivepointHistoryAdapter() {
     }
 
     // Adapter에 사용되는 데이터의 개수를 리턴. : 필수 구현
@@ -40,12 +40,10 @@ public class ActivepointHistoryAdapter extends BaseAdapter{
         }
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
-
-
-        TextView tvSeq = (TextView)convertView.findViewById(R.id.activepoint_tvSeq);
-        TextView tvDatetime = (TextView)convertView.findViewById(R.id.activepoint_tvDatetime);
-        TextView tvLabel = (TextView)convertView.findViewById(R.id.activepoint_tvLabel);
-        TextView tvActivepoint = (TextView)convertView.findViewById(R.id.activepoint_tvActivepoint);
+        TextView tvSeq = (TextView) convertView.findViewById(R.id.activepoint_tvSeq);
+        TextView tvDatetime = (TextView) convertView.findViewById(R.id.activepoint_tvDatetime);
+        TextView tvLabel = (TextView) convertView.findViewById(R.id.activepoint_tvLabel);
+        TextView tvActivepoint = (TextView) convertView.findViewById(R.id.activepoint_tvActivepoint);
 
         // Data Set(listViewItemList)에서 position에 위치한 데이터 참조 획득
         ActivepointHistoryListViewItem listViewItem = listViewItemList.get(position);
@@ -55,10 +53,10 @@ public class ActivepointHistoryAdapter extends BaseAdapter{
         tvDatetime.setText(listViewItem.getDatetime());
         tvLabel.setText(listViewItem.getLabel());
 
-        if(Integer.parseInt(listViewItem.getActive_point())>0){
-            tvActivepoint.setText(Html.fromHtml("<font color='#62BDB5'>+ "+listViewItem.getActive_point()+"</font>"));
-        }else{
-            tvActivepoint.setText(Html.fromHtml("<font color='#D57A76'>- "+listViewItem.getActive_point()+"</font>"));
+        if (Integer.parseInt(listViewItem.getActive_point()) > 0) {
+            tvActivepoint.setText(Html.fromHtml("<font color='#62BDB5'>+ " + listViewItem.getActive_point() + "</font>"));
+        } else {
+            tvActivepoint.setText(Html.fromHtml("<font color='#D57A76'>- " + listViewItem.getActive_point() + "</font>"));
         }
 
         return convertView;
@@ -66,7 +64,9 @@ public class ActivepointHistoryAdapter extends BaseAdapter{
 
     // 지정한 위치(position)에 있는 데이터와 관계된 아이템(row)의 ID를 리턴. : 필수 구현
     @Override
-    public long getItemId(int position) { return position; }
+    public long getItemId(int position) {
+        return position;
+    }
 
     // 지정한 위치(position)에 있는 데이터 리턴 : 필수 구현
     @Override

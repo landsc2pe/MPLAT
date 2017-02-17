@@ -73,7 +73,6 @@ public class SearchPwActivity extends NAppCompatActivity implements View.OnClick
             String err = json.getString("ERR");
             if (err.equals("")) {
                 String result = json.getString("RESULT");
-                Log.i("wtKim","result=>"+result);
                 if (result.equals("OK")) {
                     intent = new Intent(SearchPwActivity.this,SearchPwMobileActivity.class);
                     intent.putExtra("ID",id);

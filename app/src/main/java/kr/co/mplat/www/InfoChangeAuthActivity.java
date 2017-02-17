@@ -56,9 +56,7 @@ public class InfoChangeAuthActivity extends NAppCompatActivity implements I_load
         btnNext.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.i("wtkim","변경완료 버튼선택!");
                 boolean regEmailCheck = Common.validateEmail(etEmail.getText().toString());
-                Log.i("wtkim","regEmailCheck==>"+regEmailCheck);
                 if(regEmailCheck){
                     Object[][] params = {
                             {"NEW_EMAIL", etEmail.getText().toString()}
