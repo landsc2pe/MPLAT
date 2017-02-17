@@ -25,6 +25,7 @@ import java.io.BufferedInputStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.List;
 
 import kr.co.marketlink.jsyang.ImageViewPager;
 
@@ -40,6 +41,10 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
     TextView tvEmail,tvPoint = null;
     JSONArray ary_banner = new JSONArray();
     ArrayList<String> banner = new ArrayList<>();
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -134,19 +139,6 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
             }
         });
 
-
-        String[] urls = {"http://mplat.co.kr/upload/201612061447454173.jpg","http://mplat.co.kr/upload/201612061448150956.jpg","http://mplat.co.kr/upload/201612061448337231.jpg","http://mplat.co.kr/upload/201612061448502008.jpg","http://mplat.co.kr/upload/201612061449061055.jpg"};
-        if(!bannerLoad) {
-            ImageViewPager imageViewPager = (ImageViewPager) findViewById(R.id.ivp);
-            ImageViewPager.ImageViewPagerClickListener imageViewPagerClickListener=new ImageViewPager.ImageViewPagerClickListener() {
-                @Override
-                public void onClick(int position) {
-                    Log.d("MYLOG",Integer.toString(position));
-                }
-            };
-            imageViewPager.start(this, getSupportFragmentManager(), urls,imageViewPagerClickListener, 3000, 3000, 1000);
-            bannerLoad=true;
-        }
     }
     @Override
     protected void onResume() {
@@ -188,8 +180,10 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
     }
 
     public void monClick(View view) {
+        Log.i("wtKim","onClick222 클릭!!");
         switch(view.getId()){
             case  R.id.menubar_ibNav4:
+                Log.i("wtKim","menubar_ibNav4 클릭!!");
                 intent = new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(intent);
                 break;
@@ -218,9 +212,24 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
                     }
 
                     try {
-
+                        List<String> urls=new ArrayList<>();
+                        for (int i = 0; i < ary_banner.length(); i++) {
+                            JSONObject object=ary_banner.getJSONObject(i);
+                            urls.add(object.getString("IMG_URL"));
+                        }
+                        if(!bannerLoad) {
+                            ImageViewPager imageViewPager = (ImageViewPager) findViewById(R.id.ivp);
+                            ImageViewPager.ImageViewPagerClickListener imageViewPagerClickListener=new ImageViewPager.ImageViewPagerClickListener() {
+                                @Override
+                                public void onClick(int position) {
+                                    Log.d("MYLOG",Integer.toString(position));
+                                }
+                            };
+                            imageViewPager.start(this, urls,imageViewPagerClickListener, 1000, 3000);
+                            bannerLoad=true;
+                        }
                     }catch(Exception e){
-                        Common.createDialog(this, getString(R.string.app_name).toString(),null, e.toString(), getString(R.string.btn_ok),null, false, false);
+                        Log.i("wtkim",e.toString());
                     }
 
                    /*for(int i=0;i<5;i++){
