@@ -126,7 +126,6 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
             }
         });
         //회원추천
-        //라운지
         ((LinearLayout)findViewById(R.id.main_llRecommend)).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

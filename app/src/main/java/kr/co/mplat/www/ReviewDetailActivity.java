@@ -400,16 +400,6 @@ public class ReviewDetailActivity extends NAppCompatActivity implements I_loadda
                 //((TextView)findViewById(R.id.reviewDetail_tvTab1Desc)).setText(Html.fromHtml(reviewDesc));
                 //reviewDetail_tvTab1JoinBeware
 
-                //테스트용
-                TextView tvJoinMethodInfo = (TextView) findViewById(R.id.reviewDetail_tvJoinMethodInfo);
-                tvJoinMethodInfo.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent i = new Intent(ReviewDetailActivity.this, MapsActivity.class);
-                        startActivity(i);
-                    }
-                });
-
                 //step 색변경
                 if (step.equals("1")) {
                     ((TextView) findViewById(R.id.reviewDetail_tvStep1)).setBackgroundResource(R.color.primary);
