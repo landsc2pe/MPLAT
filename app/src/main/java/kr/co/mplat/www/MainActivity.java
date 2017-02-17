@@ -218,7 +218,6 @@ public class MainActivity extends MAppCompatActivity implements View.OnClickList
                             JSONObject object=ary_banner.getJSONObject(i);
                             urls.add(object.getString("IMG_URL"));
                         }
-                        Common.Logg(urls.toString());
                         if(!bannerLoad) {
                             ImageViewPager imageViewPager = (ImageViewPager) findViewById(R.id.ivp);
                             ImageViewPager.ImageViewPagerClickListener imageViewPagerClickListener=new ImageViewPager.ImageViewPagerClickListener() {
